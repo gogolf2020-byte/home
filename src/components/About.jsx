@@ -2,7 +2,7 @@ import wellnessPhoto from '../assets/3.jpg'
 
 export default function About() {
   return (
-    <section id="about" className="bg-white py-20 md:py-24">
+    <section id="about" className="bg-bgLight py-20 md:py-24">
       <div className="container">
         <h2 className="text-4xl font-bold text-primary mb-8 text-center">
           About Wellness Spring
@@ -32,10 +32,10 @@ export default function About() {
         </div>
 
         {/* Services */}
-        <div id="services" className="rounded-[2rem] bg-gray-50 p-6 md:p-10">
-          <h3 className="text-2xl font-bold text-primary mb-8 text-center">Our Services</h3>
-          <p className="mx-auto mb-9 max-w-2xl text-center text-gray-600">Integrating traditional wisdom with modern innovation to support your health and wellbeing.</p>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div id="services" className="rounded-[2rem] bg-[#eef4ef] p-6 md:p-10 dark:bg-slate-900">
+          <h3 className="mb-4 text-3xl font-bold text-primary text-center">Our Services</h3>
+          <p className="mx-auto mb-8 max-w-5xl text-center text-base font-medium leading-7 text-slate-700 md:text-lg dark:text-slate-200">Integrating traditional wisdom with modern innovation to support your health and wellbeing.</p>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {[
               { title: 'Acupuncture', icon: '✦', description: 'Restore balance and support natural healing.' },
               { title: 'Cupping', icon: '◉', description: 'Encourage circulation and ease muscle tension.' },
@@ -47,11 +47,11 @@ export default function About() {
               { title: 'Therapeutic Music', icon: '♫', description: 'Calm the mind and support recovery.' },
               { title: 'AI-Assisted Health Assessment', icon: 'AI', description: 'Personalised insights supported by AI technology.' },
             ].map((service) => (
-              <div key={service.title} className="rounded-2xl bg-white p-5 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg dark:bg-slate-800">
-                <span className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#edf0df] text-xl font-semibold text-primary">{service.icon}</span>
-                <h4 className="min-h-12 text-base font-semibold leading-5 text-primary">{service.title}</h4>
-                <span className="my-3 block text-accent">⌁</span>
-                <p className="text-sm leading-6 text-gray-600">{service.description}</p>
+              <div key={service.title} className="flex min-h-[255px] flex-col rounded-2xl border border-emerald-950/10 bg-white p-5 text-center shadow-md transition duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-xl dark:border-slate-600 dark:bg-slate-800">
+                <span className="mx-auto mb-4 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#e2eddc] text-xl font-bold text-primary dark:bg-emerald-950 dark:text-emerald-200">{service.icon}</span>
+                <h4 className="flex min-h-11 items-center justify-center text-base font-bold leading-5 text-[#153e26] dark:text-emerald-200">{service.title}</h4>
+                <span className="my-3 block text-sm font-bold text-accent">⌁</span>
+                <p className="text-sm font-medium leading-6 text-slate-700 dark:text-slate-200">{service.description}</p>
               </div>
             ))}
           </div>

@@ -4,18 +4,20 @@ import About from './components/About'
 import AIAssessment from './components/AIAssessment'
 import Practitioner from './components/Practitioner'
 import Testimonials from './components/Testimonials'
+import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen bg-white transition-colors duration-300 dark:bg-slate-950">
+    <div className="min-h-screen bg-bgLight transition-colors duration-300 dark:bg-slate-950">
       <Header />
       <Hero />
       <About />
       <AIAssessment />
       <Practitioner />
       <Testimonials />
+      <FAQ />
       <Contact />
       <Footer />
     </div>

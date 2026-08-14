@@ -2,7 +2,7 @@ import logo from '../assets/matrix1.jpg'
 
 export default function AIAssessment() {
   return (
-    <section id="ai-assessment" className="bg-blue-50 py-20 md:py-24">
+    <section id="ai-assessment" className="bg-bgLight py-20 md:py-24">
       <div className="container">
         <h2 className="text-4xl font-bold text-primary mb-12 text-center">
           AI Health Assessment

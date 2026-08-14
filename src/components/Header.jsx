@@ -13,6 +13,7 @@ export default function Header() {
     { label: 'AI Assessment', href: '#ai-assessment' },
     { label: 'Practitioner', href: '#practitioner' },
     { label: 'Testimonials', href: '#testimonials' },
+    { label: 'Faq', href: '#faq' },
     { label: 'Contact', href: '#contact' },
   ]
 
