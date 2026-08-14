@@ -12,7 +12,7 @@ export default function Contact() {
         </p>
 
         <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-8 md:p-12">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {/* Contact Info */}
             <div>
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
@@ -73,6 +73,11 @@ export default function Contact() {
                 </button>
               </form>
             </div>
+
+            <div className="order-last flex flex-col items-center justify-center text-center md:order-none">
+              <img src={qrCode} alt="Wellness Spring WeChat QR code" className="h-36 w-36 rounded-xl bg-white p-2" />
+              <p className="mt-3 text-sm font-medium">Scan to connect via WeChat</p>
+            </div>
           </div>
         </div>
 
@@ -84,3 +89,4 @@ export default function Contact() {
     </section>
   )
 }
+import qrCode from '../assets/logo1.jpg'

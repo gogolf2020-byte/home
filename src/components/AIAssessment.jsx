@@ -1,3 +1,5 @@
+import logo from '../assets/matrix1.jpg'
+
 export default function AIAssessment() {
   return (
     <section id="ai-assessment" className="bg-blue-50 py-20 md:py-24">
@@ -23,8 +25,8 @@ export default function AIAssessment() {
           </div>
           
           <div className="flex items-center justify-center">
-            <div className="w-32 h-32 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg">
-              <span className="text-white text-6xl">🤖</span>
+            <div className="rounded-[2rem] bg-white p-4 shadow-lg md:p-5">
+              <img src={logo} alt="MATRIX AI health assessment device" className="h-auto w-64 rounded-2xl object-contain md:w-72" />
             </div>
           </div>
         </div>

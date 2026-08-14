@@ -8,9 +8,7 @@ export default function Practitioner() {
         
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-4xl mx-auto">
           <div className="flex justify-center">
-            <div className="w-48 h-48 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg">
-              <span className="text-white text-8xl">👩‍⚕️</span>
-            </div>
+            <img src={practitionerPhoto} alt="Helene Li Yu" className="h-[430px] w-full max-w-sm rounded-[2rem] object-cover object-top shadow-xl" />
           </div>
           
           <div>
@@ -42,3 +40,4 @@ export default function Practitioner() {
     </section>
   )
 }
+import practitionerPhoto from '../assets/22.jpg'
