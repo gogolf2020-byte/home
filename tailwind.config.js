@@ -10,6 +10,8 @@ export default {
         primary: '#1a472a',
         secondary: '#2d5a3d',
         accent: '#4a7c5e',
+      },
+      backgroundColor: {
         bgLight: '#f0f4f9',
       },
       fontFamily: {

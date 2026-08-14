@@ -1,6 +1,6 @@
 export default function Practitioner() {
   return (
-    <section id="practitioner" className="bg-bgLight py-20 md:py-24">
+    <section id="practitioner" className="bg-[#f0f4f9] py-20 md:py-24">
       <div className="container">
         <h2 className="text-4xl font-bold text-primary mb-12 text-center">
           Meet the Practitioner

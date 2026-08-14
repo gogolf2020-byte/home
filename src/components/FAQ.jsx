@@ -51,7 +51,7 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faq" className="bg-bgLight py-20 md:py-24 dark:bg-slate-950">
+    <section id="faq" className="bg-[#f0f4f9] py-20 md:py-24 dark:bg-slate-950">
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-primary mb-4">

@@ -2,7 +2,7 @@ import wellnessPhoto from '../assets/3.jpg'
 
 export default function About() {
   return (
-    <section id="about" className="bg-bgLight py-20 md:py-24">
+    <section id="about" className="bg-[#f0f4f9] py-20 md:py-24">
       <div className="container">
         <h2 className="text-4xl font-bold text-primary mb-8 text-center">
           About Wellness Spring

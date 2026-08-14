@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen bg-bgLight transition-colors duration-300 dark:bg-slate-950">
+    <div className="min-h-screen bg-[#f0f4f9] transition-colors duration-300 dark:bg-slate-950">
       <Header />
       <Hero />
       <About />
