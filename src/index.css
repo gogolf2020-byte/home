@@ -10,40 +10,69 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 68px;
 }
 
 body {
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background: #fff;
+  color: #1e293b;
+  background: #ffffff;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dark body {
-  color: #e2e8f0;
-  background: #020617;
+  color: #f1f5f9;
+  background-color: #020617;
 }
 
-/* The existing Tailwind utility palette is kept for the light design; these
-   overrides make the same content readable when the theme control is active. */
-.dark .bg-white,
-.dark .bg-gray-50,
-.dark .bg-blue-50 {
+/* Dark mode theme overrides */
+.dark [class*="bg-[#f0f4f9]"] {
+  background-color: #020617 !important;
+}
+
+.dark [class*="bg-[#eef4ef]"] {
   background-color: #0f172a !important;
+  border-color: #1e293b !important;
+}
+
+.dark .bg-white,
+.dark .bg-white\/95 {
+  background-color: #0f172a !important;
+  border-color: #1e293b !important;
+}
+
+.dark header {
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  border-color: #1e293b !important;
+}
+
+.dark .bg-gray-50 {
+  background-color: #1e293b !important;
+}
+
+.dark .text-primary {
+  color: #34d399 !important;
+}
+
+.dark [class*="text-[#153e26]"] {
+  color: #6ee7b7 !important;
+}
+
+.dark .text-gray-900,
+.dark .text-slate-900 {
+  color: #f1f5f9 !important;
 }
 
 .dark .text-gray-700,
+.dark .text-slate-700,
 .dark .text-gray-600 {
   color: #cbd5e1 !important;
 }
 
-.dark .text-primary {
-  color: #86efac !important;
-}
-
+.dark [class*="border-emerald-950"],
 .dark .border-gray-200 {
-  border-color: #334155 !important;
+  border-color: #1e293b !important;
 }
 
 button {
@@ -66,3 +95,4 @@ button {
     padding: 40px 0;
   }
 }
+

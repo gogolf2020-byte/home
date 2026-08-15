@@ -51,10 +51,10 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faq" className="bg-[#f0f4f9] py-20 md:py-24 dark:bg-slate-950">
+    <section id="faq" className="scroll-mt-6 bg-[#f0f4f9] py-12 md:py-16 dark:bg-slate-950">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary mb-4">
+          <h2 className="text-4xl font-bold text-primary dark:text-emerald-400 mb-4">
             Common Questions
           </h2>
           <p className="text-lg text-gray-600 dark:text-slate-300 max-w-2xl mx-auto">
@@ -66,18 +66,18 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 dark:hover:border-accent/50"
+              className="border border-gray-200 dark:border-slate-700 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 dark:hover:border-emerald-500/50"
             >
               <button
                 onClick={() => toggleOpen(index)}
                 className="w-full px-6 py-5 md:px-8 md:py-6 text-left bg-white dark:bg-slate-900 hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors duration-200 flex items-center justify-between group"
               >
-                <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white group-hover:text-primary dark:group-hover:text-accent transition-colors">
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-slate-100 group-hover:text-primary dark:group-hover:text-emerald-300 transition-colors">
                   {faq.question}
                 </h3>
                 <div className="flex-shrink-0 ml-4">
                   <svg
-                    className={`w-6 h-6 text-primary dark:text-accent transition-transform duration-300 ${
+                    className={`w-6 h-6 text-primary dark:text-emerald-400 transition-transform duration-300 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                     fill="none"

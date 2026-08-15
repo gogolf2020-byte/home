@@ -85,24 +85,37 @@ export default function Header() {
 
           <div className="ml-auto hidden items-center gap-3 md:flex">
             <label className="sr-only" htmlFor="language">Language</label>
-            <select
-              id="language"
-              value={language}
-              onChange={(event) => setLanguage(event.target.value)}
-              className="rounded-full border border-emerald-900/20 bg-transparent px-3 py-1.5 text-xs font-semibold text-emerald-900 outline-none transition focus:ring-2 focus:ring-emerald-600 dark:border-slate-700 dark:text-slate-200 dark:bg-slate-800/50"
-            >
-              <option value="en" className="dark:bg-slate-900">EN</option>
-              <option value="zh" className="dark:bg-slate-900">中文</option>
-              <option value="de" className="dark:bg-slate-900">DE</option>
-            </select>
+            <div className="relative flex items-center">
+              <select
+                id="language"
+                value={language}
+                onChange={(event) => setLanguage(event.target.value)}
+                className="appearance-none rounded-full border border-emerald-900/20 bg-transparent pl-3.5 pr-8 py-1.5 text-xs font-semibold text-emerald-900 outline-none transition focus:ring-2 focus:ring-emerald-600 dark:border-slate-700 dark:text-slate-200 dark:bg-slate-800/50 cursor-pointer"
+              >
+                <option value="en" className="dark:bg-slate-900">EN</option>
+                <option value="zh" className="dark:bg-slate-900">中文</option>
+                <option value="de" className="dark:bg-slate-900">DE</option>
+              </select>
+              <svg className="pointer-events-none absolute right-2.5 h-3.5 w-3.5 text-emerald-900/70 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </div>
             <button
               type="button"
               onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-              className="rounded-full border border-emerald-900/20 p-1.5 text-emerald-900 transition hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-600 dark:border-slate-700 dark:text-amber-300 dark:hover:bg-slate-800"
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-emerald-900/20 text-emerald-900 transition hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-600 dark:border-slate-700 dark:text-amber-300 dark:hover:bg-slate-800"
               aria-label={theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme'}
               title={theme === 'light' ? 'Dark theme' : 'Light theme'}
             >
-              {theme === 'light' ? '☾' : '☀'}
+              {theme === 'light' ? (
+                <svg className="h-4 w-4 fill-current text-emerald-950 dark:text-amber-300" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12.3 2C6.5 2 1.8 6.7 1.8 12.5S6.5 23 12.3 23c4.8 0 8.9-3.2 10.1-7.7-1.1.4-2.3.6-3.6.6-5.5 0-10-4.5-10-10 0-1.3.2-2.5.6-3.6C15.5 2.2 13.9 2 12.3 2z" />
+                </svg>
+              ) : (
+                <svg className="h-4 w-4 fill-current text-amber-400" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z" />
+                </svg>
+              )}
             </button>
           </div>
 
