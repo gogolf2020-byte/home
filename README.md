@@ -107,6 +107,12 @@ colors: {
 - Safari (最新版本)
 - Edge (最新版本)
 
+## 📝 TODO
+
+- [ ] **ACC (Accident Compensation Corporation) 流程整合与申请支持**:
+  - 完善 ACC 针灸理赔与损伤报销相关的在线申报指引与资质信息展示。
+  - 优化 ACC 理赔所需信息（如 ACC 案号 Claim Number、事故日期 Date of Injury）在预约与联系表单中的集成。
+
 ## 📞 联系信息
 
 - 电话: 021 101 8892
@@ -120,3 +126,4 @@ All rights reserved © 2026 Wellness Spring
 ---
 
 Built with ❤️ using Vite, React, and Tailwind CSS
+
