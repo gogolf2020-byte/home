@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import qrCode from '../assets/logo1.jpg'
 
-export default function Contact() {
+export default function Contact({ title, subtitle }) {
   const [method, setMethod] = useState('email') // 'email' | 'txt'
   const [formData, setFormData] = useState({
     name: '',
@@ -73,7 +73,7 @@ export default function Contact() {
       setIsSubmitting(false)
       setSubmitted(true)
       setSubmittedMethod(method)
-    }, 600)
+    }, 800)
   }
 
   const handleReset = () => {
@@ -86,12 +86,11 @@ export default function Contact() {
     <section id="contact" className="bg-gradient-to-r from-primary to-secondary text-white py-12 md:py-16">
       <div className="container max-w-4xl">
         <h2 className="text-4xl font-bold mb-4 text-center">
-          Book an Appointment
+          {title || 'Book an Appointment'}
         </h2>
         
         <p className="text-lg text-center mb-12 opacity-90 max-w-2xl mx-auto">
-          Ready to take the next step in your health journey? Contact Wellness Spring to
-          discuss your needs and book an appointment.
+          {subtitle || 'Ready to take the next step in your health journey? Contact Wellness Spring to discuss your needs and book an appointment.'}
         </p>
 
         <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-10 shadow-xl border border-white/10">
@@ -280,11 +279,6 @@ export default function Contact() {
               <p className="mt-3 text-sm font-medium">Scan to connect via WeChat</p>
             </div>
           </div>
-        </div>
-
-        {/* Languages */}
-        <div className="text-center mt-12">
-          <p className="text-sm opacity-75">Languages: English · Mandarin · Cantonese</p>
         </div>
       </div>
     </section>

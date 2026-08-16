@@ -1,25 +1,41 @@
+import { useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import AIAssessment from './components/AIAssessment'
-import Practitioner from './components/Practitioner'
-import Testimonials from './components/Testimonials'
-import FAQ from './components/FAQ'
-import Contact from './components/Contact'
+import HomePage from './components/HomePage'
+import ACCTreatmentPage from './components/ACCTreatmentPage'
 import Footer from './components/Footer'
+import FloatingBookButton from './components/FloatingBookButton'
+
+function ScrollToTop() {
+  const { pathname, hash } = useLocation()
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 50)
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }, [pathname, hash])
+
+  return null
+}
 
 function App() {
   return (
     <div className="min-h-screen bg-[#f0f4f9] transition-colors duration-300 dark:bg-slate-950">
+      <ScrollToTop />
       <Header />
-      <Hero />
-      <About />
-      <AIAssessment />
-      <Practitioner />
-      <Testimonials />
-      <FAQ />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/acc-treatment" element={<ACCTreatmentPage />} />
+      </Routes>
       <Footer />
+      <FloatingBookButton />
     </div>
   )
 }

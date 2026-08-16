@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import logo from '../assets/98.jpg'
 import { usePreferences } from '../context/Preferences'
 
@@ -6,11 +7,14 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeHash, setActiveHash] = useState(window.location.hash || '')
   const { language, setLanguage, theme, setTheme } = usePreferences()
+  const location = useLocation()
+  const navigate = useNavigate()
 
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '#about' },
     { label: 'Services', href: '#services' },
+    { label: 'ACC Treatment', href: '/acc-treatment' },
     { label: 'AI Assessment', href: '#ai-assessment' },
     { label: 'Practitioner', href: '#practitioner' },
     { label: 'Testimonials', href: '#testimonials' },
@@ -32,7 +36,7 @@ export default function Header() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && location.pathname === '/') {
             setActiveHash(`#${entry.target.id}`)
           }
         })
@@ -47,31 +51,71 @@ export default function Header() {
       window.removeEventListener('hashchange', handleHashChange)
       sections.forEach((section) => observer.unobserve(section))
     }
-  }, [])
+  }, [location.pathname])
+
+  const handleNavClick = (e, item) => {
+    setIsMenuOpen(false)
+    if (item.href === '/acc-treatment') {
+      return // React Router Link will handle navigate to /acc-treatment
+    }
+    if (item.href === '/') {
+      if (location.pathname !== '/') {
+        navigate('/')
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+      return
+    }
+    if (item.href.startsWith('#')) {
+      if (location.pathname !== '/') {
+        e.preventDefault()
+        navigate(`/${item.href}`)
+      }
+    }
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-emerald-900/5 transition-colors dark:bg-slate-900/95 dark:border-slate-800 dark:shadow-black/30">
       <div className="container">
         <div className="flex justify-between items-center py-3.5">
-          <div className="flex items-center">
-            <a href="/" className="flex items-center gap-2 group">
+          <div className="flex items-center shrink-0">
+            <Link to="/" className="flex items-center gap-2 group">
               <img src={logo} alt="Wellness Spring" className="h-10 w-10 rounded-full object-cover ring-2 ring-emerald-600/20 group-hover:ring-emerald-600/40 transition-all" />
-              <span className="font-bold text-lg text-emerald-950 dark:text-emerald-100 tracking-tight">Wellness Spring</span>
-            </a>
+              <span className="font-bold text-lg text-emerald-950 dark:text-emerald-100 tracking-tight whitespace-nowrap">Wellness Spring</span>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="ml-8 hidden gap-1.5 lg:flex items-center">
+          <nav className="mx-2 hidden gap-1 xl:gap-2 lg:flex items-center shrink">
             {navItems.map((item) => {
-              const isActive = item.href === '/'
-                ? (!activeHash || activeHash === '#' || activeHash === '')
-                : activeHash === item.href
+              const isAccRoute = item.href === '/acc-treatment' && location.pathname === '/acc-treatment'
+              const isHomeRoute = item.href === '/' && location.pathname === '/' && (!activeHash || activeHash === '#' || activeHash === '')
+              const isHashActive = location.pathname === '/' && activeHash === item.href
+              const isActive = isAccRoute || isHomeRoute || isHashActive
+
+              if (item.href === '/acc-treatment' || item.href === '/') {
+                return (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    onClick={(e) => handleNavClick(e, item)}
+                    className={`px-2.5 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm whitespace-nowrap transition-all duration-200 ${
+                      isActive
+                        ? 'bg-emerald-100/90 text-emerald-900 font-bold ring-1 ring-emerald-600/30 shadow-xs dark:bg-emerald-950/80 dark:text-emerald-300 dark:ring-emerald-500/40'
+                        : 'text-slate-600 hover:text-emerald-700 hover:bg-emerald-50/70 font-medium dark:text-slate-300 dark:hover:text-emerald-300 dark:hover:bg-slate-800/60'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              }
 
               return (
                 <a
                   key={item.label}
-                  href={item.href}
-                  className={`px-3.5 py-1.5 rounded-full text-sm transition-all duration-200 ${
+                  href={location.pathname === '/' ? item.href : `/${item.href}`}
+                  onClick={(e) => handleNavClick(e, item)}
+                  className={`px-2.5 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm whitespace-nowrap transition-all duration-200 ${
                     isActive
                       ? 'bg-emerald-100/90 text-emerald-900 font-bold ring-1 ring-emerald-600/30 shadow-xs dark:bg-emerald-950/80 dark:text-emerald-300 dark:ring-emerald-500/40'
                       : 'text-slate-600 hover:text-emerald-700 hover:bg-emerald-50/70 font-medium dark:text-slate-300 dark:hover:text-emerald-300 dark:hover:bg-slate-800/60'
@@ -145,20 +189,38 @@ export default function Header() {
         {isMenuOpen && (
           <nav className="md:hidden py-3 border-t border-emerald-900/10 dark:border-slate-800 flex flex-col gap-1">
             {navItems.map((item) => {
-              const isActive = item.href === '/'
-                ? (!activeHash || activeHash === '#' || activeHash === '')
-                : activeHash === item.href
+              const isAccRoute = item.href === '/acc-treatment' && location.pathname === '/acc-treatment'
+              const isHomeRoute = item.href === '/' && location.pathname === '/' && (!activeHash || activeHash === '#' || activeHash === '')
+              const isHashActive = location.pathname === '/' && activeHash === item.href
+              const isActive = isAccRoute || isHomeRoute || isHashActive
+
+              if (item.href === '/acc-treatment' || item.href === '/') {
+                return (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    onClick={(e) => handleNavClick(e, item)}
+                    className={`px-3 py-2 rounded-lg text-sm transition-colors ${
+                      isActive
+                        ? 'bg-emerald-100/90 text-emerald-900 font-bold dark:bg-emerald-950/80 dark:text-emerald-300'
+                        : 'text-slate-700 hover:bg-emerald-50/60 dark:text-slate-200 dark:hover:bg-slate-800'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              }
 
               return (
                 <a
                   key={item.label}
-                  href={item.href}
+                  href={location.pathname === '/' ? item.href : `/${item.href}`}
                   className={`px-3 py-2 rounded-lg text-sm transition-colors ${
                     isActive
                       ? 'bg-emerald-100/90 text-emerald-900 font-bold dark:bg-emerald-950/80 dark:text-emerald-300'
                       : 'text-slate-700 hover:bg-emerald-50/60 dark:text-slate-200 dark:hover:bg-slate-800'
                   }`}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, item)}
                 >
                   {item.label}
                 </a>
