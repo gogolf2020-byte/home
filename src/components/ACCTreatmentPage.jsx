@@ -153,31 +153,31 @@ export default function ACCTreatmentPage() {
   return (
     <div id="acc-details" className="scroll-mt-16 bg-[#f0f4f9] dark:bg-slate-950 transition-colors">
       {/* SECTION 1 — HERO */}
-      <section className="relative isolate overflow-hidden bg-primary py-16 md:py-24 text-white">
+      <section className="relative isolate overflow-hidden bg-[#f0f4f9] py-16 md:py-24 dark:bg-slate-950 border-b border-slate-200/80 dark:border-slate-800">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-block rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold tracking-wider text-emerald-100 mb-4">
+            <span className="inline-block rounded-full bg-emerald-100 dark:bg-emerald-950/80 px-4 py-1.5 text-xs font-bold tracking-wider text-emerald-900 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 mb-4">
               ACC INJURY RECOVERY
             </span>
-            <h1 className="text-4xl font-bold md:text-5xl mb-4 text-white">
+            <h1 className="text-4xl font-extrabold md:text-5xl mb-4 text-[#1a472a] dark:text-emerald-300">
               ACC Injury Recovery
             </h1>
-            <p className="text-xl font-medium text-emerald-200 mb-6">
+            <p className="text-xl font-semibold text-emerald-800 dark:text-emerald-400 mb-6">
               Personalised Acupuncture & Chinese Medicine Treatment for ACC-Covered Injuries
             </p>
-            <p className="text-base md:text-lg leading-8 opacity-90 mb-8">
+            <p className="text-base md:text-lg leading-relaxed text-slate-700 dark:text-slate-300 mb-8 max-w-3xl mx-auto">
               Injury can affect more than the painful area — it can change movement, sleep, confidence and everyday activity. Wellness Spring provides individualised acupuncture and Chinese medicine care to support recovery from ACC-covered injuries and help you return to function safely and confidently.
             </p>
 
             {/* Trust Badges */}
             <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8">
-              <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold backdrop-blur-sm border border-white/15">
+              <span className="rounded-full bg-white dark:bg-slate-900 px-4 py-2 text-xs font-semibold text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-slate-800 shadow-sm">
                 ✓ ACC-Registered Acupuncturist
               </span>
-              <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold backdrop-blur-sm border border-white/15">
+              <span className="rounded-full bg-white dark:bg-slate-900 px-4 py-2 text-xs font-semibold text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-slate-800 shadow-sm">
                 ✓ Individualised Injury Recovery Plans
               </span>
-              <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold backdrop-blur-sm border border-white/15">
+              <span className="rounded-full bg-white dark:bg-slate-900 px-4 py-2 text-xs font-semibold text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-slate-800 shadow-sm">
                 ✓ Acupuncture + Chinese Medicine Support
               </span>
             </div>
@@ -185,7 +185,7 @@ export default function ACCTreatmentPage() {
             <a
               href="#contact"
               onClick={handleContactClick}
-              className="inline-block rounded-full bg-white px-8 py-3.5 text-sm font-bold text-primary hover:bg-emerald-50 transition-all shadow-lg cursor-pointer"
+              className="inline-block rounded-full bg-primary hover:bg-secondary text-white dark:bg-emerald-600 dark:hover:bg-emerald-500 px-8 py-3.5 text-sm font-bold shadow-lg transition-all cursor-pointer"
             >
               Book ACC Treatment
             </a>
