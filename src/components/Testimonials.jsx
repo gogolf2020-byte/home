@@ -18,29 +18,29 @@ export default function Testimonials() {
   ]
 
   return (
-    <section id="testimonials" className="bg-[#f0f4f9] py-20 md:py-24">
+    <section id="testimonials" className="bg-[#f0f4f9] py-12 md:py-16 dark:bg-slate-950">
       <div className="container">
-        <h2 className="text-4xl font-bold text-primary mb-12 text-center">
+        <h2 className="text-4xl font-bold text-primary dark:text-emerald-400 mb-12 text-center">
           Testimonials
         </h2>
         
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
-            <div key={testimonial.name} className="bg-white p-8 rounded-lg shadow-md">
+            <div key={testimonial.name} className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-md dark:border dark:border-slate-800">
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-yellow-400">★</span>
                 ))}
               </div>
               
-              <p className="text-gray-700 italic mb-6 leading-8">
+              <p className="text-gray-700 dark:text-slate-300 italic mb-6 leading-8">
                 "{testimonial.text}"
               </p>
               
-              <hr className="border-gray-200 mb-4" />
+              <hr className="border-gray-200 dark:border-slate-800 mb-4" />
               
-              <h4 className="font-bold text-primary">{testimonial.name}</h4>
-              <p className="text-sm text-gray-600">{testimonial.title}</p>
+              <h4 className="font-bold text-primary dark:text-emerald-300">{testimonial.name}</h4>
+              <p className="text-sm text-gray-600 dark:text-slate-400">{testimonial.title}</p>
             </div>
           ))}
         </div>
