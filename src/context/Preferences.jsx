@@ -221,7 +221,8 @@ const copy = {
   'Monitors progress and adapts treatment as needed': ['追踪进展并按需调整方案', 'Begleitet Fortschritte und passt die Behandlung bei Bedarf an'],
 
   // Practitioner
-  'Meet the Practitioner': ['认识医师', 'Ihre Behandlerin kennenlernen'],
+  'Meet Our Practitioners': ['医师团队', 'Unser Ärzteteam'],
+  'Meet the Practitioner': ['医师介绍', 'Unser Ärzteteam'],
   'Helene Li YU': ['Helene Li YU', 'Helene Li YU'],
   'Helene brings extensive expertise and compassion to her practice, with a holistic approach to care, integrating acupuncture, traditional Chinese medicine therapies, mind–body regulation, and AI-assisted health assessment.': [
     'Helene 以丰富的专业经验与关怀服务每位来访者，采用融合针灸、中医疗法、身心调节和 AI 辅助健康评估的整体护理方法。',
@@ -231,7 +232,29 @@ const copy = {
     '她专注于个性化治疗、情绪平衡，并以细致的个人化护理支持长期健康。',
     'Ihr Fokus liegt auf individueller Behandlung, emotionaler Balance und langfristigem Wohlbefinden durch aufmerksame, persönliche Betreuung.'
   ],
-  'Specialties': ['专业领域', 'Schwerpunkte'],
+  'Dr. Damen QIAN (Ph.D.)': ['前 达 门', 'Dr. med. Damen QIAN'],
+  'Ph.D. in Ethnomedicine | Traditional Mongolian Acupuncture & Five Therapies': [
+    '医学博士 ｜ 民族医学（蒙医传统针灸与五疗方向）',
+    'Dr. med. Ethnomedizin | Traditionelle Mongolische Akupunktur & Fünf Therapien'
+  ],
+  'Beijing University of Chinese Medicine': ['北京中医药大学', 'Peking-Universität für Chinesische Medizin'],
+  'Inner Mongolia Medical University': ['内蒙古医科大学', 'Medizinische Universität der Inneren Mongolei'],
+  'Inner Mongolia International Mongolian Hospital': ['内蒙古国际蒙医医院', 'Internationales Mongolische Medizin-Krankenhaus der Inneren Mongolei'],
+  'Prof. Wulan (National Qihuang Scholar & Heritage Successor)': [
+    '导师：国家岐黄学者、国家非遗传承人 乌兰教授',
+    'Doktormutter: Prof. Wulan (Nationaler Qihuang-Gelehrter & Erbe des immateriellen Kulturerbes)'
+  ],
+  'Specialties': ['临床专长', 'Schwerpunkte'],
+  'Clinical Specialties & Focus': ['临床专长与精技', 'Klinische Schwerpunkte'],
+  'Education & Research': ['教育与科研经历', 'Ausbildung & Forschung'],
+  'Contact Practitioner': ['联系医师', 'Behandler kontaktieren'],
+  'Catherine Wang': ['Catherine Wang', 'Catherine Wang'],
+  'New Zealand Registered Acupuncturist · ACC Provider': [
+    '新西兰注册针灸师 · ACC 认证医师',
+    'Neuseeländisch registrierte Akupunkteurin · ACC-Anbieterin'
+  ],
+  'New Zealand College of Chinese Medicine': ['新西兰中医学院', 'Neuseeland-College für Chinesische Medizin'],
+  'Zhengzhou University': ['郑州大学', 'Zhengzhou-Universität'],
   'Traditional Chinese Medicine & Acupuncture': ['中医与针灸', 'Traditionelle Chinesische Medizin & Akupunktur'],
   'Mind-Body Regulation': ['身心调节', 'Körper-Geist-Regulation'],
   'Emotional Balance & Wellness': ['情绪平衡与健康', 'Emotionale Balance & Wohlbefinden'],
