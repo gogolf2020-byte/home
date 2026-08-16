@@ -14,43 +14,21 @@ export default function Practitioner() {
           Meet the Practitioner
         </h2>
 
-        {/* 3-Column Doctor Card Grid - Reference to Image 1 */}
+        {/* 3-Column Doctor Card Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {practitionersData.map((doc) => (
             <Link
               key={doc.id}
               to={`/practitioners/${doc.slug}`}
-              className="group bg-white dark:bg-slate-900 rounded-3xl p-5 shadow-md hover:shadow-2xl border border-slate-200/80 dark:border-slate-800 transition-all duration-500 cursor-pointer flex flex-col justify-between transform hover:-translate-y-2 block"
+              className="group bg-white dark:bg-slate-900 p-5 shadow-md hover:shadow-2xl border border-slate-200/80 dark:border-slate-800 transition-all duration-500 cursor-pointer flex flex-col justify-between transform hover:-translate-y-2 block"
             >
-              {/* Photo Frame Container with 0.5s Cubic Bezier Upward Movement */}
-              <div className="relative overflow-hidden rounded-2xl bg-slate-900 shadow-inner">
+              {/* Photo Container: Full Image Display with Gold Frame Exposed */}
+              <div className="relative overflow-hidden bg-slate-900/5 dark:bg-slate-950">
                 <img
                   src={doc.photo}
                   alt={doc.name[lang]}
-                  className="w-full h-80 object-cover object-top transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 group-hover:-translate-y-2"
+                  className="w-full h-auto object-contain transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 group-hover:-translate-y-1"
                 />
-
-                {/* Metallic Gold Bottom Curve Accent */}
-                <div className="absolute inset-x-0 bottom-0 pointer-events-none">
-                  <svg
-                    viewBox="0 0 400 55"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-full h-auto drop-shadow-sm"
-                  >
-                    <path
-                      d="M0 55C100 18 300 18 400 55V55H0V55Z"
-                      fill="url(#goldCardGradMinimal)"
-                    />
-                    <defs>
-                      <linearGradient id="goldCardGradMinimal" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#D4AF37" />
-                        <stop offset="0.5" stopColor="#F3E5AB" />
-                        <stop offset="1" stopColor="#AA771C" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
               </div>
 
               {/* Doctor Details below photo */}

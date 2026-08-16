@@ -44,7 +44,7 @@ export default function PractitionerDetailPage() {
             </Link>
             <span>/</span>
             <Link to="/#practitioner" className="hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors">
-              {lang === 'zh' ? '医师团队' : lang === 'de' ? 'Behandler' : 'Medical Team'}
+              {lang === 'zh' ? '医师介绍' : lang === 'de' ? 'Behandler' : 'Practitioner'}
             </Link>
             <span>/</span>
             <span className="text-emerald-800 dark:text-emerald-300 font-semibold">
@@ -56,47 +56,18 @@ export default function PractitionerDetailPage() {
 
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Main Doctor Profile Card */}
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-100 dark:border-slate-800">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start bg-white dark:bg-slate-900 p-6 sm:p-10 shadow-xl border border-slate-100 dark:border-slate-800">
           
-          {/* Left Column: Image Frame with 0.5s Bezier Upward Hover Animation */}
+          {/* Left Column: Image Frame displaying full photo with gold frame exposed */}
           <div className="lg:col-span-5 flex flex-col items-center">
             <div className="relative w-full max-w-md group">
-              {/* Styled Rounded Image Frame with 0.5s Cubic Bezier Hover Animation */}
-              <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl bg-slate-900 border-2 border-emerald-900/10 dark:border-emerald-500/20 transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-2">
+              {/* Styled Image Frame displaying complete photo without clipping */}
+              <div className="relative overflow-hidden shadow-2xl bg-slate-950 border border-slate-200 dark:border-slate-800 transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-2">
                 <img
                   src={doctor.photo}
                   alt={doctor.name[lang]}
-                  className="h-[460px] sm:h-[500px] w-full object-cover object-top transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                  className="w-full h-auto object-contain transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                 />
-
-                {/* Gold Curve Accent */}
-                <div className="absolute inset-x-0 bottom-0 pointer-events-none">
-                  <svg
-                    viewBox="0 0 400 65"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-full h-auto drop-shadow-md"
-                  >
-                    <path
-                      d="M0 65C100 22 300 22 400 65V65H0V65Z"
-                      fill="url(#goldGradDetailClean)"
-                    />
-                    <defs>
-                      <linearGradient id="goldGradDetailClean" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#D4AF37" />
-                        <stop offset="0.5" stopColor="#F3E5AB" />
-                        <stop offset="1" stopColor="#AA771C" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
-              </div>
-
-              {/* Hometown Tag */}
-              <div className="mt-5 text-center">
-                <span className="text-xs font-medium text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-4 py-1.5 rounded-full inline-block border border-slate-200 dark:border-slate-700">
-                  📍 {doctor.hometown[lang]}
-                </span>
               </div>
             </div>
           </div>
@@ -252,12 +223,12 @@ export default function PractitionerDetailPage() {
                 <Link
                   key={other.id}
                   to={`/practitioners/${other.slug}`}
-                  className="group bg-white dark:bg-slate-900 rounded-3xl p-6 shadow-md hover:shadow-xl border border-slate-200 dark:border-slate-800 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex items-center gap-5 cursor-pointer transform hover:-translate-y-2 block"
+                  className="group bg-white dark:bg-slate-900 p-6 shadow-md hover:shadow-xl border border-slate-200 dark:border-slate-800 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex items-center gap-5 cursor-pointer transform hover:-translate-y-2 block"
                 >
                   <img
                     src={other.photo}
                     alt={other.name[lang]}
-                    className="w-24 h-28 object-cover object-top rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                    className="w-24 h-auto object-contain rounded-none shadow-sm border border-slate-200 dark:border-slate-700 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                   />
                   <div>
                     <h4 className="text-xl font-bold text-[#1a472a] dark:text-emerald-300 group-hover:text-emerald-600 transition-colors">
