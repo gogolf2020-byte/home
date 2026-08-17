@@ -6,6 +6,7 @@ import ACCTreatmentPage from './components/ACCTreatmentPage'
 import PractitionerDetailPage from './components/PractitionerDetailPage'
 import Footer from './components/Footer'
 import FloatingBookButton from './components/FloatingBookButton'
+import FloatingMusicPlayer from './components/FloatingMusicPlayer'
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -39,6 +40,7 @@ function App() {
       </Routes>
       <Footer />
       <FloatingBookButton />
+      <FloatingMusicPlayer />
     </div>
   )
 }

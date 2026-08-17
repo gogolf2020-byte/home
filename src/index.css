@@ -42,6 +42,25 @@ body {
   border-color: #1e293b !important;
 }
 
+/* Audio Player Animations */
+@keyframes eq-bar {
+  0%, 100% { height: 4px; }
+  50% { height: 18px; }
+}
+
+.animate-eq-1 {
+  animation: eq-bar 0.7s ease-in-out infinite;
+}
+.animate-eq-2 {
+  animation: eq-bar 0.7s ease-in-out 0.2s infinite;
+}
+.animate-eq-3 {
+  animation: eq-bar 0.7s ease-in-out 0.4s infinite;
+}
+.animate-spin-slow {
+  animation: spin 15s linear infinite;
+}
+
 .dark header {
   background-color: rgba(15, 23, 42, 0.95) !important;
   border-color: #1e293b !important;
