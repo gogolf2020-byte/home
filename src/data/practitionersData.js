@@ -1,5 +1,6 @@
 import qianPhoto from '../assets/doctors/1_qian.png'
 import wangPhoto from '../assets/doctors/2_wang.png'
+import gaoPhoto from '../assets/doctors/3_gao.jpg'
 import helenePhoto from '../assets/22.jpg'
 
 export const practitionersData = [
@@ -248,6 +249,126 @@ export const practitionersData = [
       ]
     },
     contactEmail: 'info@heyangwellness.co.nz'
+  },
+  {
+    id: 'grace-gao',
+    slug: 'grace-gao',
+    name: {
+      zh: 'Grace Gao',
+      en: 'Grace Gao',
+      de: 'Grace Gao'
+    },
+    shortTitle: {
+      zh: '新西兰 ACC & CMC 注册针灸师 · 硕士在读',
+      en: 'ACC & CMC Registered Acupuncturist · Master Candidate',
+      de: 'ACC & CMC Registrierte Akupunkteurin · Master-Studium'
+    },
+    title: {
+      zh: '新西兰 ACC & CMC 注册针灸师 ｜ 中医药学硕士在读',
+      en: 'ACC & CMC Registered Acupuncturist | Master Candidate in TCM',
+      de: 'ACC & CMC Registrierte Akupunkteurin | Master-Studium in TCM'
+    },
+    mentor: {
+      zh: '新西兰中医学院 (NZCCM) 毕业 · 循证中针诊疗专家',
+      en: 'Graduate of NZCCM · Evidence-Based Acupuncture & Herbal Specialist',
+      de: 'NZCCM-Absolventin · Evidenzbasierte Akupunktur & Kräuterheilkunde'
+    },
+    photo: gaoPhoto,
+    hometown: {
+      zh: '新西兰 ACC & CMC 认证注册针灸师',
+      en: 'NZ ACC & CMC Registered Acupuncturist',
+      de: 'NZ ACC & CMC Registrierte Akupunkteurin'
+    },
+    tags: {
+      zh: ['ACC 认证医师', 'CMC 注册医师', '新西兰中医学院', '硕士在读', '痛症与内科调理'],
+      en: ['ACC Registered', 'CMC Registered', 'NZCCM Graduate', 'Master Candidate', 'Musculoskeletal Care'],
+      de: ['ACC-Registriert', 'CMC-Registriert', 'NZCCM-Absolventin', 'Master-Studium', 'Schmerztherapie']
+    },
+    shortDesc: {
+      zh: '毕业于新西兰中医学院并攻读硕士，精通针灸、推拿与中药调理，擅长肌骨痛症与内科杂病的精准诊疗。',
+      en: 'A passionate Registered Acupuncturist with a solid TCM foundation, skilled in acupuncture, Tui Na, and herbal care for musculoskeletal pain and internal disorders.',
+      de: 'Erfahrene Akupunkteurin mit fundierter TCM-Ausbildung, spezialisiert auf Akupunktur, Tui Na und Kräuterheilkunde bei Schmerzen und internistischen Erkrankungen.'
+    },
+    bioParagraphs: {
+      zh: [
+        'Grace Gao 为新西兰 ACC & CMC 双认证注册针灸师，具备扎实的中医药学术功底与丰富的临床诊疗经验。她毕业于新西兰中医学院（New Zealand College of Chinese Medicine），目前正在攻读中医药学硕士学位，致力于将深厚的学术理论与临床实践深度结合。',
+        '在临床中，Grace 精通针灸、推拿理筋与中药调理，尤为擅长肌骨系统各类痛症及内科杂病的精准诊断与高效调护。她始终恪守循证医疗标准，以热忱而专业的态度为患者提供高质量的个性化康复服务，致力于提升求诊者的生活质量与整体健康水平。'
+      ],
+      en: [
+        'Grace Gao is a passionate and results-driven Registered Acupuncturist with a solid academic foundation in Traditional Chinese Medicine and extensive clinical experience. She graduated from the New Zealand College of Chinese Medicine and is currently pursuing a Master’s degree in the same field, dedicated to integrating deep academic knowledge with clinical practice.',
+        'Holding ACC and CMC registrations in New Zealand, Grace has expertise in utilizing acupuncture, Tui Na, and herbal medicine, particularly skilled in effectively diagnosing and treating a wide range of musculoskeletal pain conditions and internal medical disorders. She is committed to providing the highest standard of evidence-based care to improve patient health outcomes and quality of life.'
+      ],
+      de: [
+        'Grace Gao ist eine leidenschaftliche und ergebnisorientierte registrierte Akupunkteurin mit fundiertem akademischem Wissen in Traditioneller Chinesischer Medizin und umfangreicher klinischer Erfahrung. Sie schloss ihr Studium am New Zealand College of Chinese Medicine ab und absolvierte derzeit ihr Masterstudium in demselben Fachbereich.',
+        'Mit ihrer ACC- und CMC-Zulassung in Neuseeland kombiniert Grace Akupunktur, Tui Na und Kräuterheilkunde. Sie ist besonders versiert in der Diagnose und Behandlung von Muskel-Skelett-Schmerzen sowie internistischen Erkrankungen und verschreibt sich höchsten evidenzbasierten Qualitätsstandards.'
+      ]
+    },
+    educationList: {
+      zh: [
+        { period: '硕士在读', degree: '中医药学硕士学位 (Master of TCM Candidate)', school: '新西兰中医学院 (NZCCM)' },
+        { period: '学士毕业', degree: '中医/针灸学士学位 (Bachelor of TCM / Acupuncture)', school: '新西兰中医学院 (NZCCM)' },
+        { period: '双执业认证', degree: '新西兰 ACC & CMC 注册认证针灸师', school: 'ACC & CMC New Zealand' }
+      ],
+      en: [
+        { period: 'Currently Pursuing', degree: 'Master’s Degree in Traditional Chinese Medicine', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
+        { period: 'Graduated', degree: 'Bachelor of Health Science / Acupuncture', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
+        { period: 'Accreditation', degree: 'ACC & CMC Registered Acupuncturist', school: 'ACC & CMC New Zealand' }
+      ],
+      de: [
+        { period: 'Laufend', degree: 'Masterstudium Traditionelle Chinesische Medizin', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
+        { period: 'Abschluss', degree: 'Bachelor of Health Science / Akupunktur', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
+        { period: 'Zulassung', degree: 'ACC & CMC Registrierte Akupunkteurin', school: 'ACC & CMC Neuseeland' }
+      ]
+    },
+    researchPoints: {
+      zh: [
+        '融合循证医学理念与深厚中医药理论，深耕中医药学术与临床深度融合。',
+        '精通针灸、推拿理筋与中药辨证施治，实现身心并调与多维调护。',
+        '专精于肌骨系统急性/慢性痛症、关节功能障碍及内科疑难杂病的精准诊疗。',
+        '持有新西兰 ACC & CMC 双权威注册资质，全力保障高质量高标准的患者康复成果。'
+      ],
+      en: [
+        'Dedicated to integrating deep academic knowledge of TCM with evidence-based clinical practice.',
+        'Expertise in combining acupuncture, Tui Na manual therapy, and Chinese herbal medicine.',
+        'Specialized in diagnosing and treating complex musculoskeletal pain and internal disorders.',
+        'Holds dual ACC & CMC registrations committed to delivering high-standard patient outcomes.'
+      ],
+      de: [
+        'Verbindung von vertieftem akademischen Wissen der TCM mit evidenzbasierter klinischer Praxis.',
+        'Expertise in Akupunktur, Tui Na manueller Therapie und chinesischer Kräuterheilkunde.',
+        'Spezialisiert auf Diagnose und Behandlung von Muskel-Skelett-Schmerzen und internistischen Beschwerden.',
+        'Doppelzulassung als ACC & CMC registrierte Behandlerin für beste Patientenergebnisse.'
+      ]
+    },
+    specialtiesTitle: {
+      zh: 'Specialties 临床专长',
+      en: 'Specialties',
+      de: 'Schwerpunkte'
+    },
+    specialties: {
+      zh: [
+        'Musculoskeletal Pain & Injury Rehabilitation 肌骨系统痛症与损伤康复',
+        'Acupuncture & Tui Na Manual Therapy 针灸与推拿理筋手法',
+        'Internal Medical Disorders & Herbal Care 内科杂病诊断与中药辨证调理',
+        'Evidence-Based Integrative Care 循证医疗与全方位身心健康管理',
+        'ACC & CMC Registered Services ACC & CMC 注册针灸理疗服务'
+      ],
+      en: [
+        'Musculoskeletal Pain Conditions & Injury Rehabilitation',
+        'Acupuncture & Tui Na Manual Therapy',
+        'Internal Medical Disorders & Herbal Conditioning',
+        'Evidence-Based Integrative Health Management',
+        'ACC & CMC Registered Acupuncture Services'
+      ],
+      de: [
+        'Muskel-Skelett-Schmerzen & Verletzungsrehabilitation',
+        'Akupunktur & Tui Na Manuelle Therapie',
+        'Internistische Erkrankungen & Kräuterheilkunde',
+        'Evidenzbasierte Ganzheitliche Gesundheitsversorgung',
+        'ACC & CMC Registrierte Akupunktur-Behandlungen'
+      ]
+    },
+    contactEmail: 'info@wellnessspring.co.nz'
   },
   {
     id: 'helene-li-yu',

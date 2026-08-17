@@ -7,10 +7,8 @@ export default function Practitioner() {
   const { language } = usePreferences() || { language: 'zh' }
   const lang = language === 'zh' ? 'zh' : language === 'de' ? 'de' : 'en'
 
-  // Filter team doctors list for the 2 specialists: Dr. Damen Qian & Catherine Wang
-  const teamDoctors = practitionersData.filter(
-    (doc) => doc.id === 'dr-damen-qian' || doc.id === 'catherine-wang'
-  )
+  // Filter team doctors list for specialists (excluding Helene who is featured in the Founder section)
+  const teamDoctors = practitionersData.filter((doc) => doc.id !== 'helene-li-yu')
 
   return (
     <section id="practitioner" className="bg-[#f0f4f9] py-16 md:py-24 dark:bg-slate-950 transition-colors duration-300">
@@ -119,7 +117,7 @@ export default function Practitioner() {
           </div>
         </div>
 
-        {/* 2. DOCTORS TEAM GRID (2 Doctors: Dr. Damen Qian & Catherine Wang) */}
+        {/* 2. DOCTORS TEAM GRID (3 Doctors: Dr. Damen Qian, Catherine Wang, Grace Gao) */}
         <div>
           <div className="text-center max-w-2xl mx-auto mb-10">
             <span className="text-emerald-700 dark:text-emerald-400 text-xs uppercase tracking-widest font-semibold bg-emerald-50 dark:bg-emerald-950/60 px-3.5 py-1 rounded-full border border-emerald-200 dark:border-emerald-800 inline-block mb-2">
@@ -130,7 +128,7 @@ export default function Practitioner() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {teamDoctors.map((doc) => (
               <Link
                 key={doc.id}
