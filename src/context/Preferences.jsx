@@ -223,6 +223,9 @@ const copy = {
   // Practitioner
   'Meet Our Practitioners': ['医师团队', 'Unser Ärzteteam'],
   'Meet the Practitioner': ['医师介绍', 'Unser Ärzteteam'],
+  'Founder of Wellness Spring': ['Wellness Spring 诊所创始人', 'Gründerin von Wellness Spring'],
+  'Founder & Lead Practitioner': ['诊所创始人 · 首席诊疗师', 'Gründerin & Leitende Behandlerin'],
+  'Medical Specialists': ['专家医师', 'Fachärzte & Spezialisten'],
   'Helene Li YU': ['Helene Li YU', 'Helene Li YU'],
   'Helene brings extensive expertise and compassion to her practice, with a holistic approach to care, integrating acupuncture, traditional Chinese medicine therapies, mind–body regulation, and AI-assisted health assessment.': [
     'Helene 以丰富的专业经验与关怀服务每位来访者，采用融合针灸、中医疗法、身心调节和 AI 辅助健康评估的整体护理方法。',
