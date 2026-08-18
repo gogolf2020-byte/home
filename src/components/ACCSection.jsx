@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
-import { usePreferences } from '../context/Preferences'
+import { useTranslation } from 'react-i18next'
 
 export default function ACCSection() {
-  const { language } = usePreferences()
+  const { t } = useTranslation()
 
   return (
     <section id="acc-treatment" className="scroll-mt-20 bg-white py-16 md:py-20 dark:bg-slate-900 border-y border-emerald-900/10 dark:border-slate-800">
@@ -11,66 +11,41 @@ export default function ACCSection() {
           {/* Header */}
           <div className="text-center mb-8">
             <span className="inline-block rounded-full bg-emerald-100 px-4 py-1.5 text-xs font-bold tracking-wider text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-300 mb-3">
-              ACC INJURY RECOVERY
+              {t('acc.tag')}
             </span>
-            <h2 className="text-3xl font-bold text-primary dark:text-emerald-400 md:text-4xl">
-              ACC Injury Recovery
+            <h2 className="text-3xl font-bold text-primary dark:text-emerald-300 md:text-4xl mb-3">
+              {t('acc.title')}
             </h2>
-            <p className="mt-2 text-lg font-semibold text-accent dark:text-emerald-300">
-              Treatment with an ACC-Registered Acupuncturist
+            <p className="text-lg font-semibold text-emerald-800 dark:text-emerald-400">
+              {t('acc.subtitle')}
             </p>
           </div>
 
-          {/* Core Copy */}
-          <p className="mx-auto max-w-3xl text-center text-base leading-8 text-slate-700 md:text-lg dark:text-slate-200 mb-8">
-            Recovering from an accident, sports injury, work injury or another ACC-covered injury? Wellness Spring provides personalised acupuncture and Chinese medicine treatment to support recovery, reduce injury-related symptoms, restore movement and function, and help you return to everyday activity.
+          {/* Description */}
+          <p className="text-base md:text-lg leading-8 text-slate-700 dark:text-slate-300 text-center mb-8 max-w-3xl mx-auto">
+            {t('acc.desc')}
           </p>
 
-          {/* Sub-card: Already Have an ACC Claim */}
-          <div className="mb-8 rounded-2xl bg-white p-6 shadow-sm dark:bg-slate-900 dark:border dark:border-slate-800">
-            <div className="flex items-start gap-4">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-lg font-bold text-primary dark:bg-emerald-950 dark:text-emerald-300">
-                ✓
-              </span>
-              <div>
-                <h3 className="text-lg font-bold text-primary dark:text-emerald-300 mb-1">
-                  Already have an ACC claim?
-                </h3>
-                <p className="text-sm font-medium text-slate-700 dark:text-slate-300 leading-6">
-                  If you already have an ACC-covered claim, you can self-refer for acupuncture treatment. Simply provide your ACC claim number when booking.
-                </p>
-              </div>
-            </div>
+          {/* Key Trust Highlights */}
+          <div className="flex flex-wrap justify-center gap-3 mb-8 text-xs font-semibold text-emerald-900 dark:text-emerald-300">
+            <span className="rounded-full bg-white dark:bg-slate-900 px-4 py-2 shadow-sm border border-emerald-200 dark:border-slate-700">
+              ✓ {t('acc.badgeAcupuncturist')}
+            </span>
+            <span className="rounded-full bg-white dark:bg-slate-900 px-4 py-2 shadow-sm border border-emerald-200 dark:border-slate-700">
+              ✓ {t('acc.badgePlan')}
+            </span>
+            <span className="rounded-full bg-white dark:bg-slate-900 px-4 py-2 shadow-sm border border-emerald-200 dark:border-slate-700">
+              ✓ {t('acc.badgeSupport')}
+            </span>
           </div>
 
-          {/* Treatment may include */}
-          <div className="mb-8 text-center">
-            <p className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
-              Treatment may include:
-            </p>
-            <p className="text-sm font-semibold text-emerald-900 dark:text-emerald-300 flex flex-wrap justify-center gap-2 md:gap-4">
-              <span>Acupuncture</span> · <span>Cupping</span> · <span>Gua Sha</span> · <span>Tuina</span> · <span>Individualised Recovery Support</span>
-            </p>
-          </div>
-
-          {/* ACC Funding Note */}
-          <div className="mb-8 rounded-xl bg-emerald-50/80 p-4 text-center text-xs font-medium text-slate-700 dark:bg-slate-900/60 dark:text-slate-300 dark:border dark:border-slate-800">
-            <span className="font-bold text-primary dark:text-emerald-400">ACC Funding:</span> ACC contributes towards eligible acupuncture treatment for covered injuries. A co-payment may apply.
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/acc-treatment#contact"
-              className="rounded-full bg-primary px-8 py-3.5 text-sm font-semibold text-white shadow-md hover:bg-secondary transition-all"
-            >
-              Book ACC Treatment
-            </Link>
+          {/* CTA Link to ACC Details Page */}
+          <div className="text-center">
             <Link
               to="/acc-treatment"
-              className="rounded-full border-2 border-primary px-8 py-3.5 text-sm font-semibold text-primary hover:bg-primary hover:text-white transition-all dark:border-emerald-400 dark:text-emerald-300 dark:hover:bg-emerald-900/50"
+              className="inline-block rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-white shadow-lg transition-all hover:bg-secondary hover:scale-105 dark:bg-emerald-600 dark:hover:bg-emerald-500"
             >
-              Learn About ACC Treatment
+              {t('acc.bookBtn')}
             </Link>
           </div>
         </div>

@@ -1,25 +1,29 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import logo from '../assets/98.jpg'
 import { usePreferences } from '../context/Preferences'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeHash, setActiveHash] = useState(window.location.hash || '')
-  const { language, setLanguage, theme, setTheme } = usePreferences()
+  const { language, setLanguage, theme, setTheme } = usePreferences() || {}
+  const { t, i18n } = useTranslation()
   const location = useLocation()
   const navigate = useNavigate()
 
+  const currentLang = i18n.language || language || 'zh'
+
   const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'ACC Treatment', href: '/acc-treatment' },
-    { label: 'AI Assessment', href: '#ai-assessment' },
-    { label: 'Practitioner', href: '#practitioner' },
-    { label: 'Testimonials', href: '#testimonials' },
-    { label: 'Faq', href: '#faq' },
-    { label: 'Contact', href: '#contact' },
+    { key: 'nav.home', href: '/' },
+    { key: 'nav.about', href: '#about' },
+    { key: 'nav.services', href: '#services' },
+    { key: 'nav.accTreatment', href: '/acc-treatment' },
+    { key: 'nav.aiAssessment', href: '#ai-assessment' },
+    { key: 'nav.practitioner', href: '#practitioner' },
+    { key: 'nav.testimonials', href: '#testimonials' },
+    { key: 'nav.faq', href: '#faq' },
+    { key: 'nav.contact', href: '#contact' },
   ]
 
   useEffect(() => {
@@ -48,45 +52,72 @@ export default function Header() {
     window.addEventListener('hashchange', handleHashChange)
 
     return () => {
-      window.removeEventListener('hashchange', handleHashChange)
       sections.forEach((section) => observer.unobserve(section))
+      window.removeEventListener('hashchange', handleHashChange)
     }
   }, [location.pathname])
 
   const handleNavClick = (e, item) => {
     setIsMenuOpen(false)
-    if (item.href === '/acc-treatment') {
-      return // React Router Link will handle navigate to /acc-treatment
-    }
     if (item.href === '/') {
-      if (location.pathname !== '/') {
-        navigate('/')
-      } else {
+      e.preventDefault()
+      if (location.pathname === '/') {
         window.scrollTo({ top: 0, behavior: 'smooth' })
+        window.history.pushState(null, '', '/')
+        setActiveHash('')
+      } else {
+        navigate('/')
       }
       return
     }
+
+    if (item.href === '/acc-treatment') {
+      return
+    }
+
     if (item.href.startsWith('#')) {
-      if (location.pathname !== '/') {
-        e.preventDefault()
+      e.preventDefault()
+      const targetId = item.href.slice(1)
+      if (location.pathname === '/') {
+        const elem = document.getElementById(targetId)
+        if (elem) {
+          elem.scrollIntoView({ behavior: 'smooth' })
+          window.history.pushState(null, '', item.href)
+          setActiveHash(item.href)
+        }
+      } else {
         navigate(`/${item.href}`)
       }
     }
   }
 
+  const handleLanguageChange = (newLang) => {
+    if (setLanguage) setLanguage(newLang)
+    i18n.changeLanguage(newLang)
+  }
+
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-emerald-900/5 transition-colors dark:bg-slate-900/95 dark:border-slate-800 dark:shadow-black/30">
-      <div className="container">
-        <div className="flex justify-between items-center py-3.5">
-          <div className="flex items-center shrink-0">
-            <Link to="/" className="flex items-center gap-2 group">
-              <img src={logo} alt="Wellness Spring" className="h-10 w-10 rounded-full object-cover ring-2 ring-emerald-600/20 group-hover:ring-emerald-600/40 transition-all" />
-              <span className="font-bold text-lg text-emerald-950 dark:text-emerald-100 tracking-tight whitespace-nowrap">Wellness Spring</span>
-            </Link>
-          </div>
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md dark:bg-slate-900/95 border-b border-emerald-900/10 dark:border-slate-800 transition-colors duration-300">
+      <div className="container mx-auto px-4">
+        <div className="flex h-16 items-center justify-between">
+          {/* Logo */}
+          <Link
+            to="/"
+            onClick={(e) => handleNavClick(e, { href: '/' })}
+            className="flex items-center gap-3 group"
+          >
+            <img
+              src={logo}
+              alt="Wellness Spring logo"
+              className="h-10 w-10 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform"
+            />
+            <span className="text-lg font-bold text-primary dark:text-emerald-300 tracking-tight block leading-tight">
+              Wellness Spring
+            </span>
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="mx-2 hidden gap-1 xl:gap-2 lg:flex items-center shrink">
+          <nav className="hidden md:flex items-center gap-1 lg:gap-1.5 xl:gap-2 mx-auto">
             {navItems.map((item) => {
               const isAccRoute = item.href === '/acc-treatment' && location.pathname === '/acc-treatment'
               const isHomeRoute = item.href === '/' && location.pathname === '/' && (!activeHash || activeHash === '#' || activeHash === '')
@@ -96,48 +127,49 @@ export default function Header() {
               if (item.href === '/acc-treatment' || item.href === '/') {
                 return (
                   <Link
-                    key={item.label}
+                    key={item.key}
                     to={item.href}
                     onClick={(e) => handleNavClick(e, item)}
-                    className={`px-2.5 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm whitespace-nowrap transition-all duration-200 ${
+                    className={`px-2.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold transition-all whitespace-nowrap ${
                       isActive
-                        ? 'bg-emerald-100/90 text-emerald-900 font-bold ring-1 ring-emerald-600/30 shadow-xs dark:bg-emerald-950/80 dark:text-emerald-300 dark:ring-emerald-500/40'
-                        : 'text-slate-600 hover:text-emerald-700 hover:bg-emerald-50/70 font-medium dark:text-slate-300 dark:hover:text-emerald-300 dark:hover:bg-slate-800/60'
+                        ? 'bg-emerald-700 text-white shadow-sm dark:bg-emerald-500 dark:text-slate-950'
+                        : 'text-slate-700 hover:text-emerald-800 hover:bg-emerald-50/60 dark:text-slate-200 dark:hover:text-emerald-300 dark:hover:bg-slate-800'
                     }`}
                   >
-                    {item.label}
+                    {t(item.key)}
                   </Link>
                 )
               }
 
               return (
                 <a
-                  key={item.label}
+                  key={item.key}
                   href={location.pathname === '/' ? item.href : `/${item.href}`}
-                  onClick={(e) => handleNavClick(e, item)}
-                  className={`px-2.5 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm whitespace-nowrap transition-all duration-200 ${
+                  className={`px-2.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold transition-all whitespace-nowrap ${
                     isActive
-                      ? 'bg-emerald-100/90 text-emerald-900 font-bold ring-1 ring-emerald-600/30 shadow-xs dark:bg-emerald-950/80 dark:text-emerald-300 dark:ring-emerald-500/40'
-                      : 'text-slate-600 hover:text-emerald-700 hover:bg-emerald-50/70 font-medium dark:text-slate-300 dark:hover:text-emerald-300 dark:hover:bg-slate-800/60'
+                      ? 'bg-emerald-700 text-white shadow-sm dark:bg-emerald-500 dark:text-slate-950'
+                      : 'text-slate-700 hover:text-emerald-800 hover:bg-emerald-50/60 dark:text-slate-200 dark:hover:text-emerald-300 dark:hover:bg-slate-800'
                   }`}
+                  onClick={(e) => handleNavClick(e, item)}
                 >
-                  {item.label}
+                  {t(item.key)}
                 </a>
               )
             })}
           </nav>
 
-          <div className="ml-auto hidden items-center gap-3 md:flex">
+          {/* Controls: Language & Theme Toggle */}
+          <div className="hidden md:flex items-center gap-3 ml-4 lg:ml-6 pl-3 border-l border-emerald-900/10 dark:border-slate-800 shrink-0">
             <label className="sr-only" htmlFor="language">Language</label>
             <div className="relative flex items-center">
               <select
                 id="language"
-                value={language}
-                onChange={(event) => setLanguage(event.target.value)}
+                value={currentLang}
+                onChange={(event) => handleLanguageChange(event.target.value)}
                 className="appearance-none rounded-full border border-emerald-900/20 bg-transparent pl-3.5 pr-8 py-1.5 text-xs font-semibold text-emerald-900 outline-none transition focus:ring-2 focus:ring-emerald-600 dark:border-slate-700 dark:text-slate-200 dark:bg-slate-800/50 cursor-pointer"
               >
-                <option value="en" className="dark:bg-slate-900">EN</option>
                 <option value="zh" className="dark:bg-slate-900">中文</option>
+                <option value="en" className="dark:bg-slate-900">EN</option>
                 <option value="de" className="dark:bg-slate-900">DE</option>
               </select>
               <svg className="pointer-events-none absolute right-2.5 h-3.5 w-3.5 text-emerald-900/70 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -169,18 +201,8 @@ export default function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Navigation Menu"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
-              />
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
             </svg>
           </button>
         </div>
@@ -197,7 +219,7 @@ export default function Header() {
               if (item.href === '/acc-treatment' || item.href === '/') {
                 return (
                   <Link
-                    key={item.label}
+                    key={item.key}
                     to={item.href}
                     onClick={(e) => handleNavClick(e, item)}
                     className={`px-3 py-2 rounded-lg text-sm transition-colors ${
@@ -206,14 +228,14 @@ export default function Header() {
                         : 'text-slate-700 hover:bg-emerald-50/60 dark:text-slate-200 dark:hover:bg-slate-800'
                     }`}
                   >
-                    {item.label}
+                    {t(item.key)}
                   </Link>
                 )
               }
 
               return (
                 <a
-                  key={item.label}
+                  key={item.key}
                   href={location.pathname === '/' ? item.href : `/${item.href}`}
                   className={`px-3 py-2 rounded-lg text-sm transition-colors ${
                     isActive
@@ -222,27 +244,20 @@ export default function Header() {
                   }`}
                   onClick={(e) => handleNavClick(e, item)}
                 >
-                  {item.label}
+                  {t(item.key)}
                 </a>
               )
             })}
             <div className="flex items-center gap-3 pt-3 px-3 border-t border-slate-100 dark:border-slate-800 mt-2">
               <select
-                value={language}
-                onChange={(event) => setLanguage(event.target.value)}
-                className="rounded-lg border border-slate-200 dark:border-slate-700 bg-transparent px-2.5 py-1 text-xs font-medium text-slate-800 dark:text-slate-200 dark:bg-slate-800"
+                value={currentLang}
+                onChange={(e) => handleLanguageChange(e.target.value)}
+                className="rounded-lg border border-slate-200 dark:border-slate-700 bg-transparent px-3 py-1 text-xs font-semibold text-slate-800 dark:text-slate-200"
               >
-                <option value="en">English</option>
-                <option value="zh">中文</option>
-                <option value="de">Deutsch</option>
+                <option value="zh" className="dark:bg-slate-900">中文</option>
+                <option value="en" className="dark:bg-slate-900">EN</option>
+                <option value="de" className="dark:bg-slate-900">DE</option>
               </select>
-              <button
-                type="button"
-                onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-                className="rounded-lg border border-slate-200 dark:border-slate-700 px-3 py-1 text-xs font-medium text-slate-800 dark:text-amber-300 dark:bg-slate-800"
-              >
-                {theme === 'light' ? '☾ Dark' : '☀ Light'}
-              </button>
             </div>
           </nav>
         )}
@@ -250,4 +265,3 @@ export default function Header() {
     </header>
   )
 }
-

@@ -34,7 +34,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm opacity-75">
               <li>📞 021 101 8892</li>
               <li>027 372 0262</li>
-              <li>📧 info@wellness-spring.co.nz</li>
+              <li>📧 wellness.spring@hotmail.com</li>
             </ul>
           </div>
 

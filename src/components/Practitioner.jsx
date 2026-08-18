@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { usePreferences } from '../context/Preferences'
 import { practitionersData } from '../data/practitionersData'
 import founderPhoto from '../assets/22.jpg'
 
 export default function Practitioner() {
-  const { language } = usePreferences() || { language: 'zh' }
-  const lang = language === 'zh' ? 'zh' : language === 'de' ? 'de' : 'en'
+  const { t, i18n } = useTranslation()
+  const { language } = usePreferences() || {}
+  const activeLang = i18n.language || language || 'zh'
+  const lang = activeLang === 'zh' ? 'zh' : activeLang === 'de' ? 'de' : 'en'
 
   // Filter team doctors list for specialists (excluding Helene who is featured in the Founder section)
   const teamDoctors = practitionersData.filter((doc) => doc.id !== 'helene-li-yu')

@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { usePreferences } from '../context/Preferences'
 import Contact from './Contact'
 
 export default function ACCTreatmentPage() {
-  const { language } = usePreferences()
+  const { t, i18n } = useTranslation()
+  const { language } = usePreferences() || {}
+  const activeLang = i18n.language || language || 'zh'
   const [openFaqIndex, setOpenFaqIndex] = useState(0)
   const navigate = useNavigate()
 

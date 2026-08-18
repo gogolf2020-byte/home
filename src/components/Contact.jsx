@@ -1,11 +1,9 @@
 import { useState } from 'react'
-import { usePreferences } from '../context/Preferences'
+import { useTranslation } from 'react-i18next'
 import qrCode from '../assets/logo1.jpg'
 
 export default function Contact({ title, subtitle }) {
-  const { language } = usePreferences() || { language: 'zh' }
-  const lang = language === 'zh' ? 'zh' : language === 'de' ? 'de' : 'en'
-
+  const { t } = useTranslation()
   const [method, setMethod] = useState('email') // 'email' | 'txt'
   const [formData, setFormData] = useState({
     name: '',
@@ -33,25 +31,25 @@ export default function Contact({ title, subtitle }) {
   const validate = () => {
     const newErrors = {}
     if (!formData.name.trim()) {
-      newErrors.name = 'Please enter your name'
+      newErrors.name = t('booking.fillDetails')
     }
     if (method === 'email') {
       if (!formData.email.trim()) {
-        newErrors.email = 'Please enter your email'
+        newErrors.email = t('contact.email')
       } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
         newErrors.email = 'Please enter a valid email address'
       }
     } else {
       if (!formData.phone.trim()) {
-        newErrors.phone = 'Please enter your phone number'
+        newErrors.phone = t('contact.phone')
       }
     }
     // Conditional validation for Home Visit Address
     if (formData.needHomeVisit && !formData.address.trim()) {
-      newErrors.address = lang === 'zh' ? '请填写地址' : lang === 'de' ? 'Bitte Adresse eingeben' : 'Please enter address'
+      newErrors.address = t('booking.addressError')
     }
     if (!formData.message.trim()) {
-      newErrors.message = 'Please enter your message'
+      newErrors.message = t('contact.message')
     }
     return newErrors
   }
@@ -73,7 +71,7 @@ export default function Contact({ title, subtitle }) {
         const mailtoBody = encodeURIComponent(
           `Name: ${formData.name}\nEmail: ${formData.email}${homeVisitInfo}\n\nMessage:\n${formData.message}`
         )
-        const mailtoUrl = `mailto:info@wellness-spring.co.nz?subject=${mailtoSubject}&body=${mailtoBody}`
+        const mailtoUrl = `mailto:wellness.spring@hotmail.com?subject=${mailtoSubject}&body=${mailtoBody}`
         window.location.href = mailtoUrl
       } else {
         const smsBody = encodeURIComponent(
@@ -99,11 +97,11 @@ export default function Contact({ title, subtitle }) {
     <section id="contact" className="bg-gradient-to-r from-primary to-secondary text-white py-12 md:py-16">
       <div className="container max-w-4xl">
         <h2 className="text-4xl font-bold mb-4 text-center">
-          {title || 'Book an Appointment'}
+          {title || t('contact.title')}
         </h2>
         
         <p className="text-lg text-center mb-12 opacity-90 max-w-2xl mx-auto">
-          {subtitle || 'Ready to take the next step in your health journey? Contact Wellness Spring to discuss your needs and book an appointment.'}
+          {subtitle || t('contact.subtitle')}
         </p>
 
         <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-10 shadow-xl border border-white/10">
@@ -131,7 +129,7 @@ export default function Contact({ title, subtitle }) {
                   <h4 className="font-semibold mb-1 flex items-center gap-2 text-emerald-200">
                     <span>📧</span> Email
                   </h4>
-                  <p className="text-base font-medium break-words">info@wellness-spring.co.nz</p>
+                  <p className="text-base font-medium break-words">wellness.spring@hotmail.com</p>
                 </div>
 
                 <div>
@@ -145,7 +143,7 @@ export default function Contact({ title, subtitle }) {
 
             {/* Quick Contact Form */}
             <div>
-              <h3 className="text-2xl font-bold mb-4">Send a Message</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('contact.title')}</h3>
               
               {/* Send Method Selector */}
               <div className="flex bg-black/20 p-1 rounded-xl mb-4 text-xs font-semibold">
@@ -158,7 +156,7 @@ export default function Contact({ title, subtitle }) {
                       : 'text-white/80 hover:text-white hover:bg-white/10'
                   }`}
                 >
-                  <span>📧</span> By Email
+                  <span>{t('contact.byEmail')}</span>
                 </button>
                 <button
                   type="button"
@@ -169,7 +167,7 @@ export default function Contact({ title, subtitle }) {
                       : 'text-white/80 hover:text-white hover:bg-white/10'
                   }`}
                 >
-                  <span>💬</span> By Txt (SMS)
+                  <span>{t('contact.byTxt')}</span>
                 </button>
               </div>
 
@@ -182,7 +180,7 @@ export default function Contact({ title, subtitle }) {
                   <p className="text-sm text-emerald-100/90 leading-relaxed">
                     {submittedMethod === 'email' ? (
                       <>
-                        Your email client has been launched with a pre-filled draft to <span className="font-semibold text-white">info@wellness-spring.co.nz</span>.
+                        Your email client has been launched with a pre-filled draft to <span className="font-semibold text-white">wellness.spring@hotmail.com</span>.
                       </>
                     ) : (
                       <>
@@ -206,7 +204,7 @@ export default function Contact({ title, subtitle }) {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="Your Name"
+                      placeholder={t('contact.name')}
                       className={`w-full px-3.5 py-2 rounded-lg bg-white/20 text-white placeholder-emerald-100/60 focus:outline-none focus:ring-2 focus:ring-white transition ${
                         errors.name ? 'ring-2 ring-red-300 bg-red-900/30' : ''
                       }`}
@@ -223,7 +221,7 @@ export default function Contact({ title, subtitle }) {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="Your Email"
+                        placeholder={t('contact.email')}
                         className={`w-full px-3.5 py-2 rounded-lg bg-white/20 text-white placeholder-emerald-100/60 focus:outline-none focus:ring-2 focus:ring-white transition ${
                           errors.email ? 'ring-2 ring-red-300 bg-red-900/30' : ''
                         }`}
@@ -239,7 +237,7 @@ export default function Contact({ title, subtitle }) {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="Your Mobile Phone (for Txt/SMS)"
+                        placeholder={t('contact.phone')}
                         className={`w-full px-3.5 py-2 rounded-lg bg-white/20 text-white placeholder-emerald-100/60 focus:outline-none focus:ring-2 focus:ring-white transition ${
                           errors.phone ? 'ring-2 ring-red-300 bg-red-900/30' : ''
                         }`}
@@ -266,7 +264,7 @@ export default function Contact({ title, subtitle }) {
                         }}
                         className="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 accent-emerald-500 cursor-pointer"
                       />
-                      <span>{lang === 'zh' ? '上门服务' : lang === 'de' ? 'Hausbesuch' : 'Home Visit'}</span>
+                      <span>🚗 {t('booking.homeVisit')}</span>
                     </label>
 
                     {/* Conditional Address Field with Red Border Validation */}
@@ -277,13 +275,7 @@ export default function Contact({ title, subtitle }) {
                           name="address"
                           value={formData.address}
                           onChange={handleInputChange}
-                          placeholder={
-                            lang === 'zh'
-                              ? '请填写您的地址'
-                              : lang === 'de'
-                              ? 'Bitte Adresse eingeben'
-                              : 'Your Address'
-                          }
+                          placeholder={t('booking.addressPlaceholder')}
                           className={`w-full px-3.5 py-2 rounded-lg text-xs transition focus:outline-none ${
                             errors.address
                               ? 'border-2 border-red-400 ring-2 ring-red-400 bg-red-900/50 text-white placeholder-red-200'
@@ -293,13 +285,7 @@ export default function Contact({ title, subtitle }) {
                         {errors.address && (
                           <p className="text-xs font-semibold text-red-200 mt-1 flex items-center gap-1">
                             <span>⚠️</span>
-                            <span>
-                              {lang === 'zh'
-                                ? '请填写地址'
-                                : lang === 'de'
-                                ? 'Bitte Adresse eingeben'
-                                : 'Please enter address'}
-                            </span>
+                            <span>{errors.address}</span>
                           </p>
                         )}
                       </div>
@@ -311,7 +297,7 @@ export default function Contact({ title, subtitle }) {
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Your Message / Symptoms"
+                      placeholder={t('contact.message')}
                       rows="3"
                       className={`w-full px-3.5 py-2 rounded-lg bg-white/20 text-white placeholder-emerald-100/60 focus:outline-none focus:ring-2 focus:ring-white resize-none transition ${
                         errors.message ? 'ring-2 ring-red-300 bg-red-900/30' : ''
@@ -336,7 +322,7 @@ export default function Contact({ title, subtitle }) {
                         <span>Preparing Message...</span>
                       </>
                     ) : (
-                      <span>Send Message</span>
+                      <span>{t('contact.sendBtn')}</span>
                     )}
                   </button>
                 </form>
@@ -345,7 +331,7 @@ export default function Contact({ title, subtitle }) {
 
             <div className="order-last flex flex-col items-center justify-center text-center md:order-none">
               <img src={qrCode} alt="Wellness Spring WeChat QR code" className="h-36 w-36 rounded-xl bg-white p-2 shadow-md" />
-              <p className="mt-3 text-sm font-medium">Scan to connect via WeChat</p>
+              <p className="mt-3 text-sm font-medium">{t('contact.scanWeChat')}</p>
             </div>
           </div>
         </div>
