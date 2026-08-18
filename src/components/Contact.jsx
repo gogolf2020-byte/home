@@ -1,12 +1,18 @@
 import { useState } from 'react'
+import { usePreferences } from '../context/Preferences'
 import qrCode from '../assets/logo1.jpg'
 
 export default function Contact({ title, subtitle }) {
+  const { language } = usePreferences() || { language: 'zh' }
+  const lang = language === 'zh' ? 'zh' : language === 'de' ? 'de' : 'en'
+
   const [method, setMethod] = useState('email') // 'email' | 'txt'
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
+    needHomeVisit: false,
+    address: '',
     message: '',
   })
   const [errors, setErrors] = useState({})
@@ -15,8 +21,10 @@ export default function Contact({ title, subtitle }) {
   const [submittedMethod, setSubmittedMethod] = useState('')
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
+    const { name, value, type, checked } = e.target
+    const val = type === 'checkbox' ? checked : value
+
+    setFormData((prev) => ({ ...prev, [name]: val }))
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: '' }))
     }
@@ -38,6 +46,10 @@ export default function Contact({ title, subtitle }) {
         newErrors.phone = 'Please enter your phone number'
       }
     }
+    // Conditional validation for Home Visit Address
+    if (formData.needHomeVisit && !formData.address.trim()) {
+      newErrors.address = lang === 'zh' ? '请填写地址' : lang === 'de' ? 'Bitte Adresse eingeben' : 'Please enter address'
+    }
     if (!formData.message.trim()) {
       newErrors.message = 'Please enter your message'
     }
@@ -55,16 +67,17 @@ export default function Contact({ title, subtitle }) {
     setIsSubmitting(true)
 
     setTimeout(() => {
+      const homeVisitInfo = formData.needHomeVisit ? `\n[Home Visit Requested - Address: ${formData.address}]` : ''
       if (method === 'email') {
         const mailtoSubject = encodeURIComponent(`Message from ${formData.name}`)
         const mailtoBody = encodeURIComponent(
-          `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+          `Name: ${formData.name}\nEmail: ${formData.email}${homeVisitInfo}\n\nMessage:\n${formData.message}`
         )
         const mailtoUrl = `mailto:info@wellness-spring.co.nz?subject=${mailtoSubject}&body=${mailtoBody}`
         window.location.href = mailtoUrl
       } else {
         const smsBody = encodeURIComponent(
-          `Hi Wellness Spring, message from ${formData.name} (${formData.phone}): ${formData.message}`
+          `Hi Wellness Spring, message from ${formData.name} (${formData.phone})${homeVisitInfo}: ${formData.message}`
         )
         const smsUrl = `sms:+64211018892?body=${smsBody}`
         window.location.href = smsUrl
@@ -78,7 +91,7 @@ export default function Contact({ title, subtitle }) {
 
   const handleReset = () => {
     setSubmitted(false)
-    setFormData({ name: '', email: '', phone: '', message: '' })
+    setFormData({ name: '', email: '', phone: '', needHomeVisit: false, address: '', message: '' })
     setErrors({})
   }
 
@@ -237,13 +250,69 @@ export default function Contact({ title, subtitle }) {
                     </div>
                   )}
 
+                  {/* Home Visit Checkbox Selector */}
+                  <div className="bg-black/20 p-2.5 rounded-lg border border-white/10">
+                    <label className="flex items-center gap-2 cursor-pointer text-xs font-semibold text-white">
+                      <input
+                        type="checkbox"
+                        name="needHomeVisit"
+                        checked={formData.needHomeVisit}
+                        onChange={(e) => {
+                          handleInputChange(e)
+                          if (!e.target.checked) {
+                            setFormData((prev) => ({ ...prev, address: '' }))
+                            setErrors((prev) => ({ ...prev, address: '' }))
+                          }
+                        }}
+                        className="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500 accent-emerald-500 cursor-pointer"
+                      />
+                      <span>{lang === 'zh' ? '上门服务' : lang === 'de' ? 'Hausbesuch' : 'Home Visit'}</span>
+                    </label>
+
+                    {/* Conditional Address Field with Red Border Validation */}
+                    {formData.needHomeVisit && (
+                      <div className="mt-2 pt-2 border-t border-white/10 animate-fadeIn">
+                        <input
+                          type="text"
+                          name="address"
+                          value={formData.address}
+                          onChange={handleInputChange}
+                          placeholder={
+                            lang === 'zh'
+                              ? '请填写您的地址'
+                              : lang === 'de'
+                              ? 'Bitte Adresse eingeben'
+                              : 'Your Address'
+                          }
+                          className={`w-full px-3.5 py-2 rounded-lg text-xs transition focus:outline-none ${
+                            errors.address
+                              ? 'border-2 border-red-400 ring-2 ring-red-400 bg-red-900/50 text-white placeholder-red-200'
+                              : 'bg-white/20 text-white placeholder-emerald-100/60 focus:ring-2 focus:ring-white'
+                          }`}
+                        />
+                        {errors.address && (
+                          <p className="text-xs font-semibold text-red-200 mt-1 flex items-center gap-1">
+                            <span>⚠️</span>
+                            <span>
+                              {lang === 'zh'
+                                ? '请填写地址'
+                                : lang === 'de'
+                                ? 'Bitte Adresse eingeben'
+                                : 'Please enter address'}
+                            </span>
+                          </p>
+                        )}
+                      </div>
+                    )}
+                  </div>
+
                   <div>
                     <textarea
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Your Message"
-                      rows="4"
+                      placeholder="Your Message / Symptoms"
+                      rows="3"
                       className={`w-full px-3.5 py-2 rounded-lg bg-white/20 text-white placeholder-emerald-100/60 focus:outline-none focus:ring-2 focus:ring-white resize-none transition ${
                         errors.message ? 'ring-2 ring-red-300 bg-red-900/30' : ''
                       }`}
@@ -284,4 +353,3 @@ export default function Contact({ title, subtitle }) {
     </section>
   )
 }
-

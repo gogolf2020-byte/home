@@ -12,9 +12,12 @@ export default function BookingModal({ isOpen, onClose, preselectedDoctor }) {
     email: '',
     date: '',
     time: '10:00 AM',
+    needHomeVisit: false,
+    address: '',
     notes: ''
   })
 
+  const [errors, setErrors] = useState({})
   const [submitted, setSubmitted] = useState(false)
 
   useEffect(() => {
@@ -30,6 +33,16 @@ export default function BookingModal({ isOpen, onClose, preselectedDoctor }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    // Validate Home Visit Address
+    if (formData.needHomeVisit && !formData.address.trim()) {
+      setErrors((prev) => ({
+        ...prev,
+        address: 'Address is required for Home Visit'
+      }))
+      return
+    }
+
     setSubmitted(true)
     setTimeout(() => {
       setSubmitted(false)
@@ -39,7 +52,7 @@ export default function BookingModal({ isOpen, onClose, preselectedDoctor }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity">
-      <div className="relative w-full max-w-lg bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-800 p-6 md:p-8 overflow-hidden">
+      <div className="relative w-full max-w-lg bg-white dark:bg-slate-900 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-800 p-6 md:p-8 overflow-hidden max-h-[90vh] overflow-y-auto">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -57,13 +70,18 @@ export default function BookingModal({ isOpen, onClose, preselectedDoctor }) {
             <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
               {lang === 'zh' ? '预约提交成功！' : lang === 'de' ? 'Terminanfrage gesendet!' : 'Appointment Request Sent!'}
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm max-w-xs mx-auto">
+            <p className="text-slate-600 dark:text-slate-400 text-sm max-w-xs mx-auto mb-2">
               {lang === 'zh'
                 ? `感谢您的预约！我们的诊疗团队将尽快联系您确认与 ${formData.doctor} 的就诊时间。`
                 : lang === 'de'
                 ? `Vielen Dank! Unser Team wird Sie in Kürze kontaktieren, um Ihren Termin mit ${formData.doctor} zu bestätigen.`
                 : `Thank you! Our clinic team will reach out shortly to confirm your appointment with ${formData.doctor}.`}
             </p>
+            {formData.needHomeVisit && (
+              <span className="inline-block text-xs font-semibold text-emerald-800 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
+                🚗 {lang === 'zh' ? `已选择上门服务：${formData.address}` : `Home visit requested: ${formData.address}`}
+              </span>
+            )}
           </div>
         ) : (
           <div>
@@ -93,6 +111,86 @@ export default function BookingModal({ isOpen, onClose, preselectedDoctor }) {
                   className="w-full px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 font-medium text-sm focus:outline-none"
                 />
               </div>
+
+              {/* 1. Home Visit Option Selection */}
+              <div>
+                <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                  {lang === 'zh' ? '上门服务' : lang === 'de' ? 'Hausbesuch' : 'Home Visit'}
+                </label>
+                <div className="grid grid-cols-2 gap-2 p-1 bg-slate-100 dark:bg-slate-800/80 rounded-xl">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setFormData({ ...formData, needHomeVisit: false, address: '' })
+                      setErrors({ ...errors, address: '' })
+                    }}
+                    className={`py-2 px-3 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 ${
+                      !formData.needHomeVisit
+                        ? 'bg-white dark:bg-slate-700 text-emerald-800 dark:text-emerald-300 shadow-sm border border-slate-200 dark:border-slate-600'
+                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-800'
+                    }`}
+                  >
+                    <span>{lang === 'zh' ? '否' : lang === 'de' ? 'Nein' : 'No'}</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setFormData({ ...formData, needHomeVisit: true })
+                    }}
+                    className={`py-2 px-3 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1.5 ${
+                      formData.needHomeVisit
+                        ? 'bg-emerald-700 text-white shadow-md font-extrabold'
+                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-800'
+                    }`}
+                  >
+                    <span>{lang === 'zh' ? '是' : lang === 'de' ? 'Ja' : 'Yes'}</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* 2. Address Input with Red Border Validation */}
+              {formData.needHomeVisit && (
+                <div className="transition-all duration-300">
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                    {lang === 'zh' ? '地址' : lang === 'de' ? 'Adresse' : 'Address'}
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.address}
+                    onChange={(e) => {
+                      setFormData({ ...formData, address: e.target.value })
+                      if (errors.address && e.target.value.trim()) {
+                        setErrors({ ...errors, address: '' })
+                      }
+                    }}
+                    placeholder={
+                      lang === 'zh'
+                        ? '请填写您的详细地址...'
+                        : lang === 'de'
+                        ? 'Bitte geben Sie Ihre Adresse ein...'
+                        : 'Please enter your address...'
+                    }
+                    className={`w-full px-4 py-2.5 rounded-xl text-sm focus:outline-none transition-all ${
+                      errors.address
+                        ? 'border-2 border-red-500 ring-2 ring-red-500/30 bg-red-50 dark:bg-red-950/40 text-red-900 dark:text-red-200 placeholder-red-400'
+                        : 'bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-emerald-500'
+                    }`}
+                  />
+                  {errors.address && (
+                    <p className="text-xs font-semibold text-red-600 dark:text-red-400 mt-1 flex items-center gap-1">
+                      <span>⚠️</span>
+                      <span>
+                        {lang === 'zh'
+                          ? '请填写地址'
+                          : lang === 'de'
+                          ? 'Bitte Adresse eingeben'
+                          : 'Please enter address'}
+                      </span>
+                    </p>
+                  )}
+                </div>
+              )}
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
