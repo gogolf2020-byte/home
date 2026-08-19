@@ -21,7 +21,6 @@ export default function Header() {
     { key: 'nav.accTreatment', href: '/services/acc-treatment', isRoute: true, icon: '🏥' },
     { key: 'nav.mobileCare', href: '/services/mobile-care', isRoute: true, icon: '🚗' },
     { key: 'nav.aiAssessment', href: '#ai-assessment', isRoute: false, icon: '🤖' },
-    { key: 'nav.servicesOverview', href: '#services', isRoute: false, icon: '📋' },
   ]
 
   const navItems = [
