@@ -172,6 +172,8 @@ export default {
     scanWeChat: '微信扫码联系我们'
   },
   music: {
+    title: '艾泉疗愈之音',
+    tagline: '聆听 · 放松 · 修复',
     tooltip: '🎵 点击播放舒缓背景音乐',
     closeTooltip: '关闭提示',
     play: '播放音乐',

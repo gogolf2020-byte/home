@@ -171,6 +171,8 @@ export default {
     scanWeChat: 'WeChat Scannen'
   },
   music: {
+    title: 'The Wellness Spring Sound',
+    tagline: 'Zuhören · Entspannen · Regenerieren',
     tooltip: '🎵 Klicken für Entspannungsmusik',
     closeTooltip: 'Schließen',
     play: 'Musik Abspielen',

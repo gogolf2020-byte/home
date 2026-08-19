@@ -16,19 +16,9 @@ export default function MobileCareSection() {
           
           {/* Brand Header */}
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 dark:bg-emerald-950/80 px-4 py-1.5 border border-emerald-200 dark:border-emerald-800 text-emerald-900 dark:text-emerald-300 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm">
-              <span>✨</span>
-              <span>{t('mobileCare.brandTag')}</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary dark:text-emerald-300 mb-3">
-              {t('mobileCare.brandTitle')}
-            </h2>
-            <p className="text-lg font-semibold text-emerald-700 dark:text-emerald-400 mb-3 italic">
-              "{t('mobileCare.tagline')}"
-            </p>
-            <h3 className="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary dark:text-emerald-300 mb-4">
               {t('mobileCare.title')}
-            </h3>
+            </h2>
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
               {t('mobileCare.subtitle')}
             </p>

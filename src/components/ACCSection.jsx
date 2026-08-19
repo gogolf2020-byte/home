@@ -10,9 +10,6 @@ export default function ACCSection() {
         <div className="mx-auto max-w-4xl rounded-[2.5rem] bg-[#eef4ef] p-8 md:p-12 dark:bg-slate-800/90 dark:border dark:border-slate-700 shadow-lg">
           {/* Header */}
           <div className="text-center mb-8">
-            <span className="inline-block rounded-full bg-emerald-100 px-4 py-1.5 text-xs font-bold tracking-wider text-emerald-900 dark:bg-emerald-950/80 dark:text-emerald-300 mb-3">
-              {t('acc.tag')}
-            </span>
             <h2 className="text-3xl font-bold text-primary dark:text-emerald-300 md:text-4xl mb-3">
               {t('acc.title')}
             </h2>

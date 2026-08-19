@@ -1,10 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
-import { usePreferences } from '../context/Preferences'
+import { useTranslation } from 'react-i18next'
 import logo from '../assets/98.jpg'
 
 export default function FloatingMusicPlayer() {
-  const { language } = usePreferences() || { language: 'zh' }
-  const lang = language === 'zh' ? 'zh' : language === 'de' ? 'de' : 'en'
+  const { t } = useTranslation()
 
   const AUDIO_SRC = 'https://www.buddhanet.net/filelib/mp3/metta.mp3'
   const audioRef = useRef(null)
@@ -165,16 +164,12 @@ export default function FloatingMusicPlayer() {
           onMouseDown={(e) => e.stopPropagation()}
           onTouchStart={(e) => e.stopPropagation()}
           onClick={togglePlay}
-          className="absolute left-16 top-1/2 -translate-y-1/2 whitespace-nowrap bg-emerald-900/95 text-white text-xs font-semibold px-3.5 py-2 rounded-2xl shadow-2xl backdrop-blur-md border border-emerald-400/50 flex items-center gap-2 animate-bounce pointer-events-auto cursor-pointer"
+          className="absolute left-16 top-1/2 -translate-y-1/2 whitespace-nowrap bg-emerald-950/95 text-white text-xs font-semibold px-4 py-2.5 rounded-2xl shadow-2xl backdrop-blur-md border border-emerald-400/50 flex items-center gap-2.5 animate-bounce pointer-events-auto cursor-pointer"
         >
-          <span>🎵</span>
-          <span>
-            {lang === 'zh'
-              ? '点击播放舒缓背景音乐'
-              : lang === 'de'
-              ? 'Klicken für Entspannungsmusik'
-              : 'Click to play healing music'}
-          </span>
+          <div className="flex flex-col text-left leading-tight">
+            <span className="font-bold text-xs text-white">🎵 {t('music.title')}</span>
+            <span className="text-[10px] text-emerald-200/90 font-medium tracking-wide">{t('music.tagline')}</span>
+          </div>
           <button
             type="button"
             onClick={(e) => {
@@ -182,7 +177,7 @@ export default function FloatingMusicPlayer() {
               setShowTooltip(false)
             }}
             className="ml-1 px-1.5 py-0.5 rounded-full hover:bg-emerald-800 text-white/80 hover:text-white transition-colors text-xs font-bold"
-            title={lang === 'zh' ? '关闭提示' : 'Close'}
+            title={t('music.closeTooltip')}
           >
             ✕
           </button>
@@ -198,11 +193,7 @@ export default function FloatingMusicPlayer() {
           }
         }}
         onClick={handleButtonClick}
-        title={
-          isPlaying
-            ? lang === 'zh' ? '暂停音乐' : 'Pause Music'
-            : lang === 'zh' ? '播放音乐' : 'Play Music'
-        }
+        title={isPlaying ? t('music.pause') : t('music.play')}
         className={`relative w-14 h-14 rounded-full shadow-2xl flex items-center justify-center cursor-grab active:cursor-grabbing transition-transform duration-300 border-2 ${
           isPlaying
             ? 'border-emerald-500 ring-4 ring-emerald-500/30 shadow-emerald-500/30'

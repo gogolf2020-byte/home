@@ -172,6 +172,8 @@ export default {
     scanWeChat: 'Scan to connect via WeChat'
   },
   music: {
+    title: 'The Wellness Spring Sound',
+    tagline: 'Listen · Relax · Restore',
     tooltip: '🎵 Click to play healing music',
     closeTooltip: 'Close',
     play: 'Play Music',
