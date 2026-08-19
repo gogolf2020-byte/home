@@ -476,6 +476,6 @@ export const practitionersData = [
         'KI-gestützte Gesundheitsanalyse'
       ]
     },
-    contactEmail: 'wellness.spring@hotmail.com'
+    contactEmail: 'wellness.spring.sys@gmail.com'
   }
 ]

@@ -116,7 +116,7 @@ export default function MobileCareModal({ isOpen, onClose }) {
       `Pets in Home: ${formData.petsInHome || 'None'}\n`
     )
 
-    const mailtoUrl = `mailto:wellness.spring@hotmail.com?subject=${mailtoSubject}&body=${mailtoBody}`
+    const mailtoUrl = `mailto:wellness.spring.sys@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`
     window.location.href = mailtoUrl
 
     setSubmitted(true)

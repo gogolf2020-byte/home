@@ -71,7 +71,7 @@ export default function Contact({ title, subtitle }) {
         const mailtoBody = encodeURIComponent(
           `Name: ${formData.name}\nEmail: ${formData.email}${homeVisitInfo}\n\nMessage:\n${formData.message}`
         )
-        const mailtoUrl = `mailto:wellness.spring@hotmail.com?subject=${mailtoSubject}&body=${mailtoBody}`
+        const mailtoUrl = `mailto:wellness.spring.sys@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`
         window.location.href = mailtoUrl
       } else {
         const smsBody = encodeURIComponent(
@@ -129,7 +129,7 @@ export default function Contact({ title, subtitle }) {
                   <h4 className="font-semibold mb-1 flex items-center gap-2 text-emerald-200">
                     <span>📧</span> Email
                   </h4>
-                  <p className="text-base font-medium break-words">wellness.spring@hotmail.com</p>
+                  <p className="text-base font-medium break-words">wellness.spring.sys@gmail.com</p>
                 </div>
 
                 <div>
@@ -180,7 +180,7 @@ export default function Contact({ title, subtitle }) {
                   <p className="text-sm text-emerald-100/90 leading-relaxed">
                     {submittedMethod === 'email' ? (
                       <>
-                        Your email client has been launched with a pre-filled draft to <span className="font-semibold text-white">wellness.spring@hotmail.com</span>.
+                        Your email client has been launched with a pre-filled draft to <span className="font-semibold text-white">wellness.spring.sys@gmail.com</span>.
                       </>
                     ) : (
                       <>
