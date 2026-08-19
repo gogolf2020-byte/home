@@ -5,7 +5,7 @@ import logo from '../assets/98.jpg'
 export default function FloatingMusicPlayer() {
   const { t } = useTranslation()
 
-  const AUDIO_SRC = 'https://www.buddhanet.net/filelib/mp3/metta.mp3'
+  const AUDIO_SRC = '/bg_music.mp3'
   const audioRef = useRef(null)
 
   const [isPlaying, setIsPlaying] = useState(false)
