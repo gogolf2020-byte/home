@@ -1,13 +1,14 @@
 export default {
   nav: {
     home: 'Startseite',
-    about: 'Über uns',
+    about: 'Über Uns',
     services: 'Leistungen',
-    accTreatment: 'ACC-Behandlung',
-    mobileCare: 'Mobile Care™',
-    aiAssessment: 'KI-Analyse',
-    practitioner: 'Behandler',
-    testimonials: 'Erfahrungsberichte',
+    servicesOverview: 'Leistungsübersicht',
+    accTreatment: 'ACC Behandlung',
+    mobileCare: 'Hausbesuche',
+    aiAssessment: 'KI Analyse',
+    practitioner: 'Ärzte',
+    testimonials: 'Bewertungen',
     faq: 'FAQ',
     contact: 'Kontakt'
   },

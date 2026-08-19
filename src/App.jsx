@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import HomePage from './components/HomePage'
 import ACCTreatmentPage from './components/ACCTreatmentPage'
+import MobileCarePage from './components/MobileCarePage'
 import PractitionerDetailPage from './components/PractitionerDetailPage'
 import Footer from './components/Footer'
 import FloatingBookButton from './components/FloatingBookButton'
@@ -34,7 +35,11 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/services" element={<HomePage />} />
+        <Route path="/services/acc-treatment" element={<ACCTreatmentPage />} />
         <Route path="/acc-treatment" element={<ACCTreatmentPage />} />
+        <Route path="/services/mobile-care" element={<MobileCarePage />} />
+        <Route path="/mobile-care" element={<MobileCarePage />} />
         <Route path="/practitioners/:doctorId" element={<PractitionerDetailPage />} />
         <Route path="/practitioner/:doctorId" element={<PractitionerDetailPage />} />
       </Routes>

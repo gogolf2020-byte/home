@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import logo from '../assets/98.jpg'
@@ -6,7 +6,10 @@ import { usePreferences } from '../context/Preferences'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [activeHash, setActiveHash] = useState(window.location.hash || '')
+  const dropdownRef = useRef(null)
+
   const { language, setLanguage, theme, setTheme } = usePreferences() || {}
   const { t, i18n } = useTranslation()
   const location = useLocation()
@@ -14,13 +17,22 @@ export default function Header() {
 
   const currentLang = i18n.language || language || 'zh'
 
+  const serviceSubItems = [
+    { key: 'nav.accTreatment', href: '/services/acc-treatment', isRoute: true, icon: '🏥' },
+    { key: 'nav.mobileCare', href: '/services/mobile-care', isRoute: true, icon: '🚗' },
+    { key: 'nav.aiAssessment', href: '#ai-assessment', isRoute: false, icon: '🤖' },
+    { key: 'nav.servicesOverview', href: '#services', isRoute: false, icon: '📋' },
+  ]
+
   const navItems = [
     { key: 'nav.home', href: '/' },
     { key: 'nav.about', href: '#about' },
-    { key: 'nav.services', href: '#services' },
-    { key: 'nav.accTreatment', href: '/acc-treatment' },
-    { key: 'nav.mobileCare', href: '#mobile-care' },
-    { key: 'nav.aiAssessment', href: '#ai-assessment' },
+    {
+      key: 'nav.services',
+      href: '/services',
+      isDropdown: true,
+      subItems: serviceSubItems
+    },
     { key: 'nav.practitioner', href: '#practitioner' },
     { key: 'nav.testimonials', href: '#testimonials' },
     { key: 'nav.faq', href: '#faq' },
@@ -32,9 +44,7 @@ export default function Header() {
       setActiveHash(window.location.hash || '')
     }
 
-    const sections = navItems
-      .map((item) => (item.href.startsWith('#') ? item.href.slice(1) : null))
-      .filter(Boolean)
+    const sections = ['about', 'services', 'ai-assessment', 'practitioner', 'testimonials', 'faq', 'contact']
       .map((id) => document.getElementById(id))
       .filter(Boolean)
 
@@ -58,8 +68,21 @@ export default function Header() {
     }
   }, [location.pathname])
 
+  // Close dropdown on click outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsServicesOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
   const handleNavClick = (e, item) => {
     setIsMenuOpen(false)
+    setIsServicesOpen(false)
+
     if (item.href === '/') {
       e.preventDefault()
       if (location.pathname === '/') {
@@ -72,11 +95,11 @@ export default function Header() {
       return
     }
 
-    if (item.href === '/acc-treatment') {
+    if (item.isRoute) {
       return
     }
 
-    if (item.href.startsWith('#')) {
+    if (item.href && item.href.startsWith('#')) {
       e.preventDefault()
       const targetId = item.href.slice(1)
       if (location.pathname === '/') {
@@ -97,6 +120,12 @@ export default function Header() {
     i18n.changeLanguage(newLang)
   }
 
+  const isServicesActive =
+    location.pathname.startsWith('/services') ||
+    location.pathname === '/acc-treatment' ||
+    location.pathname === '/mobile-care' ||
+    (location.pathname === '/' && (activeHash === '#services' || activeHash === '#ai-assessment' || activeHash === '#mobile-care'))
+
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md dark:bg-slate-900/95 border-b border-emerald-900/10 dark:border-slate-800 transition-colors duration-300">
       <div className="container mx-auto px-4">
@@ -105,7 +134,7 @@ export default function Header() {
           <Link
             to="/"
             onClick={(e) => handleNavClick(e, { href: '/' })}
-            className="flex items-center gap-3 group"
+            className="flex items-center gap-3 group shrink-0"
           >
             <img
               src={logo}
@@ -120,18 +149,102 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1 lg:gap-1.5 xl:gap-2 mx-auto">
             {navItems.map((item) => {
-              const isAccRoute = item.href === '/acc-treatment' && location.pathname === '/acc-treatment'
+              if (item.isDropdown) {
+                return (
+                  <div
+                    key={item.key}
+                    ref={dropdownRef}
+                    className="relative group"
+                    onMouseEnter={() => setIsServicesOpen(true)}
+                    onMouseLeave={() => setIsServicesOpen(false)}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setIsServicesOpen(!isServicesOpen)}
+                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs xl:text-sm font-semibold transition-all whitespace-nowrap ${
+                        isServicesActive
+                          ? 'bg-emerald-700 text-white shadow-sm dark:bg-emerald-500 dark:text-slate-950'
+                          : 'text-slate-700 hover:text-emerald-800 hover:bg-emerald-50/60 dark:text-slate-200 dark:hover:text-emerald-300 dark:hover:bg-slate-800'
+                      }`}
+                    >
+                      <span>{t(item.key)}</span>
+                      <svg
+                        className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                          isServicesOpen ? 'rotate-180' : ''
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+
+                    {/* Services Dropdown Menu Card */}
+                    <div
+                      className={`absolute left-0 top-full pt-1.5 w-60 z-50 transition-all duration-200 ${
+                        isServicesOpen
+                          ? 'opacity-100 visible translate-y-0'
+                          : 'opacity-0 invisible -translate-y-2 pointer-events-none'
+                      }`}
+                    >
+                      <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md rounded-2xl p-2 shadow-xl border border-slate-200/80 dark:border-slate-800 space-y-1">
+                        {item.subItems.map((sub) => {
+                          const isSubActive =
+                            (sub.href.startsWith('/') && location.pathname === sub.href) ||
+                            (sub.href.startsWith('#') && location.pathname === '/' && activeHash === sub.href)
+
+                          if (sub.isRoute) {
+                            return (
+                              <Link
+                                key={sub.key}
+                                to={sub.href}
+                                onClick={(e) => handleNavClick(e, sub)}
+                                className={`flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs xl:text-sm font-medium transition-colors ${
+                                  isSubActive
+                                    ? 'bg-emerald-100 text-emerald-900 font-bold dark:bg-emerald-950/90 dark:text-emerald-300'
+                                    : 'text-slate-700 hover:bg-emerald-50/80 hover:text-emerald-800 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-emerald-300'
+                                }`}
+                              >
+                                <span className="text-base">{sub.icon}</span>
+                                <span>{t(sub.key)}</span>
+                              </Link>
+                            )
+                          }
+
+                          return (
+                            <a
+                              key={sub.key}
+                              href={location.pathname === '/' ? sub.href : `/${sub.href}`}
+                              onClick={(e) => handleNavClick(e, sub)}
+                              className={`flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs xl:text-sm font-medium transition-colors ${
+                                isSubActive
+                                  ? 'bg-emerald-100 text-emerald-900 font-bold dark:bg-emerald-950/90 dark:text-emerald-300'
+                                  : 'text-slate-700 hover:bg-emerald-50/80 hover:text-emerald-800 dark:text-slate-200 dark:hover:bg-slate-800 dark:hover:text-emerald-300'
+                              }`}
+                            >
+                              <span className="text-base">{sub.icon}</span>
+                              <span>{t(sub.key)}</span>
+                            </a>
+                          )
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                )
+              }
+
               const isHomeRoute = item.href === '/' && location.pathname === '/' && (!activeHash || activeHash === '#' || activeHash === '')
               const isHashActive = location.pathname === '/' && activeHash === item.href
-              const isActive = isAccRoute || isHomeRoute || isHashActive
+              const isActive = isHomeRoute || isHashActive
 
-              if (item.href === '/acc-treatment' || item.href === '/') {
+              if (item.href === '/') {
                 return (
                   <Link
                     key={item.key}
                     to={item.href}
                     onClick={(e) => handleNavClick(e, item)}
-                    className={`px-2.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold transition-all whitespace-nowrap ${
+                    className={`px-3 py-1.5 rounded-full text-xs xl:text-sm font-semibold transition-all whitespace-nowrap ${
                       isActive
                         ? 'bg-emerald-700 text-white shadow-sm dark:bg-emerald-500 dark:text-slate-950'
                         : 'text-slate-700 hover:text-emerald-800 hover:bg-emerald-50/60 dark:text-slate-200 dark:hover:text-emerald-300 dark:hover:bg-slate-800'
@@ -146,7 +259,7 @@ export default function Header() {
                 <a
                   key={item.key}
                   href={location.pathname === '/' ? item.href : `/${item.href}`}
-                  className={`px-2.5 py-1.5 rounded-full text-xs xl:text-sm font-semibold transition-all whitespace-nowrap ${
+                  className={`px-3 py-1.5 rounded-full text-xs xl:text-sm font-semibold transition-all whitespace-nowrap ${
                     isActive
                       ? 'bg-emerald-700 text-white shadow-sm dark:bg-emerald-500 dark:text-slate-950'
                       : 'text-slate-700 hover:text-emerald-800 hover:bg-emerald-50/60 dark:text-slate-200 dark:hover:text-emerald-300 dark:hover:bg-slate-800'
@@ -208,16 +321,75 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation Drawer */}
         {isMenuOpen && (
           <nav className="md:hidden py-3 border-t border-emerald-900/10 dark:border-slate-800 flex flex-col gap-1">
             {navItems.map((item) => {
-              const isAccRoute = item.href === '/acc-treatment' && location.pathname === '/acc-treatment'
+              if (item.isDropdown) {
+                return (
+                  <div key={item.key} className="flex flex-col">
+                    <button
+                      type="button"
+                      onClick={() => setIsServicesOpen(!isServicesOpen)}
+                      className={`flex items-center justify-between px-3 py-2 rounded-lg text-sm transition-colors ${
+                        isServicesActive
+                          ? 'bg-emerald-100/90 text-emerald-900 font-bold dark:bg-emerald-950/80 dark:text-emerald-300'
+                          : 'text-slate-700 hover:bg-emerald-50/60 dark:text-slate-200 dark:hover:bg-slate-800'
+                      }`}
+                    >
+                      <span>{t(item.key)}</span>
+                      <svg
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          isServicesOpen ? 'rotate-180' : ''
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+
+                    {/* Mobile Sub-items */}
+                    {isServicesOpen && (
+                      <div className="pl-4 pr-2 py-1 space-y-1 my-1 border-l-2 border-emerald-600/40 ml-4">
+                        {item.subItems.map((sub) => {
+                          if (sub.isRoute) {
+                            return (
+                              <Link
+                                key={sub.key}
+                                to={sub.href}
+                                onClick={(e) => handleNavClick(e, sub)}
+                                className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold text-slate-700 hover:bg-emerald-50 dark:text-slate-200 dark:hover:bg-slate-800"
+                              >
+                                <span>{sub.icon}</span>
+                                <span>{t(sub.key)}</span>
+                              </Link>
+                            )
+                          }
+                          return (
+                            <a
+                              key={sub.key}
+                              href={location.pathname === '/' ? sub.href : `/${sub.href}`}
+                              onClick={(e) => handleNavClick(e, sub)}
+                              className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold text-slate-700 hover:bg-emerald-50 dark:text-slate-200 dark:hover:bg-slate-800"
+                            >
+                              <span>{sub.icon}</span>
+                              <span>{t(sub.key)}</span>
+                            </a>
+                          )
+                        })}
+                      </div>
+                    )}
+                  </div>
+                )
+              }
+
               const isHomeRoute = item.href === '/' && location.pathname === '/' && (!activeHash || activeHash === '#' || activeHash === '')
               const isHashActive = location.pathname === '/' && activeHash === item.href
-              const isActive = isAccRoute || isHomeRoute || isHashActive
+              const isActive = isHomeRoute || isHashActive
 
-              if (item.href === '/acc-treatment' || item.href === '/') {
+              if (item.href === '/') {
                 return (
                   <Link
                     key={item.key}

@@ -1,12 +1,13 @@
 export default {
   nav: {
     home: 'Home',
-    about: 'About',
+    about: 'About Us',
     services: 'Services',
+    servicesOverview: 'Services Overview',
     accTreatment: 'ACC Treatment',
     mobileCare: 'Mobile Care™',
     aiAssessment: 'AI Assessment',
-    practitioner: 'Practitioner',
+    practitioner: 'Practitioners',
     testimonials: 'Testimonials',
     faq: 'FAQ',
     contact: 'Contact'
