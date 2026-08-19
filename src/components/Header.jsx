@@ -20,7 +20,7 @@ export default function Header() {
   const serviceSubItems = [
     { key: 'nav.accTreatment', href: '/services/acc-treatment', isRoute: true, icon: '🏥' },
     { key: 'nav.mobileCare', href: '/services/mobile-care', isRoute: true, icon: '🚗' },
-    { key: 'nav.aiAssessment', href: '#ai-assessment', isRoute: false, icon: '🤖' },
+    { key: 'nav.aiAssessment', href: '/services/ai-assessment', isRoute: true, icon: '🤖' },
   ]
 
   const navItems = [
@@ -123,7 +123,7 @@ export default function Header() {
     location.pathname.startsWith('/services') ||
     location.pathname === '/acc-treatment' ||
     location.pathname === '/mobile-care' ||
-    (location.pathname === '/' && (activeHash === '#services' || activeHash === '#ai-assessment' || activeHash === '#mobile-care'))
+    location.pathname === '/ai-assessment'
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md dark:bg-slate-900/95 border-b border-emerald-900/10 dark:border-slate-800 transition-colors duration-300">

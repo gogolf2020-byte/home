@@ -4,6 +4,7 @@ import Header from './components/Header'
 import HomePage from './components/HomePage'
 import ACCTreatmentPage from './components/ACCTreatmentPage'
 import MobileCarePage from './components/MobileCarePage'
+import AIAssessmentPage from './components/AIAssessmentPage'
 import PractitionerDetailPage from './components/PractitionerDetailPage'
 import Footer from './components/Footer'
 import FloatingBookButton from './components/FloatingBookButton'
@@ -40,6 +41,8 @@ function App() {
         <Route path="/acc-treatment" element={<ACCTreatmentPage />} />
         <Route path="/services/mobile-care" element={<MobileCarePage />} />
         <Route path="/mobile-care" element={<MobileCarePage />} />
+        <Route path="/services/ai-assessment" element={<AIAssessmentPage />} />
+        <Route path="/ai-assessment" element={<AIAssessmentPage />} />
         <Route path="/practitioners/:doctorId" element={<PractitionerDetailPage />} />
         <Route path="/practitioner/:doctorId" element={<PractitionerDetailPage />} />
       </Routes>
