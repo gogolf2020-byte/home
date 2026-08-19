@@ -164,11 +164,12 @@ export default function FloatingMusicPlayer() {
           onMouseDown={(e) => e.stopPropagation()}
           onTouchStart={(e) => e.stopPropagation()}
           onClick={togglePlay}
-          className="absolute left-16 top-1/2 -translate-y-1/2 whitespace-nowrap bg-emerald-950/95 text-white text-xs font-semibold px-4 py-2.5 rounded-2xl shadow-2xl backdrop-blur-md border border-emerald-400/50 flex items-center gap-2.5 animate-bounce pointer-events-auto cursor-pointer"
+          className="absolute left-16 top-1/2 -translate-y-1/2 whitespace-nowrap bg-emerald-950/95 text-white text-xs font-semibold px-4 py-2.5 rounded-2xl shadow-2xl backdrop-blur-md border border-emerald-400/50 flex items-center gap-3 animate-bounce pointer-events-auto cursor-pointer"
         >
-          <div className="flex flex-col text-left leading-tight">
-            <span className="font-bold text-xs text-white">🎵 {t('music.title')}</span>
-            <span className="text-[10px] text-emerald-200/90 font-medium tracking-wide">{t('music.tagline')}</span>
+          <span className="text-xl shrink-0 leading-none">🎵</span>
+          <div className="flex flex-col text-left justify-center space-y-0.5">
+            <span className="font-bold text-xs text-white leading-snug">{t('music.title')}</span>
+            <span className="text-[11px] text-emerald-200/90 font-medium tracking-wide leading-snug">{t('music.tagline')}</span>
           </div>
           <button
             type="button"
@@ -176,7 +177,7 @@ export default function FloatingMusicPlayer() {
               e.stopPropagation()
               setShowTooltip(false)
             }}
-            className="ml-1 px-1.5 py-0.5 rounded-full hover:bg-emerald-800 text-white/80 hover:text-white transition-colors text-xs font-bold"
+            className="ml-1 px-1.5 py-0.5 rounded-full hover:bg-emerald-800 text-white/80 hover:text-white transition-colors text-xs font-bold shrink-0"
             title={t('music.closeTooltip')}
           >
             ✕
