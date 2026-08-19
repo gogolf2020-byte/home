@@ -19,6 +19,7 @@ export default function Header() {
     { key: 'nav.about', href: '#about' },
     { key: 'nav.services', href: '#services' },
     { key: 'nav.accTreatment', href: '/acc-treatment' },
+    { key: 'nav.mobileCare', href: '#mobile-care' },
     { key: 'nav.aiAssessment', href: '#ai-assessment' },
     { key: 'nav.practitioner', href: '#practitioner' },
     { key: 'nav.testimonials', href: '#testimonials' },

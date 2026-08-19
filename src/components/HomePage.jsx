@@ -1,6 +1,7 @@
 import Hero from './Hero'
 import About from './About'
 import ACCSection from './ACCSection'
+import MobileCareSection from './MobileCareSection'
 import AIAssessment from './AIAssessment'
 import Practitioner from './Practitioner'
 import Testimonials from './Testimonials'
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Hero />
       <About />
       <ACCSection />
+      <MobileCareSection />
       <AIAssessment />
       <Practitioner />
       <Testimonials />
