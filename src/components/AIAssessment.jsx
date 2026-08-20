@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import aiPatternImage from '../assets/matrix1.jpg'
+import aiPatternImage from '../assets/AI-hero.jpg'
 import BookingModal from './BookingModal'
 
 export default function AIAssessment() {
