@@ -5,33 +5,35 @@ export default function ACCSection() {
   const { t } = useTranslation()
 
   return (
-    <section id="acc-treatment" className="scroll-mt-20 bg-white py-16 md:py-20 dark:bg-slate-900 border-y border-emerald-900/10 dark:border-slate-800">
-      <div className="container">
-        <div className="mx-auto max-w-4xl rounded-[2.5rem] bg-[#eef4ef] p-8 md:p-12 dark:bg-slate-800/90 dark:border dark:border-slate-700 shadow-lg">
+    <section id="acc-treatment" className="scroll-mt-20 bg-[#f0f4f9] py-16 md:py-24 dark:bg-slate-950 transition-colors duration-300 border-y border-emerald-900/10 dark:border-slate-800">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-6 sm:p-10 md:p-12 shadow-xl border border-slate-200/80 dark:border-slate-800">
           {/* Header */}
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-primary dark:text-emerald-300 md:text-4xl mb-3">
+          <div className="text-center max-w-3xl mx-auto mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary dark:text-emerald-300 mb-4">
               {t('acc.title')}
             </h2>
-            <p className="text-lg font-semibold text-emerald-800 dark:text-emerald-400">
+            <p className="text-base sm:text-lg font-semibold text-emerald-800 dark:text-emerald-400 leading-relaxed">
               {t('acc.subtitle')}
             </p>
           </div>
 
           {/* Description */}
-          <p className="text-base md:text-lg leading-8 text-slate-700 dark:text-slate-300 text-center mb-8 max-w-3xl mx-auto">
-            {t('acc.desc')}
-          </p>
+          <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-3xl p-6 sm:p-8 border border-emerald-200/80 dark:border-slate-700 shadow-sm mb-8">
+            <p className="text-base sm:text-lg leading-relaxed text-slate-700 dark:text-slate-200 text-center max-w-4xl mx-auto">
+              {t('acc.desc')}
+            </p>
+          </div>
 
           {/* Key Trust Highlights */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8 text-xs font-semibold text-emerald-900 dark:text-emerald-300">
-            <span className="rounded-full bg-white dark:bg-slate-900 px-4 py-2 shadow-sm border border-emerald-200 dark:border-slate-700">
+          <div className="flex flex-wrap justify-center gap-3 mb-8 text-xs sm:text-sm font-semibold text-emerald-900 dark:text-emerald-300">
+            <span className="rounded-full bg-[#f8faf7] dark:bg-slate-800 px-4 py-2 shadow-sm border border-emerald-200 dark:border-slate-700">
               ✓ {t('acc.badgeAcupuncturist')}
             </span>
-            <span className="rounded-full bg-white dark:bg-slate-900 px-4 py-2 shadow-sm border border-emerald-200 dark:border-slate-700">
+            <span className="rounded-full bg-[#f8faf7] dark:bg-slate-800 px-4 py-2 shadow-sm border border-emerald-200 dark:border-slate-700">
               ✓ {t('acc.badgePlan')}
             </span>
-            <span className="rounded-full bg-white dark:bg-slate-900 px-4 py-2 shadow-sm border border-emerald-200 dark:border-slate-700">
+            <span className="rounded-full bg-[#f8faf7] dark:bg-slate-800 px-4 py-2 shadow-sm border border-emerald-200 dark:border-slate-700">
               ✓ {t('acc.badgeSupport')}
             </span>
           </div>
@@ -40,9 +42,10 @@ export default function ACCSection() {
           <div className="text-center">
             <Link
               to="/acc-treatment"
-              className="inline-block rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-white shadow-lg transition-all hover:bg-secondary hover:scale-105 dark:bg-emerald-600 dark:hover:bg-emerald-500"
+              className="inline-flex items-center gap-2.5 bg-primary hover:bg-secondary dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white font-extrabold px-9 py-3.5 rounded-full text-base sm:text-lg shadow-lg transition-all hover:scale-105 active:scale-95"
             >
-              {t('acc.bookBtn')}
+              <span>🏥</span>
+              <span>{t('acc.bookBtn')}</span>
             </Link>
           </div>
         </div>

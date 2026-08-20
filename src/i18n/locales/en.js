@@ -122,9 +122,23 @@ export default {
     successDesc: 'Thank you for your request. Our registered practitioner team will review your clinical and safety assessment within 24 hours and contact you to confirm appointment details and fee estimates.'
   },
   ai: {
-    title: 'AI Health Assessment',
-    cardTitle: 'Smart Health Analysis',
-    cardDesc: 'Combining modern AI health pattern recognition with traditional tongue and pulse analysis to provide deeper insight into your wellbeing.'
+    tagHeaderEn: 'AI HEALTH DISCOVERY',
+    tagHeaderZh: 'AI Health Discovery',
+    title: 'What could your body be telling you?',
+    subtitle: 'A different way to explore your health — combining AI-assisted assessment with traditional Chinese medicine and professional interpretation.',
+    step1Title: '01 — Scan',
+    step1Desc: 'Complete basic assessment in minutes',
+    step1Sub: 'A quick and convenient digital health evaluation.',
+    step2Title: '02 — Discover',
+    step2Desc: 'Explore individual health trends & insights',
+    step2Sub: 'Uncover wellness patterns and constitutional balances.',
+    step3Title: '03 — Understand',
+    step3Desc: 'Professional interpretation by practitioner based on your profile',
+    step3Sub: 'Expert 1-on-1 consultation with a registered TCM practitioner.',
+    btnTextMain: 'TRY THE EXPERIENCE',
+    btnTextSub: 'Book AI Health Discovery',
+    disclaimerMedical: 'AI-assisted assessment is designed to support health awareness and practitioner discussion. It is not a substitute for medical diagnosis, emergency assessment or medical care.',
+    disclaimerPrivacy: 'AI Assessment collects identifiable health information. Wellness Spring clearly outlines the collection purpose, usage, and privacy arrangements, in strict compliance with the Health Information Privacy Code 2020 requirements.'
   },
   practitioner: {
     meetTitle: 'Meet the Practitioner',

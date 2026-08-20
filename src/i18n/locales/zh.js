@@ -122,9 +122,23 @@ export default {
     successDesc: '感谢您的申请！我们的注册医师团队将在 24 小时内审查您的健康与环境安全评估，并与您确认上门服务安排及费用明细。'
   },
   ai: {
-    title: 'AI 智能健康评估',
-    cardTitle: '智能健康模式分析',
-    cardDesc: '结合现代 AI 技术与传统脉象体质辨证，深度分析身心健康状态与潜在风险，为您制定更加精准的个性化调理计划。'
+    tagHeaderEn: 'AI HEALTH DISCOVERY',
+    tagHeaderZh: 'AI 智慧健康探索',
+    title: 'What could your body be telling you?',
+    subtitle: 'A different way to explore your health — combining AI-assisted assessment with traditional Chinese medicine and professional interpretation.',
+    step1Title: '01 — Scan',
+    step1Desc: '几分钟完成基础评估',
+    step1Sub: '快速便捷的数字化基础健康评估。',
+    step2Title: '02 — Discover',
+    step2Desc: '查看个体健康趋势与 insights',
+    step2Sub: '深入发现体质倾向、整体趋势与健康特征。',
+    step3Title: '03 — Understand',
+    step3Desc: '由 practitioner 结合你的实际情况进行解释',
+    step3Sub: '注册中医师 1对1 专业解读并量身定制调护方案。',
+    btnTextMain: 'TRY THE EXPERIENCE',
+    btnTextSub: '预约 AI 健康探索',
+    disclaimerMedical: 'AI-assisted assessment is designed to support health awareness and practitioner discussion. It is not a substitute for medical diagnosis, emergency assessment or medical care.',
+    disclaimerPrivacy: 'AI Assessment 会收集可识别的健康资料，Wellness Spring 清楚说明收集目的、使用方式和隐私安排；严格遵循 Health Information Privacy Code 2020 对健康信息的收集、使用与保存要求。'
   },
   practitioner: {
     meetTitle: 'Meet the Practitioner',

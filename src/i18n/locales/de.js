@@ -121,9 +121,23 @@ export default {
     successDesc: 'Vielen Dank für Ihre Anfrage. Unser Praxisteam wird Ihre Angaben innerhalb von 24 Stunden prüfen.'
   },
   ai: {
-    title: 'AI Health Assessment',
-    cardTitle: 'Smart Health Analysis',
-    cardDesc: 'Combining modern AI health pattern recognition with traditional tongue and pulse analysis to provide deeper insight into your wellbeing.'
+    tagHeaderEn: 'AI HEALTH DISCOVERY',
+    tagHeaderZh: 'AI Gesundheits-Entdeckung',
+    title: 'What could your body be telling you?',
+    subtitle: 'Ein neuer Weg zur Erforschung Ihrer Gesundheit — KI-gestützte Analyse kombiniert mit Traditioneller Chinesischer Medizin und professioneller Auswertung.',
+    step1Title: '01 — Scan',
+    step1Desc: 'Basis-Analyse in wenigen Minuten',
+    step1Sub: 'Schnelle und bequeme digitale Auswertung.',
+    step2Title: '02 — Discover',
+    step2Desc: 'Individuelle Gesundheitstrends & Insights',
+    step2Sub: 'Erkennen von Mustern und körperlicher Balance.',
+    step3Title: '03 — Understand',
+    step3Desc: 'Professionelle Beratung durch Therapeuten',
+    step3Sub: '1-zu-1 Auswertung mit registriertem TCM-Arzt.',
+    btnTextMain: 'TRY THE EXPERIENCE',
+    btnTextSub: 'AI-Gesundheitsanalyse Buchen',
+    disclaimerMedical: 'AI-assisted assessment is designed to support health awareness and practitioner discussion. It is not a substitute for medical diagnosis, emergency assessment or medical care.',
+    disclaimerPrivacy: 'Die KI-Analyse erfasst identifizierbare Gesundheitsdaten. Wellness Spring informiert transparent über Zweck, Nutzung und Datenschutz gemäß dem Health Information Privacy Code 2020.'
   },
   practitioner: {
     meetTitle: 'Meet the Practitioner',
