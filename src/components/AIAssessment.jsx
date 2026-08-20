@@ -27,22 +27,13 @@ export default function AIAssessment() {
             </p>
           </div>
 
-          {/* AI Hero Graphic Banner */}
-          <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-slate-700 mb-12 group">
+          {/* AI Hero Graphic Banner — Full View */}
+          <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200/80 dark:border-slate-700 mb-12 bg-emerald-950/5 dark:bg-slate-950/40 p-2 sm:p-4 flex items-center justify-center">
             <img
               src={aiPatternImage}
               alt="AI Health Discovery Hero Matrix"
-              className="w-full h-64 sm:h-80 md:h-96 object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-auto max-h-[550px] object-contain rounded-2xl shadow-sm"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/40 to-transparent flex flex-col justify-end p-6 sm:p-8">
-              <div className="inline-flex items-center gap-2 bg-emerald-500/90 backdrop-blur-md text-white text-xs font-bold px-3.5 py-1.5 rounded-full w-fit shadow-md mb-2">
-                <span>⚡</span>
-                <span>AI Bio-Pattern Recognition & TCM Synthesis</span>
-              </div>
-              <p className="text-white text-sm sm:text-base font-medium max-w-2xl drop-shadow-md">
-                Exploring underlying wellness trends, constitutional dynamics, and early health insights before symptoms escalate.
-              </p>
-            </div>
           </div>
 
           {/* 3 Step Experience Cards */}
