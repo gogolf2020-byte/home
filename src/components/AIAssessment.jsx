@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import aiPatternImage from '../assets/AI-hero.jpg'
+import aiHeroImage from '../assets/AI-hero.jpg'
+import deviceImage from '../assets/matrix1.jpg'
 import BookingModal from './BookingModal'
 
 export default function AIAssessment() {
@@ -27,13 +28,39 @@ export default function AIAssessment() {
             </p>
           </div>
 
-          {/* AI Hero Graphic Banner — Full View */}
+          {/* AI Hero Graphic Banner — Full Uncropped View */}
           <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200/80 dark:border-slate-700 mb-12 bg-emerald-950/5 dark:bg-slate-950/40 p-2 sm:p-4 flex items-center justify-center">
             <img
-              src={aiPatternImage}
+              src={aiHeroImage}
               alt="AI Health Discovery Hero Matrix"
               className="w-full h-auto max-h-[550px] object-contain rounded-2xl shadow-sm"
             />
+          </div>
+
+          {/* Feature Highlight Box: Text on Left, Original Device Image on Right */}
+          <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-3xl p-6 sm:p-8 border border-emerald-200/80 dark:border-slate-700 shadow-sm mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-4 text-slate-700 dark:text-slate-200 text-base sm:text-lg leading-relaxed text-center sm:text-left">
+                <div className="inline-flex items-center gap-2 bg-emerald-700 text-white text-xs font-bold px-3 py-1 rounded-full w-fit shadow-sm">
+                  <span>⚡ AI & TCM Fusion</span>
+                </div>
+                <h3 className="text-2xl font-bold text-emerald-900 dark:text-emerald-300">
+                  {t('ai.title')}
+                </h3>
+                <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                  {t('ai.subtitle')}
+                </p>
+              </div>
+
+              {/* Original Equipment / Device Image on Right */}
+              <div className="overflow-hidden rounded-2xl border border-emerald-200 dark:border-slate-700 shadow-md">
+                <img
+                  src={deviceImage}
+                  alt="AI Health Assessment Device & Pattern Recognition"
+                  className="w-full h-56 sm:h-64 object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
           </div>
 
           {/* 3 Step Experience Cards */}
