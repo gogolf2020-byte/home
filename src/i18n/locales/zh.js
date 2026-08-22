@@ -201,6 +201,6 @@ export default {
     aiAssessment: 'AI 智慧健康探索',
     practitioner: '医师团队',
     contact: '联系我们',
-    aiDisclaimer: 'AI-assisted health assessments are used as supportive tools and do not replace professional clinical judgement, medical diagnosis or appropriate referral. (AI 辅助健康评估仅作为辅助支持工具使用，不能替代专业临床判断、医学诊断或适当转诊。)'
+    aiDisclaimer: 'AI 辅助健康评估仅作为辅助支持工具使用，不能替代专业临床判断、医学诊断或适当转诊。'
   }
 }

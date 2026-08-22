@@ -200,6 +200,6 @@ export default {
     aiAssessment: 'KI-Gesundheitsanalyse',
     practitioner: 'Praxisteam',
     contact: 'Kontakt',
-    aiDisclaimer: 'AI-assisted health assessments are used as supportive tools and do not replace professional clinical judgement, medical diagnosis or appropriate referral. (KI-gestützte Analysen dienen als unterstützende Instrumente und ersetzen keine professionelle klinische Beurteilung.)'
+    aiDisclaimer: 'KI-gestützte Analysen dienen als unterstützende Instrumente und ersetzen keine professionelle klinische Beurteilung, medizinische Diagnose oder fachgerechte Überweisung.'
   }
 }
