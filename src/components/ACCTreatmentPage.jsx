@@ -162,7 +162,7 @@ export default function ACCTreatmentPage() {
             <span className="inline-block rounded-full bg-emerald-100 dark:bg-emerald-950/80 px-4 py-1.5 text-xs font-bold tracking-wider text-emerald-900 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 mb-4">
               ACC INJURY RECOVERY
             </span>
-            <h1 className="text-4xl font-extrabold md:text-5xl mb-4 text-[#1a472a] dark:text-emerald-300">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-[#1a472a] dark:text-emerald-300">
               ACC Injury Recovery
             </h1>
             <p className="text-xl font-semibold text-emerald-800 dark:text-emerald-400 mb-6">

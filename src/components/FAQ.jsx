@@ -54,7 +54,7 @@ export default function FAQ() {
     <section id="faq" className="scroll-mt-6 bg-[#f0f4f9] py-12 md:py-16 dark:bg-slate-950">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-primary dark:text-emerald-400 mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary dark:text-emerald-400 mb-4">
             Common Questions
           </h2>
           <p className="text-lg text-gray-600 dark:text-slate-300 max-w-2xl mx-auto">

@@ -96,7 +96,7 @@ export default function Contact({ title, subtitle }) {
   return (
     <section id="contact" className="bg-gradient-to-r from-primary to-secondary text-white py-12 md:py-16">
       <div className="container max-w-4xl">
-        <h2 className="text-4xl font-bold mb-4 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
           {title || t('contact.title')}
         </h2>
         

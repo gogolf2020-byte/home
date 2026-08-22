@@ -10,7 +10,7 @@ export default function ACCSection() {
         <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-6 sm:p-10 md:p-12 shadow-xl border border-slate-200/80 dark:border-slate-800">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-8">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary dark:text-emerald-300 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary dark:text-emerald-300 mb-4">
               {t('acc.title')}
             </h2>
             <p className="text-base sm:text-lg font-semibold text-emerald-800 dark:text-emerald-400 leading-relaxed">

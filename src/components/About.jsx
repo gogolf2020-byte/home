@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section id="about" className="bg-[#f0f4f9] py-12 md:py-16 dark:bg-slate-950">
       <div className="container">
-        <h2 className="text-4xl font-bold text-primary dark:text-emerald-400 mb-8 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-primary dark:text-emerald-400 mb-8 text-center">
           {t('about.title')}
         </h2>
         

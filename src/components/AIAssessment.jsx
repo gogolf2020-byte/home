@@ -20,7 +20,7 @@ export default function AIAssessment() {
               <span>✨</span>
               <span>{t('ai.tagHeaderEn')} · {t('ai.tagHeaderZh')}</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary dark:text-emerald-300 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary dark:text-emerald-300 mb-4">
               {t('ai.title')}
             </h2>
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">

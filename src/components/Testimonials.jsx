@@ -20,7 +20,7 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="bg-[#f0f4f9] py-12 md:py-16 dark:bg-slate-950">
       <div className="container">
-        <h2 className="text-4xl font-bold text-primary dark:text-emerald-400 mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-primary dark:text-emerald-400 mb-12 text-center">
           Testimonials
         </h2>
         

@@ -18,8 +18,8 @@ export default function Practitioner() {
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Section Title */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <h2 className="text-4xl font-bold text-primary dark:text-emerald-400 mb-4 text-center">
-            Meet the Practitioner
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary dark:text-emerald-400 mb-4 text-center">
+            {t('practitioner.meetTitle')}
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-emerald-600 to-teal-400 mx-auto rounded-full" />
         </div>
