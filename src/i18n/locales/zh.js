@@ -193,5 +193,14 @@ export default {
     closeTooltip: '关闭提示',
     play: '播放音乐',
     pause: '暂停音乐'
+  },
+  footer: {
+    quickLinks: '快速链接',
+    about: '关于我们',
+    services: '服务项目',
+    aiAssessment: 'AI 智慧健康探索',
+    practitioner: '医师团队',
+    contact: '联系我们',
+    aiDisclaimer: 'AI-assisted health assessments are used as supportive tools and do not replace professional clinical judgement, medical diagnosis or appropriate referral. (AI 辅助健康评估仅作为辅助支持工具使用，不能替代专业临床判断、医学诊断或适当转诊。)'
   }
 }

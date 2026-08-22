@@ -137,8 +137,10 @@ export default function AIAssessment() {
           </div>
 
           {/* Bottom Medical Disclaimer & Privacy Compliance Notice */}
-          <div className="mt-12 pt-6 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 space-y-2 text-center max-w-4xl mx-auto leading-relaxed">
-            <p>{t('ai.disclaimerMedical')}</p>
+          <div className="mt-12 pt-6 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 space-y-2.5 text-center max-w-4xl mx-auto leading-relaxed">
+            <p className="font-semibold text-slate-700 dark:text-slate-200 text-xs sm:text-sm">
+              {t('footer.aiDisclaimer')}
+            </p>
             <p className="text-slate-600 dark:text-slate-300 font-medium">{t('ai.disclaimerPrivacy')}</p>
           </div>
 

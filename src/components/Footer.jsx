@@ -1,9 +1,13 @@
+import { useTranslation } from 'react-i18next'
+import logo from '../assets/98.jpg'
+
 export default function Footer() {
+  const { t } = useTranslation()
   const currentYear = new Date().getFullYear()
 
   return (
     <footer className="bg-primary text-white py-12">
-      <div className="container">
+      <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
@@ -19,18 +23,18 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold mb-4">Quick Links</h4>
+            <h4 className="font-bold mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2 text-sm opacity-75">
-              <li><a href="#about" className="hover:opacity-100 transition-opacity">About</a></li>
-              <li><a href="#services" className="hover:opacity-100 transition-opacity">Services</a></li>
-              <li><a href="#ai-assessment" className="hover:opacity-100 transition-opacity">AI Assessment</a></li>
-              <li><a href="#practitioner" className="hover:opacity-100 transition-opacity">Practitioner</a></li>
+              <li><a href="#about" className="hover:opacity-100 transition-opacity">{t('footer.about')}</a></li>
+              <li><a href="#services" className="hover:opacity-100 transition-opacity">{t('footer.services')}</a></li>
+              <li><a href="#ai-assessment" className="hover:opacity-100 transition-opacity">{t('footer.aiAssessment')}</a></li>
+              <li><a href="#practitioner" className="hover:opacity-100 transition-opacity">{t('footer.practitioner')}</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold mb-4">Contact</h4>
+            <h4 className="font-bold mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-2 text-sm opacity-75">
               <li>📞 021 101 8892</li>
               <li>027 372 0262</li>
@@ -104,8 +108,13 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Global AI Supportive Tool Disclaimer Strip */}
+        <div className="mt-8 pt-6 border-t border-white/15 text-xs text-white/85 text-center max-w-3xl mx-auto leading-relaxed font-medium">
+          <p>💡 {t('footer.aiDisclaimer')}</p>
+        </div>
+
         {/* Divider */}
-        <hr className="border-white border-opacity-20 my-8" />
+        <hr className="border-white border-opacity-20 my-6" />
 
         {/* Bottom */}
         <div className="text-center text-sm opacity-75">
@@ -116,4 +125,3 @@ export default function Footer() {
     </footer>
   )
 }
-import logo from '../assets/98.jpg'

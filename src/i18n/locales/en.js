@@ -193,5 +193,14 @@ export default {
     closeTooltip: 'Close',
     play: 'Play Music',
     pause: 'Pause Music'
+  },
+  footer: {
+    quickLinks: 'Quick Links',
+    about: 'About Us',
+    services: 'Services',
+    aiAssessment: 'AI Health Discovery',
+    practitioner: 'Practitioners',
+    contact: 'Contact',
+    aiDisclaimer: 'AI-assisted health assessments are used as supportive tools and do not replace professional clinical judgement, medical diagnosis or appropriate referral.'
   }
 }
