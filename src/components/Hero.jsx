@@ -17,7 +17,7 @@ export default function Hero() {
           <p className="mb-4 text-sm font-bold tracking-[0.2em] text-accent">
             {t('hero.tag')}
           </p>
-          <h2 className="mb-6 text-4xl font-bold text-primary md:text-5xl dark:text-emerald-300">
+          <h2 className="mb-6 text-3xl sm:text-4xl font-bold text-primary dark:text-emerald-300">
             {t('hero.title')}
           </h2>
           <p className="mb-8 text-lg text-gray-700 md:text-xl dark:text-slate-200 leading-relaxed">
