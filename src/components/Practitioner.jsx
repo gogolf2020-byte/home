@@ -67,7 +67,7 @@ export default function Practitioner() {
                   {lang === 'zh' ? '创始人 · 首席诊疗师' : lang === 'de' ? 'GRÜNDERIN & LEITENDE BEHANDLERIN' : 'FOUNDER & LEAD PRACTITIONER'}
                 </span>
                 
-                <h3 className="text-2xl sm:text-3xl font-bold text-primary dark:text-emerald-300 tracking-tight mb-2">
+                <h3 className="text-xl sm:text-2xl font-bold text-primary dark:text-emerald-300 tracking-tight mb-2">
                   Helene Li YU
                 </h3>
 

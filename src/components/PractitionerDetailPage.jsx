@@ -79,7 +79,7 @@ export default function PractitionerDetailPage() {
           <div className="lg:col-span-7 flex flex-col justify-between">
             <div>
               {/* Doctor Name */}
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary dark:text-emerald-300 tracking-tight mb-3">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary dark:text-emerald-300 tracking-tight mb-3">
                 {doctor.name[lang]}
               </h1>
 
