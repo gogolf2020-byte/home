@@ -99,7 +99,7 @@ export default function Contact({ title, subtitle }) {
         <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
           {title || t('contact.title')}
         </h2>
-        
+
         <p className="text-lg text-center mb-12 opacity-90 max-w-2xl mx-auto">
           {subtitle || t('contact.subtitle')}
         </p>
@@ -109,7 +109,7 @@ export default function Contact({ title, subtitle }) {
             {/* Contact Info */}
             <div>
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-              
+
               <div className="space-y-6 text-sm sm:text-base">
                 <div>
                   <h4 className="font-semibold mb-1 flex items-center gap-2 text-emerald-200">
@@ -144,28 +144,26 @@ export default function Contact({ title, subtitle }) {
             {/* Quick Contact Form */}
             <div>
               <h3 className="text-2xl font-bold mb-4">{t('contact.title')}</h3>
-              
+
               {/* Send Method Selector */}
               <div className="flex bg-black/20 p-1 rounded-xl mb-4 text-xs font-semibold">
                 <button
                   type="button"
                   onClick={() => { setMethod('email'); setErrors({}); }}
-                  className={`flex-1 py-2 px-2.5 rounded-lg transition-all flex items-center justify-center gap-1.5 ${
-                    method === 'email'
+                  className={`flex-1 py-2 px-2.5 rounded-lg transition-all flex items-center justify-center gap-1.5 ${method === 'email'
                       ? 'bg-white text-emerald-950 shadow-md font-bold'
                       : 'text-white/80 hover:text-white hover:bg-white/10'
-                  }`}
+                    }`}
                 >
                   <span>{t('contact.byEmail')}</span>
                 </button>
                 <button
                   type="button"
                   onClick={() => { setMethod('txt'); setErrors({}); }}
-                  className={`flex-1 py-2 px-2.5 rounded-lg transition-all flex items-center justify-center gap-1.5 ${
-                    method === 'txt'
+                  className={`flex-1 py-2 px-2.5 rounded-lg transition-all flex items-center justify-center gap-1.5 ${method === 'txt'
                       ? 'bg-white text-emerald-950 shadow-md font-bold'
                       : 'text-white/80 hover:text-white hover:bg-white/10'
-                  }`}
+                    }`}
                 >
                   <span>{t('contact.byTxt')}</span>
                 </button>
@@ -205,9 +203,8 @@ export default function Contact({ title, subtitle }) {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder={t('contact.name')}
-                      className={`w-full px-3.5 py-2 rounded-lg bg-white/20 text-white placeholder-emerald-100/60 focus:outline-none focus:ring-2 focus:ring-white transition ${
-                        errors.name ? 'ring-2 ring-red-300 bg-red-900/30' : ''
-                      }`}
+                      className={`w-full px-3.5 py-2 rounded-lg bg-white/20 text-white placeholder-emerald-100/60 focus:outline-none focus:ring-2 focus:ring-white transition ${errors.name ? 'ring-2 ring-red-300 bg-red-900/30' : ''
+                        }`}
                     />
                     {errors.name && (
                       <p className="text-xs text-red-200 mt-1">{errors.name}</p>
@@ -222,9 +219,8 @@ export default function Contact({ title, subtitle }) {
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder={t('contact.email')}
-                        className={`w-full px-3.5 py-2 rounded-lg bg-white/20 text-white placeholder-emerald-100/60 focus:outline-none focus:ring-2 focus:ring-white transition ${
-                          errors.email ? 'ring-2 ring-red-300 bg-red-900/30' : ''
-                        }`}
+                        className={`w-full px-3.5 py-2 rounded-lg bg-white/20 text-white placeholder-emerald-100/60 focus:outline-none focus:ring-2 focus:ring-white transition ${errors.email ? 'ring-2 ring-red-300 bg-red-900/30' : ''
+                          }`}
                       />
                       {errors.email && (
                         <p className="text-xs text-red-200 mt-1">{errors.email}</p>
@@ -238,9 +234,8 @@ export default function Contact({ title, subtitle }) {
                         value={formData.phone}
                         onChange={handleInputChange}
                         placeholder={t('contact.phone')}
-                        className={`w-full px-3.5 py-2 rounded-lg bg-white/20 text-white placeholder-emerald-100/60 focus:outline-none focus:ring-2 focus:ring-white transition ${
-                          errors.phone ? 'ring-2 ring-red-300 bg-red-900/30' : ''
-                        }`}
+                        className={`w-full px-3.5 py-2 rounded-lg bg-white/20 text-white placeholder-emerald-100/60 focus:outline-none focus:ring-2 focus:ring-white transition ${errors.phone ? 'ring-2 ring-red-300 bg-red-900/30' : ''
+                          }`}
                       />
                       {errors.phone && (
                         <p className="text-xs text-red-200 mt-1">{errors.phone}</p>
@@ -276,11 +271,10 @@ export default function Contact({ title, subtitle }) {
                           value={formData.address}
                           onChange={handleInputChange}
                           placeholder={t('booking.addressPlaceholder')}
-                          className={`w-full px-3.5 py-2 rounded-lg text-xs transition focus:outline-none ${
-                            errors.address
+                          className={`w-full px-3.5 py-2 rounded-lg text-xs transition focus:outline-none ${errors.address
                               ? 'border-2 border-red-400 ring-2 ring-red-400 bg-red-900/50 text-white placeholder-red-200'
                               : 'bg-white/20 text-white placeholder-emerald-100/60 focus:ring-2 focus:ring-white'
-                          }`}
+                            }`}
                         />
                         {errors.address && (
                           <p className="text-xs font-semibold text-red-200 mt-1 flex items-center gap-1">
@@ -299,9 +293,8 @@ export default function Contact({ title, subtitle }) {
                       onChange={handleInputChange}
                       placeholder={t('contact.message')}
                       rows="3"
-                      className={`w-full px-3.5 py-2 rounded-lg bg-white/20 text-white placeholder-emerald-100/60 focus:outline-none focus:ring-2 focus:ring-white resize-none transition ${
-                        errors.message ? 'ring-2 ring-red-300 bg-red-900/30' : ''
-                      }`}
+                      className={`w-full px-3.5 py-2 rounded-lg bg-white/20 text-white placeholder-emerald-100/60 focus:outline-none focus:ring-2 focus:ring-white resize-none transition ${errors.message ? 'ring-2 ring-red-300 bg-red-900/30' : ''
+                        }`}
                     ></textarea>
                     {errors.message && (
                       <p className="text-xs text-red-200 mt-1">{errors.message}</p>
