@@ -94,7 +94,7 @@ export default function Contact({ title, subtitle }) {
   }
 
   return (
-    <section id="contact" className="bg-gradient-to-r from-primary/90 to-secondary/90 text-white py-12 md:py-16">
+    <section id="contact" className="bg-gradient-to-r from-primary/90 to-secondary/95 text-white py-12 md:py-16">
       <div className="container max-w-4xl">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
           {title || t('contact.title')}
@@ -151,8 +151,8 @@ export default function Contact({ title, subtitle }) {
                   type="button"
                   onClick={() => { setMethod('email'); setErrors({}); }}
                   className={`flex-1 py-2 px-2.5 rounded-lg transition-all flex items-center justify-center gap-1.5 ${method === 'email'
-                      ? 'bg-white text-emerald-950 shadow-md font-bold'
-                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                    ? 'bg-white text-emerald-950 shadow-md font-bold'
+                    : 'text-white/80 hover:text-white hover:bg-white/10'
                     }`}
                 >
                   <span>{t('contact.byEmail')}</span>
@@ -161,8 +161,8 @@ export default function Contact({ title, subtitle }) {
                   type="button"
                   onClick={() => { setMethod('txt'); setErrors({}); }}
                   className={`flex-1 py-2 px-2.5 rounded-lg transition-all flex items-center justify-center gap-1.5 ${method === 'txt'
-                      ? 'bg-white text-emerald-950 shadow-md font-bold'
-                      : 'text-white/80 hover:text-white hover:bg-white/10'
+                    ? 'bg-white text-emerald-950 shadow-md font-bold'
+                    : 'text-white/80 hover:text-white hover:bg-white/10'
                     }`}
                 >
                   <span>{t('contact.byTxt')}</span>
@@ -272,8 +272,8 @@ export default function Contact({ title, subtitle }) {
                           onChange={handleInputChange}
                           placeholder={t('booking.addressPlaceholder')}
                           className={`w-full px-3.5 py-2 rounded-lg text-xs transition focus:outline-none ${errors.address
-                              ? 'border-2 border-red-400 ring-2 ring-red-400 bg-red-900/50 text-white placeholder-red-200'
-                              : 'bg-white/20 text-white placeholder-emerald-100/60 focus:ring-2 focus:ring-white'
+                            ? 'border-2 border-red-400 ring-2 ring-red-400 bg-red-900/50 text-white placeholder-red-200'
+                            : 'bg-white/20 text-white placeholder-emerald-100/60 focus:ring-2 focus:ring-white'
                             }`}
                         />
                         {errors.address && (
