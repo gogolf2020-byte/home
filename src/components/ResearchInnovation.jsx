@@ -30,7 +30,7 @@ export default function ResearchInnovation() {
         {/* 2. MODULES STACK (01 -> 02 -> 03) */}
         <div className="space-y-10 mb-20">
           {/* MODULE 1 */}
-          <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 sm:p-12 shadow-xl border border-emerald-200/80 dark:border-emerald-900/60 relative overflow-hidden transition-all hover:shadow-2xl">
+          <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200/80 dark:border-slate-800 relative overflow-hidden transition-all hover:shadow-2xl">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
                 {t('researchInnovation.m1Title')}
@@ -48,7 +48,7 @@ export default function ResearchInnovation() {
             </div>
 
             {/* Flow Process Line */}
-            <div className="bg-emerald-50/80 dark:bg-slate-800/80 p-4 sm:p-5 rounded-2xl border border-emerald-200/80 dark:border-slate-700">
+            <div className="bg-slate-50 dark:bg-slate-800/80 p-4 sm:p-5 rounded-2xl border border-slate-200/80 dark:border-slate-700">
               <p className="text-xs uppercase tracking-wider font-bold text-emerald-800 dark:text-emerald-400 mb-2">
                 Clinical Workflow Integration
               </p>
@@ -59,7 +59,7 @@ export default function ResearchInnovation() {
           </div>
 
           {/* MODULE 2 */}
-          <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 sm:p-12 shadow-xl border border-teal-200/80 dark:border-teal-900/60 relative overflow-hidden transition-all hover:shadow-2xl">
+          <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200/80 dark:border-slate-800 relative overflow-hidden transition-all hover:shadow-2xl">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
                 {t('researchInnovation.m2Title')}
@@ -67,7 +67,7 @@ export default function ResearchInnovation() {
               <span className="text-3xl">🌏</span>
             </div>
 
-            <h4 className="text-base sm:text-lg font-semibold text-teal-800 dark:text-teal-400 mb-6">
+            <h4 className="text-base sm:text-lg font-semibold text-emerald-800 dark:text-emerald-400 mb-6">
               {t('researchInnovation.m2Sub')}
             </h4>
 
@@ -78,7 +78,7 @@ export default function ResearchInnovation() {
           </div>
 
           {/* MODULE 3 */}
-          <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 sm:p-12 shadow-xl border border-emerald-200/80 dark:border-emerald-900/60 relative overflow-hidden transition-all hover:shadow-2xl">
+          <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200/80 dark:border-slate-800 relative overflow-hidden transition-all hover:shadow-2xl">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
                 {t('researchInnovation.m3Title')}
@@ -100,7 +100,7 @@ export default function ResearchInnovation() {
         </div>
 
         {/* 3. BOTTOM CLOSING SECTION */}
-        <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 sm:p-14 shadow-xl border border-emerald-200/80 dark:border-slate-800 text-center relative overflow-hidden">
+        <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 sm:p-14 shadow-xl border border-slate-200/80 dark:border-slate-800 text-center relative overflow-hidden">
           <div className="max-w-3xl mx-auto space-y-6">
             <h3 className="text-2xl sm:text-4xl font-extrabold text-primary dark:text-emerald-300 tracking-tight">
               {t('researchInnovation.footerTitle')}
@@ -122,7 +122,7 @@ export default function ResearchInnovation() {
 
               <a
                 href="#contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-900 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-emerald-300 border border-emerald-200 dark:border-slate-700 font-extrabold px-8 py-4 rounded-full text-base shadow-sm transition-all hover:scale-105 active:scale-95"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-slate-100 hover:bg-slate-200 text-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 font-extrabold px-8 py-4 rounded-full text-base shadow-sm transition-all hover:scale-105 active:scale-95"
               >
                 <span>🤝</span>
                 <span>{t('researchInnovation.btnCollaborate')}</span>
