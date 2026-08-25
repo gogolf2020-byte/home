@@ -33,7 +33,7 @@ export default function Header() {
       subItems: serviceSubItems
     },
     { key: 'nav.researchInnovation', href: '/research-innovation', isRoute: true },
-    { key: 'nav.healthBlog', href: '#blog' },
+    { key: 'nav.healthBlog', href: '/blog', isRoute: true },
     { key: 'nav.practitioner', href: '#practitioner' },
     { key: 'nav.contact', href: '#contact' },
   ]

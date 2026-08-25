@@ -46,6 +46,12 @@ export default {
     btnExplore: 'KI-Gesundheitsanalyse Erkunden',
     btnCollaborate: 'Forschungskooperation'
   },
+  healthBlog: {
+    comingSoonTitle: 'Demnächst verfügbar...',
+    comingSoonDesc: 'Wir bereiten evidenzbasierte Gesundheitsartikel, TCM-Einblicke und ganzheitliche Pflegetipps für Sie vor. Bleiben Sie dran!',
+    btnHome: 'Zurück zur Startseite',
+    btnContact: 'Kontaktieren Sie uns'
+  },
   hero: {
     tag: 'WELLNESS SPRING · AUCKLAND',
     title: 'KI-Geführte Akupunktur & Ganzheitliche Medizin',

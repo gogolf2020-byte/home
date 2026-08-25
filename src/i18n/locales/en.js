@@ -46,6 +46,12 @@ export default {
     btnExplore: 'Explore AI Health Assessment',
     btnCollaborate: 'Research Collaboration'
   },
+  healthBlog: {
+    comingSoonTitle: 'Coming Soon...',
+    comingSoonDesc: 'We are preparing evidence-informed health articles, Traditional Chinese Medicine insights, and holistic wellness advice for you. Stay tuned!',
+    btnHome: 'Back to Home',
+    btnContact: 'Contact Us'
+  },
   hero: {
     tag: 'WELLNESS SPRING · AUCKLAND',
     title: 'AI-Integrated Acupuncture & Holistic Health',

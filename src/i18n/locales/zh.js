@@ -46,6 +46,12 @@ export default {
     btnExplore: '探索 AI 健康评估',
     btnCollaborate: '科研项目合作'
   },
+  healthBlog: {
+    comingSoonTitle: '精彩内容，即将推出...',
+    comingSoonDesc: '我们正在精心准备由专业执业医师撰写的循证健康资讯、中医养生科普与身心调护建议。敬请期待！',
+    btnHome: '返回首页',
+    btnContact: '联系我们'
+  },
   hero: {
     tag: 'WELLNESS SPRING · 奥克兰',
     title: 'AI 智能与传统中医诊疗中心',
