@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import logo from '../assets/98.jpg'
 
 export default function Footer() {
@@ -27,6 +28,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm opacity-75">
               <li><a href="#about" className="hover:opacity-100 transition-opacity">{t('footer.about')}</a></li>
               <li><a href="#services" className="hover:opacity-100 transition-opacity">{t('footer.services')}</a></li>
+              <li><Link to="/research-innovation" className="hover:opacity-100 transition-opacity">{t('nav.researchInnovation')}</Link></li>
               <li><a href="#ai-assessment" className="hover:opacity-100 transition-opacity">{t('footer.aiAssessment')}</a></li>
               <li><a href="#practitioner" className="hover:opacity-100 transition-opacity">{t('footer.practitioner')}</a></li>
             </ul>

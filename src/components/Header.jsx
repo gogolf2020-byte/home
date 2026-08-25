@@ -32,9 +32,9 @@ export default function Header() {
       isDropdown: true,
       subItems: serviceSubItems
     },
+    { key: 'nav.researchInnovation', href: '/research-innovation', isRoute: true },
+    { key: 'nav.healthBlog', href: '#blog' },
     { key: 'nav.practitioner', href: '#practitioner' },
-    { key: 'nav.testimonials', href: '#testimonials' },
-    { key: 'nav.faq', href: '#faq' },
     { key: 'nav.contact', href: '#contact' },
   ]
 
@@ -234,10 +234,11 @@ export default function Header() {
               }
 
               const isHomeRoute = item.href === '/' && location.pathname === '/' && (!activeHash || activeHash === '#' || activeHash === '')
+              const isRouteActive = item.isRoute && location.pathname === item.href
               const isHashActive = location.pathname === '/' && activeHash === item.href
-              const isActive = isHomeRoute || isHashActive
+              const isActive = isHomeRoute || isRouteActive || isHashActive
 
-              if (item.href === '/') {
+              if (item.href === '/' || item.isRoute) {
                 return (
                   <Link
                     key={item.key}
@@ -385,10 +386,11 @@ export default function Header() {
               }
 
               const isHomeRoute = item.href === '/' && location.pathname === '/' && (!activeHash || activeHash === '#' || activeHash === '')
+              const isRouteActive = item.isRoute && location.pathname === item.href
               const isHashActive = location.pathname === '/' && activeHash === item.href
-              const isActive = isHomeRoute || isHashActive
+              const isActive = isHomeRoute || isRouteActive || isHashActive
 
-              if (item.href === '/') {
+              if (item.href === '/' || item.isRoute) {
                 return (
                   <Link
                     key={item.key}
