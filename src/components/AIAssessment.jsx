@@ -31,12 +31,12 @@ export default function AIAssessment() {
             </p>
           </div>
 
-          {/* AI Hero Graphic Banner — Full Uncropped View */}
-          <div className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200/80 dark:border-slate-700 mb-12 bg-emerald-950/5 dark:bg-slate-950/40 p-2 sm:p-4 flex items-center justify-center">
+          {/* AI Hero Graphic Banner — Fully Adaptive & 100% Uncropped View */}
+          <div className="rounded-3xl overflow-hidden shadow-lg border border-slate-200/80 dark:border-slate-800 mb-12 bg-white dark:bg-slate-950 max-w-4xl mx-auto flex items-center justify-center">
             <img
               src={aiHeroImage}
-              alt="AI Health Discovery Hero Matrix"
-              className="w-full h-auto max-h-[550px] object-contain rounded-2xl shadow-sm"
+              alt="MATRIX AI HealthSense Hero Banner"
+              className="w-full h-auto object-contain block"
             />
           </div>
 
@@ -55,12 +55,12 @@ export default function AIAssessment() {
                 </p>
               </div>
 
-              {/* Original Equipment / Device Image on Right */}
-              <div className="overflow-hidden rounded-2xl border border-emerald-200 dark:border-slate-700 shadow-md">
+              {/* Original Equipment / Device Image on Right — Fully Visible */}
+              <div className="overflow-hidden rounded-2xl border border-emerald-200/80 dark:border-slate-700 bg-white dark:bg-slate-900 p-2 shadow-sm flex items-center justify-center">
                 <img
                   src={deviceImage}
                   alt="AI Health Assessment Device & Pattern Recognition"
-                  className="w-full h-56 sm:h-64 object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto max-h-[300px] object-contain hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
