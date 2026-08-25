@@ -14,22 +14,19 @@ export default function AIAssessment() {
         {/* Outer Card Container matching ACC & Mobile Care section styling */}
         <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-6 sm:p-10 md:p-12 shadow-xl border border-slate-200/80 dark:border-slate-800">
           
-          {/* Brand Header Above Image */}
-          <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
-            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 dark:bg-emerald-950/80 px-4 py-1.5 border border-emerald-200 dark:border-emerald-800 text-emerald-900 dark:text-emerald-300 text-xs sm:text-sm font-bold tracking-wide shadow-sm">
+          {/* Brand Header */}
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 dark:bg-emerald-950/80 px-4 py-1.5 border border-emerald-200 dark:border-emerald-800 text-emerald-900 dark:text-emerald-300 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm">
               <span>✨</span>
               <span>{t('ai.tagBadge')}</span>
             </div>
-
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary dark:text-emerald-300 tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary dark:text-emerald-300 mb-4">
               {t('ai.title')}
             </h2>
-
-            <h3 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100">
+            <p className="text-base sm:text-lg font-semibold text-emerald-800 dark:text-emerald-400 leading-relaxed mb-3">
               {t('ai.subtitle')}
-            </h3>
-
-            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto pt-2">
+            </p>
+            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
               {t('ai.desc')}
             </p>
           </div>
