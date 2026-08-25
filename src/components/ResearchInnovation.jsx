@@ -100,13 +100,13 @@ export default function ResearchInnovation() {
         </div>
 
         {/* 3. BOTTOM CLOSING SECTION */}
-        <div className="bg-gradient-to-r from-emerald-900 via-primary to-teal-950 text-white rounded-[2.5rem] p-8 sm:p-14 shadow-2xl text-center border border-emerald-700/50 relative overflow-hidden">
+        <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 sm:p-14 shadow-xl border border-emerald-200/80 dark:border-slate-800 text-center relative overflow-hidden">
           <div className="max-w-3xl mx-auto space-y-6">
-            <h3 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <h3 className="text-2xl sm:text-4xl font-extrabold text-primary dark:text-emerald-300 tracking-tight">
               {t('researchInnovation.footerTitle')}
             </h3>
 
-            <p className="text-emerald-100/90 text-base sm:text-lg leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
               {t('researchInnovation.footerDesc')}
             </p>
 
@@ -114,7 +114,7 @@ export default function ResearchInnovation() {
             <div className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/services/ai-assessment"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white text-emerald-950 hover:bg-emerald-50 font-extrabold px-8 py-4 rounded-full text-base shadow-xl transition-all hover:scale-105 active:scale-95"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-primary hover:bg-secondary dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white font-extrabold px-8 py-4 rounded-full text-base shadow-lg transition-all hover:scale-105 active:scale-95"
               >
                 <span>🤖</span>
                 <span>{t('researchInnovation.btnExplore')}</span>
@@ -122,7 +122,7 @@ export default function ResearchInnovation() {
 
               <a
                 href="#contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-800/80 hover:bg-emerald-800 text-white border border-emerald-500/50 font-extrabold px-8 py-4 rounded-full text-base shadow-xl transition-all hover:scale-105 active:scale-95"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-900 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-emerald-300 border border-emerald-200 dark:border-slate-700 font-extrabold px-8 py-4 rounded-full text-base shadow-sm transition-all hover:scale-105 active:scale-95"
               >
                 <span>🤝</span>
                 <span>{t('researchInnovation.btnCollaborate')}</span>
