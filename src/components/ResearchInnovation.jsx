@@ -9,11 +9,6 @@ export default function ResearchInnovation() {
       <div className="container mx-auto px-4 max-w-5xl">
         {/* 1. HERO / PAGE START HEADER */}
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 dark:bg-emerald-950/80 px-4 py-1.5 border border-emerald-200 dark:border-emerald-800 text-emerald-900 dark:text-emerald-300 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm">
-            <span>✨</span>
-            <span>{t('researchInnovation.tag')}</span>
-          </div>
-
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary dark:text-emerald-300 tracking-tight mb-4">
             {t('researchInnovation.title')}
           </h1>
@@ -36,16 +31,12 @@ export default function ResearchInnovation() {
         <div className="space-y-10 mb-20">
           {/* MODULE 1 */}
           <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 sm:p-12 shadow-xl border border-emerald-200/80 dark:border-emerald-900/60 relative overflow-hidden transition-all hover:shadow-2xl">
-            <div className="flex items-center justify-between mb-6">
-              <span className="text-xs font-bold px-3.5 py-1 rounded-full bg-emerald-100 text-emerald-900 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
-                01 — MODULE
-              </span>
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                {t('researchInnovation.m1Title')}
+              </h3>
               <span className="text-3xl">🩺</span>
             </div>
-
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-2">
-              {t('researchInnovation.m1Title')}
-            </h3>
 
             <h4 className="text-base sm:text-lg font-semibold text-emerald-800 dark:text-emerald-400 mb-6">
               {t('researchInnovation.m1Sub')}
@@ -69,16 +60,12 @@ export default function ResearchInnovation() {
 
           {/* MODULE 2 */}
           <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 sm:p-12 shadow-xl border border-teal-200/80 dark:border-teal-900/60 relative overflow-hidden transition-all hover:shadow-2xl">
-            <div className="flex items-center justify-between mb-6">
-              <span className="text-xs font-bold px-3.5 py-1 rounded-full bg-teal-100 text-teal-900 dark:bg-teal-950 dark:text-teal-300 border border-teal-300 dark:border-teal-800">
-                02 — MODULE
-              </span>
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                {t('researchInnovation.m2Title')}
+              </h3>
               <span className="text-3xl">🌏</span>
             </div>
-
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-2">
-              {t('researchInnovation.m2Title')}
-            </h3>
 
             <h4 className="text-base sm:text-lg font-semibold text-teal-800 dark:text-teal-400 mb-6">
               {t('researchInnovation.m2Sub')}
@@ -92,16 +79,12 @@ export default function ResearchInnovation() {
 
           {/* MODULE 3 */}
           <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 sm:p-12 shadow-xl border border-emerald-200/80 dark:border-emerald-900/60 relative overflow-hidden transition-all hover:shadow-2xl">
-            <div className="flex items-center justify-between mb-6">
-              <span className="text-xs font-bold px-3.5 py-1 rounded-full bg-emerald-100 text-emerald-900 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
-                03 — MODULE
-              </span>
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+                {t('researchInnovation.m3Title')}
+              </h3>
               <span className="text-3xl">🏛️</span>
             </div>
-
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-2">
-              {t('researchInnovation.m3Title')}
-            </h3>
 
             <h4 className="text-base sm:text-lg font-semibold text-emerald-800 dark:text-emerald-400 mb-6">
               {t('researchInnovation.m3Sub')}
