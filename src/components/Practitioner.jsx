@@ -134,7 +134,7 @@ export default function Practitioner() {
                 <div className="relative overflow-hidden bg-slate-900/5 dark:bg-slate-950">
                   <img
                     src={doc.photo}
-                    alt={doc.name[lang]}
+                    alt={doc.name[lang] || doc.name['en']}
                     className="w-full h-auto object-contain transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 group-hover:-translate-y-1"
                   />
                 </div>
@@ -144,17 +144,17 @@ export default function Practitioner() {
                   <div>
                     {/* Doctor Name */}
                     <h4 className="text-2xl font-extrabold text-[#1a472a] dark:text-emerald-300 group-hover:text-emerald-600 transition-colors mb-1.5">
-                      {doc.name[lang]}
+                      {doc.name[lang] || doc.name['en']}
                     </h4>
 
                     {/* Title / Accreditation */}
                     <p className="text-xs sm:text-sm font-semibold text-emerald-800 dark:text-emerald-400 mb-3 leading-snug">
-                      {doc.shortTitle[lang]}
+                      {doc.shortTitle[lang] || doc.shortTitle['en']}
                     </p>
 
                     {/* Tags */}
                     <div className="flex flex-wrap justify-center gap-1.5 mb-3">
-                      {doc.tags[lang].slice(0, 2).map((tag, idx) => (
+                      {(doc.tags[lang] || doc.tags['en'] || []).slice(0, 2).map((tag, idx) => (
                         <span
                           key={idx}
                           className="text-[11px] font-medium bg-emerald-50 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 px-2.5 py-0.5 rounded-md"

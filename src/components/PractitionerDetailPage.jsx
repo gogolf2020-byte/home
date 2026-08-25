@@ -51,7 +51,7 @@ export default function PractitionerDetailPage() {
             </Link>
             <span>/</span>
             <span className="text-emerald-800 dark:text-emerald-300 font-semibold">
-              {doctor.name[lang]}
+              {doctor.name[lang] || doctor.name['en']}
             </span>
           </nav>
         </div>
@@ -68,7 +68,7 @@ export default function PractitionerDetailPage() {
               <div className="relative overflow-hidden shadow-2xl bg-slate-950 border border-slate-200 dark:border-slate-800 transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-2">
                 <img
                   src={doctor.photo}
-                  alt={doctor.name[lang]}
+                  alt={doctor.name[lang] || doctor.name['en']}
                   className="w-full h-auto object-contain transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                 />
               </div>
@@ -80,25 +80,25 @@ export default function PractitionerDetailPage() {
             <div>
               {/* Doctor Name */}
               <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary dark:text-emerald-300 tracking-tight mb-3">
-                {doctor.name[lang]}
+                {doctor.name[lang] || doctor.name['en']}
               </h1>
 
               {/* Professional Title */}
               <p className="text-lg sm:text-xl font-semibold text-emerald-800 dark:text-emerald-400 leading-snug mb-4">
-                {doctor.title[lang]}
+                {doctor.title[lang] || doctor.title['en']}
               </p>
 
               {/* Mentor / Brand Slogan Pill */}
               {doctor.mentor && (
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 dark:bg-amber-950/60 border border-amber-300/70 dark:border-amber-800/60 text-amber-900 dark:text-amber-300 text-sm font-medium mb-6 shadow-sm">
                   <span>✨</span>
-                  <span>{doctor.mentor[lang]}</span>
+                  <span>{doctor.mentor[lang] || doctor.mentor['en']}</span>
                 </div>
               )}
 
               {/* Feature Tags */}
               <div className="flex flex-wrap gap-2 mb-8">
-                {doctor.tags[lang].map((tag, idx) => (
+                {(doctor.tags[lang] || doctor.tags['en'] || []).map((tag, idx) => (
                   <span
                     key={idx}
                     className="text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 px-3.5 py-1.5 rounded-xl"
@@ -145,7 +145,7 @@ export default function PractitionerDetailPage() {
               {/* Tab Content: Bio */}
               {activeTab === 'bio' && (
                 <div className="space-y-4 mb-8">
-                  {doctor.bioParagraphs[lang].map((para, i) => (
+                  {(doctor.bioParagraphs[lang] || doctor.bioParagraphs['en'] || []).map((para, i) => (
                     <p
                       key={i}
                       className="text-slate-700 dark:text-slate-300 text-base leading-relaxed"
@@ -159,7 +159,7 @@ export default function PractitionerDetailPage() {
               {/* Tab Content: Education */}
               {activeTab === 'education' && (
                 <div className="mb-8 space-y-3.5">
-                  {doctor.educationList[lang].map((item, idx) => (
+                  {(doctor.educationList[lang] || doctor.educationList['en'] || []).map((item, idx) => (
                     <div
                       key={idx}
                       className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm"
@@ -184,7 +184,7 @@ export default function PractitionerDetailPage() {
               {activeTab === 'research' && (
                 <div className="mb-8 bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 p-6 rounded-2xl">
                   <ul className="space-y-3">
-                    {doctor.researchPoints[lang].map((point, idx) => (
+                    {(doctor.researchPoints[lang] || doctor.researchPoints['en'] || []).map((point, idx) => (
                       <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-700 dark:text-slate-300">
                         <span className="text-emerald-600 dark:text-emerald-400 font-bold mt-0.5">✦</span>
                         <span>{point}</span>
@@ -198,10 +198,10 @@ export default function PractitionerDetailPage() {
             {/* Specialties Box */}
             <div className="bg-[#f0f4f8] dark:bg-slate-800/90 p-6 sm:p-7 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-md">
               <h4 className="font-bold text-xl text-[#1a472a] dark:text-emerald-300 mb-4 flex items-center gap-2">
-                <span>{doctor.specialtiesTitle[lang]}</span>
+                <span>{doctor.specialtiesTitle[lang] || doctor.specialtiesTitle['en']}</span>
               </h4>
               <ul className="space-y-3 text-slate-700 dark:text-slate-300 text-sm sm:text-base">
-                {doctor.specialties[lang].map((spec, index) => (
+                {(doctor.specialties[lang] || doctor.specialties['en'] || []).map((spec, index) => (
                   <li key={index} className="flex items-start gap-2.5">
                     <span className="text-emerald-600 dark:text-emerald-400 font-bold mt-0.5">•</span>
                     <span className="leading-snug">{spec}</span>
@@ -230,15 +230,15 @@ export default function PractitionerDetailPage() {
                 >
                   <img
                     src={other.photo}
-                    alt={other.name[lang]}
+                    alt={other.name[lang] || other.name['en']}
                     className="w-24 h-auto object-contain rounded-none shadow-sm border border-slate-200 dark:border-slate-700 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                   />
                   <div>
                     <h4 className="text-xl font-bold text-[#1a472a] dark:text-emerald-300 group-hover:text-emerald-600 transition-colors">
-                      {other.name[lang]}
+                      {other.name[lang] || other.name['en']}
                     </h4>
                     <p className="text-xs font-semibold text-emerald-700 dark:text-emerald-400 mt-1 mb-2">
-                      {other.shortTitle[lang]}
+                      {other.shortTitle[lang] || other.shortTitle['en']}
                     </p>
                     <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                       <span>{lang === 'zh' ? '查看医师详情' : 'View Profile'}</span>
