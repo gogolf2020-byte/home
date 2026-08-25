@@ -8,8 +8,8 @@ export default function PractitionerDetailPage() {
   const { doctorId } = useParams()
   const { t, i18n } = useTranslation()
   const { language } = usePreferences() || {}
-  const activeLang = i18n.language || language || 'zh'
-  const lang = activeLang === 'zh' ? 'zh' : activeLang === 'de' ? 'de' : 'en'
+  const activeLang = i18n.language || language || 'en'
+  const lang = ['zh', 'en', 'de', 'ko', 'to'].includes(activeLang) ? activeLang : 'en'
 
   const [activeTab, setActiveTab] = useState('bio')
 

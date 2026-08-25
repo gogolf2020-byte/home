@@ -7,8 +7,8 @@ import founderPhoto from '../assets/22.jpg'
 export default function Practitioner() {
   const { t, i18n } = useTranslation()
   const { language } = usePreferences() || {}
-  const activeLang = i18n.language || language || 'zh'
-  const lang = activeLang === 'zh' ? 'zh' : activeLang === 'de' ? 'de' : 'en'
+  const activeLang = i18n.language || language || 'en'
+  const lang = ['zh', 'en', 'de', 'ko', 'to'].includes(activeLang) ? activeLang : 'en'
 
   // Filter team doctors list for specialists (excluding Helene who is featured in the Founder section)
   const teamDoctors = practitionersData.filter((doc) => doc.id !== 'helene-li-yu')

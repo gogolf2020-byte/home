@@ -3,19 +3,23 @@ import { initReactI18next } from 'react-i18next'
 import zh from './locales/zh'
 import en from './locales/en'
 import de from './locales/de'
+import ko from './locales/ko'
+import to from './locales/to'
 
-const savedLanguage = typeof window !== 'undefined' ? localStorage.getItem('language') || 'zh' : 'zh'
+const savedLanguage = typeof window !== 'undefined' ? localStorage.getItem('language') || 'en' : 'en'
 
 i18n
   .use(initReactI18next)
   .init({
     resources: {
-      zh: { translation: zh },
       en: { translation: en },
-      de: { translation: de }
+      zh: { translation: zh },
+      de: { translation: de },
+      ko: { translation: ko },
+      to: { translation: to }
     },
     lng: savedLanguage,
-    fallbackLng: 'zh',
+    fallbackLng: 'en',
     interpolation: {
       escapeValue: false // React already escapes values
     }

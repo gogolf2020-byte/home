@@ -285,6 +285,8 @@ export default function Header() {
                 <option value="en" className="dark:bg-slate-900">EN</option>
                 <option value="zh" className="dark:bg-slate-900">中文</option>
                 <option value="de" className="dark:bg-slate-900">DE</option>
+                <option value="ko" className="dark:bg-slate-900">한국어</option>
+                <option value="to" className="dark:bg-slate-900">Tonga</option>
               </select>
               <svg className="pointer-events-none absolute right-2.5 h-3.5 w-3.5 text-emerald-900/70 dark:text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
@@ -428,9 +430,11 @@ export default function Header() {
                 onChange={(e) => handleLanguageChange(e.target.value)}
                 className="rounded-lg border border-slate-200 dark:border-slate-700 bg-transparent px-3 py-1 text-xs font-semibold text-slate-800 dark:text-slate-200"
               >
-                <option value="zh" className="dark:bg-slate-900">中文</option>
                 <option value="en" className="dark:bg-slate-900">EN</option>
+                <option value="zh" className="dark:bg-slate-900">中文</option>
                 <option value="de" className="dark:bg-slate-900">DE</option>
+                <option value="ko" className="dark:bg-slate-900">한국어</option>
+                <option value="to" className="dark:bg-slate-900">Tonga</option>
               </select>
             </div>
           </nav>
