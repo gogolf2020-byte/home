@@ -184,9 +184,9 @@ export default {
     meetTitle: 'Meet the Practitioner',
     founderBadge: '👑 Founder of Wellness Spring',
     founderTag: 'FOUNDER & LEAD PRACTITIONER',
-    founderTitle: 'ACC-Registered Acupuncturist | TCM & AI Assessment Specialist',
-    founderDesc1: 'Helene brings extensive expertise and compassion to her practice, with a holistic approach to care, integrating acupuncture, traditional Chinese medicine therapies, mind–body regulation, and AI-assisted health assessment.',
-    founderDesc2: 'Her focus is on personalised treatment, emotional balance, and supporting long-term wellbeing through thoughtful, individualised care.',
+    founderTitle: 'Founder, Wellness Spring | ACC & CMCNZ Registered Acupuncturist | AI–TCM Clinical Integration Specialist',
+    founderDesc1: 'Helene Yu is a multidisciplinary health professional and founder of Wellness Spring in New Zealand. Her background spans Traditional Chinese Medicine (TCM) clinical practice, professional medical/legal interpreting, public-service experience, and international business management.',
+    founderDesc2: 'As an ACC and CMCNZ registered acupuncturist and MATRIX AI product trainer, her focus is the responsible clinical integration of AI with practitioner-led TCM Four Diagnostics, structured real-world data, and multicultural health applications.',
     teamTag: 'MEDICAL SPECIALISTS',
     teamTitle: 'Our Medical Team',
     viewProfile: 'View Profile'

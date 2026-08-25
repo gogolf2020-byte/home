@@ -182,10 +182,10 @@ export default {
   practitioner: {
     meetTitle: 'Lernen Sie das Praxisteam Kennen',
     founderBadge: '👑 Praxisgründerin von Wellness Spring',
-    founderTag: 'GRÜNDERIN & LEITENDE THERAPEUTIN',
-    founderTitle: 'ACC-Registrierte Akupunkteurin | Spezialistin für TCM & KI-Analyse',
-    founderDesc1: 'Helene kombiniert umfassende Expertise und Fürsorge in ihrer Praxis mit einem ganzheitlichen Behandlungsansatz, der Akupunktur, TCM-Therapien, Körper-Geist-Regulierung und KI-gestützte Gesundheitsanalysen vereint.',
-    founderDesc2: 'Ihr Fokus liegt auf individueller Behandlung, emotionaler Balance und der langfristigen Unterstützung der Gesundheit.',
+    founderTag: 'GRÜNDERIN & BEHANDLERIN',
+    founderTitle: 'Gründerin Wellness Spring | ACC & CMCNZ Registrierte Akupunkteurin | KI-TCM Spezialistin',
+    founderDesc1: 'Helene Yu ist eine multidisziplinäre Gesundheitsexpertin und Gründerin von Wellness Spring in Neuseeland. Ihr Hintergrund verbindet Traditionelle Chinesische Medizin (TCM), medizinisches/juristisches Dolmetschen, öffentlichen Dienst und Management.',
+    founderDesc2: 'Als ACC- und CMCNZ-registrierte Akupunkteurin und MATRIX KI-Produkttrainerin entwickelt sie einen strukturierten klinischen Ablauf, der KI-gestützte Analyse mit den vier klassischen Verfahren der TCM-Diagnostik verbindet.',
     teamTag: 'FACHÄRZTLICHES TEAM',
     teamTitle: 'Unser Therapeuten-Team',
     viewProfile: 'Profil Anzeigen'

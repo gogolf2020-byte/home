@@ -379,76 +379,91 @@ export const practitionersData = [
       de: 'Helene Li YU'
     },
     shortTitle: {
-      zh: '高级针灸诊疗师 · ACC 注册医师',
-      en: 'Senior Practitioner · ACC Registered Acupuncturist',
-      de: 'Senior-Behandlerin · ACC-Registrierte Akupunkteurin'
+      zh: 'Wellness Spring 创始人 · ACC & CMCNZ 注册中医师 · AI-中医临床整合专家',
+      en: 'Founder Wellness Spring · ACC & CMCNZ Registered Acupuncturist · AI–TCM Specialist',
+      de: 'Gründerin Wellness Spring · ACC & CMCNZ Registrierte Akupunkteurin · KI-TCM Spezialistin'
     },
     title: {
-      zh: '高级针灸诊疗师 ｜ 中医整体调理专家',
-      en: 'Senior Practitioner | Holistic TCM & Acupuncture',
-      de: 'Senior-Behandlerin | Ganzheitliche Akupunktur & TCM'
+      zh: 'Wellness Spring 创始人 ｜ ACC & CMCNZ 注册中医师 ｜ AI-中医临床整合与跨文化医疗沟通专家',
+      en: 'Founder, Wellness Spring | ACC & CMCNZ Registered Acupuncturist | AI–TCM Clinical Integration & Cross-Cultural Communication',
+      de: 'Gründerin, Wellness Spring | ACC & CMCNZ Registrierte Akupunkteurin | KI-TCM Klinische Integration & Kommunikation'
     },
     mentor: {
-      zh: 'ACC 注册针灸医师 ｜ 资深循证中医专家',
-      en: 'ACC-Registered Acupuncturist | Evidence-Informed TCM Specialist',
-      de: 'ACC-Registrierte Akupunkteurin | Ganzheitliche TCM-Spezialistin'
+      zh: '“以语言、文化与科技为桥梁，连接传统中医与全球健康。”',
+      en: '"Bridging Traditional Chinese Medicine and global healthcare through language, culture and technology."',
+      de: '"Verbindung von Traditioneller Chinesischer Medizin und globaler Gesundheit durch Sprache, Kultur und Technologie."'
     },
     photo: helenePhoto,
     hometown: {
-      zh: '奥克兰 Wellness Spring 资深医师',
-      en: 'Senior Practitioner at Wellness Spring',
-      de: 'Senior-Behandlerin bei Wellness Spring'
+      zh: 'Wellness Spring 创始人 · 执业中医师',
+      en: 'Founder & Practitioner at Wellness Spring',
+      de: 'Gründerin & Behandlerin bei Wellness Spring'
     },
     tags: {
-      zh: ['ACC 注册医师', 'AI 智能评估', '心身调节', '整体康复'],
-      en: ['ACC Registered', 'AI Assessment', 'Mind-Body Regulation', 'Holistic Recovery'],
-      de: ['ACC-Registriert', 'KI-Gesundheitsanalyse', 'Körper-Geist-Regulation', 'Ganzheitlich']
+      zh: ['Wellness Spring 创始人', 'ACC & CMCNZ 注册医师', 'AI-中医临床整合', '资深跨文化交传', '新西兰健康科学学士'],
+      en: ['Founder Wellness Spring', 'ACC & CMCNZ Registered', 'AI–TCM Integration', 'Cross-Cultural Interpreter', 'BHSc Acupuncture'],
+      de: ['Gründerin Wellness Spring', 'ACC & CMCNZ Registriert', 'KI-TCM Integration', 'Medizinische Dolmetscherin', 'BHSc Akupunktur']
     },
     shortDesc: {
-      zh: 'Wellness Spring 资深医师，融合传统针灸、身心调节与 AI 智能健康评估，为患者提供全方位个性化护理。',
-      en: 'Senior practitioner at Wellness Spring, integrating acupuncture, mind-body regulation, and AI health assessment.',
-      de: 'Senior-Behandlerin bei Wellness Spring, verbindet Akupunktur, Körper-Geist-Regulation und KI-Gesundheitsanalyse.'
+      zh: 'Wellness Spring 创始人，融合中医临床诊疗、AI 智能健康评估、专业医疗法律交传及公共服务经验，打造执业医师主导的负责任整合医疗平台。',
+      en: 'Founder of Wellness Spring, combining TCM clinical practice, AI-assisted health assessment, cross-cultural medical interpreting, and public service experience to build a responsible, practitioner-led integrative healthcare platform.',
+      de: 'Gründerin von Wellness Spring, verbindet TCM-Praxis, KI-gestützte Gesundheitsanalyse, medizinische Dolmetscherausbildung und öffentliche Erfahrung.'
     },
     bioParagraphs: {
       zh: [
-        'Helene 以丰富的专业经验与深切关怀服务每位来访者，采用融合传统针灸、中医疗法、身心调节和 AI 辅助健康评估的整体护理方法。',
-        '她专注于个性化治疗、情绪平衡与心理疏导，全方位支持患者的长期健康与身心调和。'
+        'Helene Yu（余丽）为跨学科健康专业人士及新西兰 Wellness Spring 诊所创始人。她的专业背景跨越传统中医临床诊疗、专业医疗与法律交传、公共服务以及国际企业管理。她目前的核心焦点在于推动人工智能与中医师主导的“四诊”评估、结构化真实世界数据及多元文化健康应用的负责任临床整合。',
+        '作为新西兰 ACC 及 CMCNZ 注册中医师、MATRIX AI 产品培训师，Helene 正在建立一套结构化的临床工作流程，将 AI 辅助健康评估与传统中医“望、闻、问、切”四诊有机融合。她利用大语言模型（LLM）对临床信息进行结构化梳理与比对，同时确保最终的医学解读与临床决策始终严格由执业医师主导复核。',
+        'Helene 拥有新西兰健康科学（针灸专业）学士学位，并在奥克兰理工大学（AUT）完成了医疗法律翻译及健康管理的深造。她精通英语、国语及粤语，始终秉持“以语言、文化与科技为桥梁，连接传统中医与全球健康”的专业使命。'
       ],
       en: [
-        'Helene brings extensive expertise and compassion to her practice, with a holistic approach to care, integrating acupuncture, traditional Chinese medicine therapies, mind–body regulation, and AI-assisted health assessment.',
-        'Her focus is on personalised treatment, emotional balance, and supporting long-term wellbeing through thoughtful, individualised care.'
+        'Helene Yu is a multidisciplinary health professional and founder of Wellness Spring in New Zealand. Her background spans Traditional Chinese Medicine (TCM) clinical practice, professional medical and legal interpreting, public-service experience, and international business management. Her current focus is the responsible clinical integration of artificial intelligence with practitioner-led TCM assessment, structured real-world data, and multicultural health applications.',
+        'As an ACC and CMCNZ registered acupuncturist and MATRIX AI product trainer, Helene is developing a structured clinical workflow linking AI-assisted health assessment with traditional TCM Four Diagnostics (observation, listening/smelling, inquiry, palpation). She uses large language models (LLMs) to structure and compare clinical information while ensuring final interpretation and decision-making remain strictly under practitioner governance.',
+        'Helene holds a Bachelor of Health Science (Acupuncture) in New Zealand and completed postgraduate studies in medical and legal interpreting as well as health management at Auckland University of Technology (AUT). Fluent in English, Mandarin, and Cantonese, her professional mission is "Bridging Traditional Chinese Medicine and global healthcare through language, culture and technology."'
       ],
       de: [
-        'Helene verbindet umfassende Erfahrung und Einfühlungsvermögen mit einem ganzheitlichen Ansatz aus Akupunktur, traditioneller chinesischer Medizin, Körper-Geist-Regulation und KI-gestützter Gesundheitsanalyse.',
-        'Ihr Fokus liegt auf individueller Behandlung, emotionaler Balance und langfristigem Wohlbefinden durch aufmerksame, persönliche Betreuung.'
+        'Helene Yu ist eine multidisziplinäre Gesundheitsexpertin und Gründerin von Wellness Spring in Neuseeland. Ihr Hintergrund verbindet Traditionelle Chinesische Medizin (TCM), professionelles medizinisches und juristisches Dolmetschen, öffentlichen Dienst und internationales Unternehmensmanagement. Ihr Fokus liegt auf der verantwortungsvollen klinischen Integration künstlicher Intelligenz.',
+        'Als ACC- und CMCNZ-registrierte Akupunkteurin und MATRIX KI-Produkttrainerin entwickelt Helene einen strukturierten klinischen Ablauf, der KI-gestützte Analyse mit den vier klassischen Verfahren der TCM-Diagnostik verbindet. KI-generierte Daten werden aufbereitet, während die finale Entscheidung stets unter therapeuten-geführter Regie verbleibt.',
+        'Helene hält einen Bachelor of Health Science (Akupunktur) in Neuseeland und schloss Aufbaustudien an der Auckland University of Technology (AUT) ab. Fließend in Englisch, Mandarin und Kantonesisch ist ihre Mission: „Verbindung von TCM und globaler Gesundheit durch Sprache, Kultur und Technologie.“'
       ]
     },
     educationList: {
       zh: [
-        { period: 'ACC 注册资格', degree: 'ACC 注册针灸理疗医师', school: '新西兰针灸执业理事会' },
-        { period: '专业经验', degree: '循证中医、针灸与身心调控资深专家', school: 'Wellness Spring Clinic' }
+        { period: '学士学位', degree: '健康科学学士（针灸专业）BHSc (Acupuncture)', school: 'New Zealand (新西兰)' },
+        { period: '研究生深造', degree: '医疗与法律高级翻译研究生项目', school: '奥克兰理工大学 (AUT)' },
+        { period: '研究生深造', degree: '健康管理与体育高尔夫教练学', school: '奥克兰理工大学 (AUT)' },
+        { period: '双执业认证', degree: '新西兰 ACC 注册针灸医师 & CMCNZ 注册医师', school: 'ACC & CMCNZ New Zealand' }
       ],
       en: [
-        { period: 'ACC Practitioner', degree: 'ACC Registered Acupuncturist', school: 'Acupuncture New Zealand' },
-        { period: 'Expertise', degree: 'Senior TCM & Mind-Body Regulation Specialist', school: 'Wellness Spring Clinic' }
+        { period: 'Bachelor Degree', degree: 'Bachelor of Health Science (Acupuncture)', school: 'New Zealand (BHSc)' },
+        { period: 'Postgraduate', degree: 'Postgraduate Studies in Medical & Legal Interpreting', school: 'Auckland University of Technology (AUT)' },
+        { period: 'Postgraduate', degree: 'Health Management & Sport Coaching Studies', school: 'Auckland University of Technology (AUT)' },
+        { period: 'Registrations', degree: 'ACC Registered Acupuncturist & CMCNZ Registered Practitioner', school: 'ACC & CMCNZ New Zealand' }
       ],
       de: [
-        { period: 'ACC-Qualifikation', degree: 'ACC-Registrierte Akupunkteurin', school: 'Acupuncture New Zealand' },
-        { period: 'Expertise', degree: 'Spezialistin für TCM & Körper-Geist-Regulation', school: 'Wellness Spring Clinic' }
+        { period: 'Bachelorgrad', degree: 'Bachelor of Health Science (Akupunktur)', school: 'Neuseeland (BHSc)' },
+        { period: 'Aufbaustudium', degree: 'Postgraduales Studium Medizinisches & Juristisches Dolmetschen', school: 'Auckland University of Technology (AUT)' },
+        { period: 'Aufbaustudium', degree: 'Gesundheitsmanagement & Sport-Coaching', school: 'Auckland University of Technology (AUT)' },
+        { period: 'Zulassungen', degree: 'ACC & CMCNZ Registrierte Akupunkteurin', school: 'ACC & CMCNZ Neuseeland' }
       ]
     },
     researchPoints: {
       zh: [
-        '主导融合 AI 智能健康评估与传统脉象/体质辨证的个性化护理路径。',
-        '深入探讨中医心理学与治疗音乐在身心情绪调理中的协同减压效果。'
+        '构建结构化 AI-中医临床流程：患者接诊 → MATRIX AI 评估 → 中医四诊 → 医师复核 → 个性化调理 → 随访追溯。',
+        '推进 AI 辅助健康评估在新西兰多元族群中的跨文化临床验证与模型公平性研究。',
+        '开发双语编码四诊问卷及模型无关（Model-agnostic）的临床大模型提示词（Prompt）架构。',
+        '具备法院、医院及政府机构数十年的英语、国语及粤语高级专业翻译与沟通经验。'
       ],
       en: [
-        'Integrated AI-assisted health pattern recognition with traditional TCM diagnostic care.',
-        'Researched therapeutic music and mind-body regulation for emotional & nervous system support.'
+        'Structured AI–TCM Clinical Workflow: Intake → MATRIX AI Assessment → TCM Four Diagnostics → Practitioner Review → Personalised Care → Follow-up.',
+        'Multicultural clinical validation of AI-assisted TCM assessment across New Zealand’s diverse ethnic populations.',
+        'Bilingual coded Four-Diagnostics clinical data structuring and model-agnostic LLM prompt architecture.',
+        'Professional cross-cultural medical communication and court/hospital interpreting in English, Mandarin, and Cantonese.'
       ],
       de: [
-        'Integration von KI-Gesundheitsanalysen mit traditioneller TCM-Diagnostik.',
-        'Forschung zu therapeutischer Musik und Mind-Body-Regulation bei Stress und Angst.'
+        'Strukturierter KI-TCM Ablauf: Aufnahme → MATRIX KI Analyse → TCM 4 Diagnosen → Therapeuten-Prüfung → Pflege → Nachsorge.',
+        'Multikulturelle klinische Validierung der KI-Analyse in Neuseelands vielfältiger Gesellschaft.',
+        'Zweisprachig kodierte TCM-Datenstrukturierung und herstellerunabhängige LLM-Architektur.',
+        'Professionelle medizinische Dolmetschpraxis in Englisch, Mandarin und Kantonesisch.'
       ]
     },
     specialtiesTitle: {
@@ -458,22 +473,25 @@ export const practitionersData = [
     },
     specialties: {
       zh: [
-        'Traditional Chinese Medicine & Acupuncture 中医与针灸',
-        'Mind-Body Regulation 身心调节与经络调理',
-        'Emotional Balance & Wellness 情绪平衡与心理辅导',
-        'AI-Assisted Health Assessment AI 辅助健康评估'
+        'AI–TCM Clinical Integration & Workflow Design AI-中医临床整合与工作流设计',
+        'Traditional Chinese Medicine & Acupuncture 循证中医、针灸与“四诊”诊疗',
+        'Cross-Cultural Medical Communication 跨文化医疗沟通与交传（国/粤/英）',
+        'Multicultural Health Data & Clinical Validation 多元文化健康数据与临床验证',
+        'ACC Injury Recovery & Musculoskeletal Care ACC 损伤康复与身心整体护理'
       ],
       en: [
+        'AI–TCM Clinical Integration & Workflow Design',
         'Traditional Chinese Medicine & Acupuncture',
-        'Mind-Body Regulation',
-        'Emotional Balance & Wellness',
-        'AI-Assisted Health Assessment'
+        'Cross-Cultural Medical Communication (Mandarin, Cantonese, English)',
+        'Multicultural Health Data & Clinical Validation',
+        'ACC Injury Recovery & Integrative Healthcare'
       ],
       de: [
+        'KI-TCM Klinische Integration & Ablaufdesign',
         'Traditionelle Chinesische Medizin & Akupunktur',
-        'Körper-Geist-Regulation',
-        'Emotionale Balance & Wohlbefinden',
-        'KI-gestützte Gesundheitsanalyse'
+        'Interkulturelle Medizinische Kommunikation (Mandarin, Kantonesisch, Englisch)',
+        'Multikulturelle Gesundheitsdaten & Validierung',
+        'ACC-Verletzungsrehabilitation & Ganzheitliche Pflege'
       ]
     },
     contactEmail: 'wellness.spring.sys@gmail.com'

@@ -64,7 +64,7 @@ export default function Practitioner() {
             <div className="lg:col-span-7 flex flex-col justify-between">
               <div>
                 <span className="text-xs uppercase tracking-widest font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-3.5 py-1 rounded-full border border-emerald-200 dark:border-emerald-800 inline-block mb-3">
-                  {lang === 'zh' ? '创始人 · 首席诊疗师' : lang === 'de' ? 'GRÜNDERIN & LEITENDE BEHANDLERIN' : 'FOUNDER & LEAD PRACTITIONER'}
+                  {t('practitioner.founderTag')}
                 </span>
                 
                 <h3 className="text-xl sm:text-2xl font-bold text-primary dark:text-emerald-300 tracking-tight mb-2">
@@ -72,23 +72,15 @@ export default function Practitioner() {
                 </h3>
 
                 <p className="text-base font-semibold text-emerald-800 dark:text-emerald-400 mb-6">
-                  {lang === 'zh' ? '新西兰 ACC 注册高级针灸医师 ｜ 循证中医与 AI 结合调护专家' : lang === 'de' ? 'ACC-Registrierte Akupunkteurin | TCM & KI-Spezialistin' : 'ACC-Registered Acupuncturist | TCM & AI Assessment Specialist'}
+                  {t('practitioner.founderTitle')}
                 </p>
 
                 <p className="text-slate-700 dark:text-slate-300 text-base leading-relaxed mb-4">
-                  {lang === 'zh'
-                    ? 'Helene 以丰富的专业经验与深切关怀服务每位来访者，采用融合针灸、中医疗法、身心调节和 AI 辅助健康评估的整体护理方法。'
-                    : lang === 'de'
-                    ? 'Helene verbindet umfassende Erfahrung und Einfühlungsvermögen mit einem ganzheitlichen Ansatz aus Akupunktur, traditioneller chinesischer Medizin, Körper-Geist-Regulation und KI-gestützter Gesundheitsanalyse.'
-                    : 'Helene brings extensive expertise and compassion to her practice, with a holistic approach to care, integrating acupuncture, traditional Chinese medicine therapies, mind–body regulation, and AI-assisted health assessment.'}
+                  {t('practitioner.founderDesc1')}
                 </p>
 
                 <p className="text-slate-700 dark:text-slate-300 text-base leading-relaxed mb-8">
-                  {lang === 'zh'
-                    ? '她专注于个性化治疗、情绪平衡与心理疏导，全方位支持患者的长期健康与身心调和。'
-                    : lang === 'de'
-                    ? 'Ihr Fokus liegt auf individueller Behandlung, emotionaler Balance und langfristigem Wohlbefinden durch aufmerksame, persönliche Betreuung.'
-                    : 'Her focus is on personalised treatment, emotional balance, and supporting long-term wellbeing through thoughtful, individualised care.'}
+                  {t('practitioner.founderDesc2')}
                 </p>
 
                 {/* Specialties Box (Matches user screenshot) */}

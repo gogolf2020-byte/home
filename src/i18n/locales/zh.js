@@ -182,11 +182,11 @@ export default {
   },
   practitioner: {
     meetTitle: 'Meet the Practitioner',
-    founderBadge: '👑 Wellness Spring 诊所创始人',
-    founderTag: '创始人 · 首席诊疗师',
-    founderTitle: '新西兰 ACC 注册高级针灸医师 ｜ 循证中医与 AI 结合调护专家',
-    founderDesc1: 'Helene 以丰富的专业经验与深切关怀服务每位来访者，采用融合针灸、中医疗法、身心调节和 AI 辅助健康评估的整体护理方法。',
-    founderDesc2: '她专注于个性化治疗、情绪平衡与心理疏导，全方位支持患者的长期健康与身心调和。',
+    founderBadge: '👑 Wellness Spring 创始人',
+    founderTag: '创始人 · 执业中医师',
+    founderTitle: 'Wellness Spring 创始人 ｜ ACC & CMCNZ 注册中医师 ｜ AI-中医临床整合与跨文化沟通专家',
+    founderDesc1: 'Helene Yu（余丽）为跨学科健康专业人士及新西兰 Wellness Spring 诊所创始人。她的专业背景跨越中医临床诊疗、专业医疗与法律交传、公共服务以及国际企业管理。',
+    founderDesc2: '作为 ACC 及 CMCNZ 注册中医师、MATRIX AI 产品培训师，她的核心焦点在于推动人工智能与中医师主导的“四诊”评估、结构化真实世界数据及多元文化健康应用的负责任临床整合。',
     teamTag: '专家医师团队',
     teamTitle: '核心专家团队',
     viewProfile: '查看医师详情'
