@@ -17,19 +17,34 @@ export default {
   researchInnovation: {
     tag: 'WELLNESS SPRING · KLINISCHE FORSCHUNG & INNOVATION',
     title: 'Forschung & Innovation',
-    subtitle: 'Wellness Spring entwickelt einen strukturierten Ansatz zur Integration KI-gestützter Gesundheitsanalyse mit therapeuten-geführter Traditioneller Chinesischer Medizin in der klinischen Praxis Neuseelands.',
-    card1Title: 'Klinische Integration',
-    card1Sub: 'KI-Analyse kombiniert mit TCM-Diagnostik',
-    card1Desc: 'Verbindung digitaler Gesundheitsanalyse mit den vier klassischen Verfahren der TCM-Diagnostik für eine strukturierte evidenzbasierte Behandlung.',
-    card2Title: 'Multikulturelle Anwendung',
-    card2Sub: 'Kulturelle Anpassung & Inklusion',
-    card2Desc: 'Fokus auf die Anwendbarkeit und kulturelle Akzeptanz der KI-Gesundheitsanalyse in Neuseelands vielfältiger Gesellschaft.',
-    card3Title: 'Forschungskooperation',
-    card3Sub: 'Akademische & technologische Partnerschaften',
-    card3Desc: 'Willkommen sind Partnerschaften mit Technologieentwicklern, Bildungseinrichtungen und Forschungsinstituten.',
-    ctaTitle: 'Interesse an Forschungskooperation?',
-    ctaDesc: 'Wir laden Technologiepartner, akademische Einrichtungen und Forscher herzlich zur Zusammenarbeit ein.',
-    ctaBtn: 'Forschungsteam Kontaktieren'
+    heroHeadline: 'Wo Traditionelle Chinesische Medizin auf verantwortungsvolle KI trifft',
+    heroP1: 'Wellness Spring erforscht die verantwortungsvolle Integration von Traditioneller Chinesischer Medizin, KI-gestützter Gesundheitsanalyse und realer klinischer Praxis in Neuseeland.',
+    heroP2: 'Unser Fokus liegt auf der Verbindung von Technologie, therapeuten-geführter klinischer Expertise und multikulturellen Gesundheitsdaten, um KI-gestützte Gesundheitsversorgung besser zu verstehen, zu validieren und weiterzuentwickeln.',
+    
+    // Module 1
+    m1Title: 'KI-Gestützte Klinische Integration',
+    m1Sub: 'Verbindung von KI-Erkenntnissen mit therapeuten-geführter TCM-Diagnostik',
+    m1Desc1: 'Wellness Spring entwickelt einen strukturierten klinischen Ablauf, der KI-gestützte Gesundheitsanalyse mit den vier Verfahren der TCM-Diagnostik (Inspektion, Auskultation/Olfactio, Befragung und Palpation) vereint.',
+    m1Desc2: 'KI-generierte Daten werden zusammen mit klinischen Befunden ausgewertet, um individuelle Behandlungspläne und Nachsorge zu unterstützen.',
+    m1Flow: 'KI-Analyse → TCM Vier Diagnosen → KI-Integration → Therapeutische Prüfung → Individuelle Pflege → Nachsorge',
+
+    // Module 2
+    m2Title: 'Multikulturelle Gesundheit & Klinische Validierung',
+    m2Sub: 'Untersuchung der KI-Gesundheitsanalyse in Neuseelands vielfältigen Gemeinschaften',
+    m2Desc1: 'Neuseeland bietet ein einzigartiges multikulturelles Umfeld für reale klinische Beobachtungen. Wellness Spring baut strukturierte, anonymisierte klinische Daten auf, um die Leistung KI-gestützter Analyse über verschiedene ethnische und gesundheitliche Hintergründe hinweg zu untersuchen.',
+    m2Desc2: 'Diese Arbeit unterstützt künftige Modellvalidierung, Lokalisierung und verantwortungsvolle KI-Entwicklung.',
+
+    // Module 3
+    m3Title: 'Forschungskooperation & Zukunfts-KI',
+    m3Sub: 'Verbindung von klinischer Praxis, Technologieentwicklung und Zukunftsforschung',
+    m3Desc1: 'Wellness Spring sucht die Zusammenarbeit mit KI-Entwicklern, TCM-Institutionen, Universitäten und Forschungspartnern in Bereichen wie klinischer Validierung, Datenstandardisierung und multikultureller Gesundheit.',
+    m3Desc2: 'Wir verfolgen auch aktuelle Entwicklungen in fortschrittlicher KI und quantenoptimierten Technologien, die zur Modelloptimierung beitragen können.',
+
+    // Bottom Closing Section
+    footerTitle: 'Die Zukunft der Integrativen Medizin Gestalten',
+    footerDesc: 'Wellness Spring versteht sich als Brücke zwischen traditionellem medizinischem Wissen, moderner KI-Technologie, klinischer Praxis und zukünftiger akademischer Forschung.',
+    btnExplore: 'KI-Gesundheitsanalyse Erkunden',
+    btnCollaborate: 'Forschungskooperation'
   },
   hero: {
     tag: 'WELLNESS SPRING · AUCKLAND',

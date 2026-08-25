@@ -17,19 +17,34 @@ export default {
   researchInnovation: {
     tag: 'WELLNESS SPRING · CLINICAL RESEARCH & INNOVATION',
     title: 'Research & Innovation',
-    subtitle: 'Wellness Spring is developing a structured approach to integrating AI-assisted health assessment with practitioner-led Traditional Chinese Medicine evaluation in real-world New Zealand clinical practice.',
-    card1Title: 'Clinical Integration',
-    card1Sub: 'AI assessment & TCM 4-diagnostic integration',
-    card1Desc: 'Integrating state-of-the-art AI health assessment technology with traditional TCM 4-diagnostic methods (Inspection, Auscultation/Olfaction, Inquiry, Palpation) to establish a structured, evidence-informed clinical care workflow.',
-    card2Title: 'Multicultural Application',
-    card2Sub: 'Cultural adaptability & community health inclusivity',
-    card2Desc: 'Focusing on the applicability, cultural responsiveness, and effectiveness of AI health assessment tools across New Zealand’s diverse ethnic population groups.',
-    card3Title: 'Research Collaboration',
-    card3Sub: 'Academic & technology partnerships',
-    card3Desc: 'Welcoming collaborative partnerships with AI technology developers, educational institutions, healthcare bodies, and clinical research organizations.',
-    ctaTitle: 'Interested in Research Collaboration?',
-    ctaDesc: 'We actively invite technology partners, academic institutions, and clinical researchers to collaborate on digital health and TCM innovation.',
-    ctaBtn: 'Contact Research Team'
+    heroHeadline: 'Where Traditional Chinese Medicine Meets Responsible AI',
+    heroP1: 'Wellness Spring is exploring the responsible integration of Traditional Chinese Medicine, AI-assisted health assessment and real-world clinical practice in New Zealand.',
+    heroP2: 'Our focus is to connect technology, practitioner-led clinical insight and multicultural health data to support better understanding, validation and future development of AI-enabled healthcare.',
+    
+    // Module 1
+    m1Title: 'AI-Assisted Clinical Integration',
+    m1Sub: 'Combining AI insights with practitioner-led Traditional Chinese Medicine assessment.',
+    m1Desc1: 'Wellness Spring is developing a structured clinical workflow that integrates AI-assisted health assessment with the Traditional Chinese Medicine Four Diagnostics — observation, listening, inquiry and palpation.',
+    m1Desc2: 'AI-generated information is reviewed alongside clinical findings to support personalised assessment, treatment planning and follow-up.',
+    m1Flow: 'AI Assessment → TCM Four Diagnostics → AI-Assisted Integration → Practitioner Review → Personalised Care → Follow-up',
+
+    // Module 2
+    m2Title: 'Multicultural Health & Clinical Validation',
+    m2Sub: 'Exploring how AI health assessment performs across New Zealand’s diverse communities.',
+    m2Desc1: 'New Zealand provides a unique multicultural environment for real-world clinical observation. Wellness Spring is building structured, de-identified clinical data to explore how AI-assisted health assessment may perform across different ethnic, constitutional and health backgrounds.',
+    m2Desc2: 'This work may help support future model validation, localisation and responsible AI development.',
+
+    // Module 3
+    m3Title: 'Research Collaboration & Emerging AI',
+    m3Sub: 'Connecting clinical practice with technology development and future research.',
+    m3Desc1: 'Wellness Spring is interested in collaboration with AI developers, Traditional Chinese Medicine institutions, universities and research partners in areas including clinical validation, data standardisation, human–AI integration and multicultural health.',
+    m3Desc2: 'We are also following emerging developments in advanced AI and quantum-enhanced technologies that may contribute to future model optimisation and cross-population adaptability.',
+
+    // Bottom Closing Section
+    footerTitle: 'Building the Future of Integrative Health',
+    footerDesc: 'Wellness Spring aims to serve as a bridge between traditional medical knowledge, modern AI technology, real-world clinical practice and future academic research.',
+    btnExplore: 'Explore AI Health Assessment',
+    btnCollaborate: 'Research Collaboration'
   },
   hero: {
     tag: 'WELLNESS SPRING · AUCKLAND',

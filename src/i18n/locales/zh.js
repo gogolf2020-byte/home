@@ -17,19 +17,34 @@ export default {
   researchInnovation: {
     tag: 'WELLNESS SPRING · 临床科研与创新',
     title: '科研与创新',
-    subtitle: 'Wellness Spring 正在探索一套有系统、有规范的创新模式，将 AI 智能辅助健康评估与执业中医师四诊解读深度融合，并应用于新西兰的实际临床诊疗场景中。',
-    card1Title: 'Clinical Integration 临床整合',
-    card1Sub: 'AI 检测与中医师四诊深度结合',
-    card1Desc: '将数字化 AI 评估技术与传统中医“望、闻、问、切”四诊完美结合，构建有规范、有循证支持的临床诊疗与健康调护流程。',
-    card2Title: 'Multicultural Application 多元文化应用',
-    card2Sub: '跨族群适用性与文化包容',
-    card2Desc: '关注 AI 健康评估在新西兰多元族群与跨文化环境中的适用性、包容度及健康促进作用。',
-    card3Title: 'Research Collaboration 科研合作',
-    card3Sub: '学研产一体化开放合作平台',
-    card3Desc: '欢迎与技术研发机构、高等教育机构、医疗健康组织和科研单位建立紧密的学术与项目合作。',
-    ctaTitle: '探讨科研与技术创新合作？',
-    ctaDesc: '我们诚挚邀请人工智能技术研发机构、学术高校及临床研究单位共同拓展数字健康与中医现代化前沿。',
-    ctaBtn: '联系科研团队'
+    heroHeadline: '当传统中医遇上负责任的人工智能',
+    heroP1: 'Wellness Spring 正在探索将传统中医、AI 智能辅助健康评估与新西兰真实临床实践深度整合的负责任模式。',
+    heroP2: '我们的核心关注点在于连接现代前沿技术、医师主导的临床洞察与多元文化健康数据，以支持对 AI 智慧医疗更好的理解、临床验证与未来发展。',
+    
+    // Module 1
+    m1Title: 'AI 辅助临床整合',
+    m1Sub: '将 AI 智能洞察与医师主导的中医诊疗深度结合',
+    m1Desc1: 'Wellness Spring 正在建立一套结构化的临床工作流程，将 AI 智能辅助健康评估与传统中医“望、闻、问、切”四诊有机融合。',
+    m1Desc2: 'AI 生成的数据信息与临床检查结果相印证，全方位支持个性化评估、诊疗方案制定与后期随访管理。',
+    m1Flow: 'AI 智能评估 → 中医四诊检查 → AI-中医协同整合 → 医师专业复核 → 个性化调护方案 → 追踪随访管理',
+
+    // Module 2
+    m2Title: '多元文化健康与临床验证',
+    m2Sub: '探索 AI 健康评估在新西兰多元社区环境中的临床表现',
+    m2Desc1: '新西兰为真实世界的临床观察提供了独特的多元文化环境。Wellness Spring 正在构建结构化、去标识化的临床数据集，以探索 AI 辅助健康评估在不同族群、体质及健康背景人群中的表现。',
+    m2Desc2: '这项工作将为未来的模型验证、本土化适配及负责任的 AI 开发提供有力支持。',
+
+    // Module 3
+    m3Title: '科研合作与前沿 AI 技术',
+    m3Sub: '将临床实践与技术研发及未来学术研究紧密相连',
+    m3Desc1: 'Wellness Spring 诚挚希望与 AI 技术研发团队、中医学术机构、高校及科研伙伴建立多方合作，涵盖临床验证、数据标准化、人机协同及多元文化健康等领域。',
+    m3Desc2: '同时，我们持续关注高级 AI 与量子增强技术的前沿进展，以期为未来的模型优化与跨族群适应性贡献力量。',
+
+    // Bottom Closing Section
+    footerTitle: '共建整合医学的未来',
+    footerDesc: 'Wellness Spring 旨在成为连接传统医学智慧、现代 AI 科技、真实临床实践与未来学术研究的桥梁。',
+    btnExplore: '探索 AI 健康评估',
+    btnCollaborate: '科研项目合作'
   },
   hero: {
     tag: 'WELLNESS SPRING · 奥克兰',
