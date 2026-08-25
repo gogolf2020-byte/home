@@ -14,17 +14,23 @@ export default function AIAssessment() {
         {/* Outer Card Container matching ACC & Mobile Care section styling */}
         <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-6 sm:p-10 md:p-12 shadow-xl border border-slate-200/80 dark:border-slate-800">
           
-          {/* Brand Header */}
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 dark:bg-emerald-950/80 px-4 py-1.5 border border-emerald-200 dark:border-emerald-800 text-emerald-900 dark:text-emerald-300 text-xs font-bold tracking-widest uppercase mb-4 shadow-sm">
+          {/* Brand Header Above Image */}
+          <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
+            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 dark:bg-emerald-950/80 px-4 py-1.5 border border-emerald-200 dark:border-emerald-800 text-emerald-900 dark:text-emerald-300 text-xs sm:text-sm font-bold tracking-wide shadow-sm">
               <span>✨</span>
-              <span>{t('ai.tagHeaderEn')} · {t('ai.tagHeaderZh')}</span>
+              <span>{t('ai.tagBadge')}</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary dark:text-emerald-300 mb-4">
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-primary dark:text-emerald-300 tracking-tight leading-tight">
               {t('ai.title')}
             </h2>
-            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-slate-100">
               {t('ai.subtitle')}
+            </h3>
+
+            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto pt-2">
+              {t('ai.desc')}
             </p>
           </div>
 
@@ -44,11 +50,11 @@ export default function AIAssessment() {
                 <div className="inline-flex items-center gap-2 bg-emerald-700 text-white text-xs font-bold px-3 py-1 rounded-full w-fit shadow-sm">
                   <span>⚡ AI & TCM Fusion</span>
                 </div>
-                <h3 className="text-2xl font-bold text-emerald-900 dark:text-emerald-300">
+                <h3 className="text-2xl font-extrabold text-emerald-900 dark:text-emerald-300">
                   {t('ai.title')}
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
-                  {t('ai.subtitle')}
+                  {t('ai.desc')}
                 </p>
               </div>
 

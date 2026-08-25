@@ -162,10 +162,12 @@ export default {
     successDesc: 'Thank you for your request. Our registered practitioner team will review your clinical and safety assessment within 24 hours and contact you to confirm appointment details and fee estimates.'
   },
   ai: {
-    tagHeaderEn: 'AI HEALTH DISCOVERY',
-    tagHeaderZh: 'AI Health Discovery',
-    title: 'What could your body be telling you?',
-    subtitle: 'A different way to explore your health — combining AI-assisted assessment with traditional Chinese medicine and professional interpretation.',
+    tagHeaderEn: 'MATRIX AI HealthSense™',
+    tagHeaderZh: 'AI-Assisted Multimodal Health Assessment System',
+    tagBadge: 'Powered by AI-enabled TCM and multimodal health intelligence',
+    title: 'MATRIX AI HealthSense™ Assessment',
+    subtitle: 'AI-Assisted Multimodal Health Assessment System',
+    desc: 'A non-invasive, AI-assisted health assessment that combines physiological signals and Traditional Chinese Medicine-informed analysis to provide structured health insights. Results are reviewed alongside practitioner-led clinical assessment at Wellness Spring.',
     step1Title: '01 — Scan',
     step1Desc: 'Complete basic assessment in minutes',
     step1Sub: 'A quick and convenient digital health evaluation.',
