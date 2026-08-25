@@ -156,7 +156,7 @@ export default {
   ai: {
     tagHeaderEn: 'MATRIX AI HealthSense™',
     tagHeaderZh: 'AI 다모달 건강 진단 시스템',
-    tagBadge: 'Powered by AI-enabled TCM and multimodal health intelligence',
+    tagBadge: 'AI 융합 한의학 & 다모달 지능형 건강 진단',
     title: 'MATRIX AI HealthSense™ 진단',
     subtitle: 'AI-Assisted Multimodal Health Assessment System',
     desc: '생체 신호 측정과 전통 한의학 사진(四診) 분석을 결합한 비침습적 AI 건강 진단 시스템입니다. 분석 결과는 Wellness Spring 한의사의 임상 진단과 함께 정밀하게 검토됩니다.',
@@ -222,7 +222,7 @@ export default {
   },
   music: {
     title: 'The Wellness Spring Sound',
-    tagline: 'Listen · Relax · Restore',
+    tagline: '경청 · 휴식 · 치유',
     tooltip: '🎵 치유 음악 듣기',
     closeTooltip: '닫기',
     play: '음악 재생',

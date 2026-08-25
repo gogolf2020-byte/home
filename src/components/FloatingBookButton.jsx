@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { usePreferences } from '../context/Preferences'
+import { useTranslation } from 'react-i18next'
 
 export default function FloatingBookButton() {
   const [isVisible, setIsVisible] = useState(false)
   const location = useLocation()
   const navigate = useNavigate()
-  const { language } = usePreferences()
+  const { t } = useTranslation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,7 +46,8 @@ export default function FloatingBookButton() {
 
   if (!isVisible) return null
 
-  const buttonText = location.pathname === '/acc-treatment' ? 'Book ACC Treatment' : 'Book Appointment'
+  const isAccPage = location.pathname === '/acc-treatment' || location.pathname === '/services/acc-treatment'
+  const buttonText = isAccPage ? t('acc.bookBtn') : t('hero.bookBtn')
 
   return (
     <a
