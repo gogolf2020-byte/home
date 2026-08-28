@@ -130,7 +130,30 @@ export default function AIAssessment() {
             <p className="font-semibold text-slate-700 dark:text-slate-200 text-xs sm:text-sm">
               {t('footer.aiDisclaimer')}
             </p>
-            <p className="text-slate-600 dark:text-slate-300 font-medium">{t('ai.disclaimerPrivacy')}</p>
+            <p className="text-slate-600 dark:text-slate-300 font-medium">
+              {(() => {
+                const text = t('ai.disclaimerPrivacy')
+                const targetPhrase = 'Health Information Privacy Code 2020'
+                if (text.includes(targetPhrase)) {
+                  const parts = text.split(targetPhrase)
+                  return (
+                    <>
+                      {parts[0]}
+                      <a
+                        href="https://www.privacy.org.nz/privacy-act-2020/codes-of-practice/hipc2020/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-700 dark:text-emerald-400 font-semibold underline underline-offset-2 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors"
+                      >
+                        {targetPhrase}
+                      </a>
+                      {parts[1]}
+                    </>
+                  )
+                }
+                return text
+              })()}
+            </p>
           </div>
 
         </div>

@@ -110,9 +110,20 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Global AI Supportive Tool Disclaimer Strip */}
-        <div className="mt-8 pt-6 border-t border-slate-200/80 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 text-center max-w-3xl mx-auto leading-relaxed font-medium">
+        {/* Global AI Supportive Tool & Privacy Compliance Strip */}
+        <div className="mt-8 pt-6 border-t border-slate-200/80 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 text-center max-w-3xl mx-auto leading-relaxed font-medium space-y-1.5">
           <p>💡 {t('footer.aiDisclaimer')}</p>
+          <p>
+            🔒 Health information privacy handled in strict compliance with the{' '}
+            <a
+              href="https://www.privacy.org.nz/privacy-act-2020/codes-of-practice/hipc2020/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-700 dark:text-emerald-400 font-semibold underline underline-offset-2 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors"
+            >
+              Health Information Privacy Code 2020
+            </a>.
+          </p>
         </div>
 
         {/* Divider */}
