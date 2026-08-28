@@ -60,7 +60,7 @@ export default function AIAssessment() {
           {/* 3 Step Experience Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {/* Step 1: Scan */}
-            <div className="bg-[#f8faf7] dark:bg-slate-800/50 rounded-2xl p-6 sm:p-8 border border-emerald-900/10 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-6 sm:p-8 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-xl mb-4 shadow-sm">
                   01
@@ -78,7 +78,7 @@ export default function AIAssessment() {
             </div>
 
             {/* Step 2: Discover */}
-            <div className="bg-[#f8faf7] dark:bg-slate-800/50 rounded-2xl p-6 sm:p-8 border border-emerald-900/10 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-6 sm:p-8 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-xl mb-4 shadow-sm">
                   02
@@ -96,7 +96,7 @@ export default function AIAssessment() {
             </div>
 
             {/* Step 3: Understand */}
-            <div className="bg-[#f8faf7] dark:bg-slate-800/50 rounded-2xl p-6 sm:p-8 border border-emerald-900/10 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-6 sm:p-8 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
               <div>
                 <div className="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-xl mb-4 shadow-sm">
                   03

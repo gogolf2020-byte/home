@@ -48,7 +48,7 @@ export default function ResearchInnovation() {
             </div>
 
             {/* Flow Process Line */}
-            <div className="bg-slate-50 dark:bg-slate-800/80 p-4 sm:p-5 rounded-2xl border border-slate-200/80 dark:border-slate-700">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 p-4 sm:p-5 rounded-2xl border border-emerald-200/80 dark:border-slate-700">
               <p className="text-xs uppercase tracking-wider font-bold text-emerald-800 dark:text-emerald-400 mb-2">
                 Clinical Workflow Integration
               </p>
@@ -92,7 +92,7 @@ export default function ResearchInnovation() {
 
             <div className="space-y-4 text-slate-700 dark:text-slate-300 text-base leading-relaxed">
               <p>{t('researchInnovation.m3Desc1')}</p>
-              <p className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200/80 dark:border-slate-700 text-slate-800 dark:text-slate-200">
+              <p className="p-4 bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl border border-emerald-200/80 dark:border-slate-700 text-slate-800 dark:text-slate-200">
                 ⚡ {t('researchInnovation.m3Desc2')}
               </p>
             </div>

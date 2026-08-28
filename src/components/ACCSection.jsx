@@ -27,13 +27,13 @@ export default function ACCSection() {
 
           {/* Key Trust Highlights */}
           <div className="flex flex-wrap justify-center gap-3 mb-8 text-xs sm:text-sm font-semibold text-emerald-900 dark:text-emerald-300">
-            <span className="rounded-full bg-[#f8faf7] dark:bg-slate-800 px-4 py-2 shadow-sm border border-emerald-200 dark:border-slate-700">
+            <span className="rounded-full bg-[#eef4ef] dark:bg-slate-800 px-4 py-2 shadow-sm border border-emerald-200 dark:border-slate-700">
               ✓ {t('acc.badgeAcupuncturist')}
             </span>
-            <span className="rounded-full bg-[#f8faf7] dark:bg-slate-800 px-4 py-2 shadow-sm border border-emerald-200 dark:border-slate-700">
+            <span className="rounded-full bg-[#eef4ef] dark:bg-slate-800 px-4 py-2 shadow-sm border border-emerald-200 dark:border-slate-700">
               ✓ {t('acc.badgePlan')}
             </span>
-            <span className="rounded-full bg-[#f8faf7] dark:bg-slate-800 px-4 py-2 shadow-sm border border-emerald-200 dark:border-slate-700">
+            <span className="rounded-full bg-[#eef4ef] dark:bg-slate-800 px-4 py-2 shadow-sm border border-emerald-200 dark:border-slate-700">
               ✓ {t('acc.badgeSupport')}
             </span>
           </div>

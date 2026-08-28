@@ -110,7 +110,7 @@ export default function Contact({ title, subtitle }) {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Contact Info */}
-            <div className="bg-emerald-50/60 dark:bg-slate-800/60 p-6 rounded-3xl border border-emerald-200/70 dark:border-slate-700">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 p-6 rounded-3xl border border-emerald-200/80 dark:border-slate-700">
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6">Contact Information</h3>
 
               <div className="space-y-5 text-sm sm:text-base">
@@ -145,7 +145,7 @@ export default function Contact({ title, subtitle }) {
             </div>
 
             {/* Quick Contact Form */}
-            <div className="bg-slate-50/80 dark:bg-slate-800/40 p-6 rounded-3xl border border-slate-200/80 dark:border-slate-800">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 p-6 rounded-3xl border border-emerald-200/80 dark:border-slate-700">
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">{t('contact.title')}</h3>
 
               {/* Send Method Selector */}
@@ -175,7 +175,7 @@ export default function Contact({ title, subtitle }) {
               </div>
 
               {submitted ? (
-                <div className="bg-emerald-50 dark:bg-slate-800 border border-emerald-300 dark:border-emerald-700 rounded-2xl p-5 text-center space-y-3">
+                <div className="bg-white dark:bg-slate-800 border border-emerald-300 dark:border-emerald-700 rounded-2xl p-5 text-center space-y-3">
                   <div className="w-12 h-12 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl font-bold shadow-sm">
                     ✓
                   </div>
@@ -332,7 +332,7 @@ export default function Contact({ title, subtitle }) {
               )}
             </div>
 
-            <div className="bg-emerald-50/60 dark:bg-slate-800/60 p-6 rounded-3xl border border-emerald-200/70 dark:border-slate-700 flex flex-col items-center justify-center text-center">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 p-6 rounded-3xl border border-emerald-200/80 dark:border-slate-700 flex flex-col items-center justify-center text-center">
               <img src={qrCode} alt="Wellness Spring WeChat QR code" className="h-36 w-36 rounded-2xl bg-white p-2 shadow-md border border-slate-200 dark:border-slate-700" />
               <p className="mt-4 text-sm font-bold text-slate-800 dark:text-slate-200">{t('contact.scanWeChat')}</p>
             </div>

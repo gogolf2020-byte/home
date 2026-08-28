@@ -357,7 +357,7 @@ export default function ACCTreatmentPage() {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {whyChooseUs.map((item) => (
-              <div key={item.title} className="rounded-2xl bg-[#f0f4f9] p-6 dark:bg-slate-800 border border-emerald-900/10 dark:border-slate-700">
+              <div key={item.title} className="rounded-2xl bg-[#eef4ef] p-6 dark:bg-slate-800/80 border border-emerald-200/80 dark:border-slate-700">
                 <span className="mb-3 block text-2xl font-bold text-accent dark:text-emerald-400">✦</span>
                 <h3 className="text-lg font-bold text-primary dark:text-emerald-300 mb-2">{item.title}</h3>
                 <p className="text-sm text-slate-700 dark:text-slate-300 leading-6">{item.description}</p>

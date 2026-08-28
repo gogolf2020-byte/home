@@ -162,7 +162,7 @@ export default function PractitionerDetailPage() {
                   {(doctor.educationList[lang] || doctor.educationList['en'] || []).map((item, idx) => (
                     <div
                       key={idx}
-                      className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm"
+                      className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-2xl bg-[#eef4ef] dark:bg-slate-800/80 border border-emerald-200/80 dark:border-slate-700/60 shadow-sm"
                     >
                       <div>
                         <span className="font-bold text-slate-900 dark:text-slate-100 text-sm sm:text-base block sm:inline mr-3">
@@ -182,7 +182,7 @@ export default function PractitionerDetailPage() {
 
               {/* Tab Content: Research / Practice */}
               {activeTab === 'research' && (
-                <div className="mb-8 bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 p-6 rounded-2xl">
+                <div className="mb-8 bg-[#eef4ef] dark:bg-slate-800/80 border border-emerald-200/80 dark:border-slate-700/60 p-6 rounded-2xl">
                   <ul className="space-y-3">
                     {(doctor.researchPoints[lang] || doctor.researchPoints['en'] || []).map((point, idx) => (
                       <li key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-700 dark:text-slate-300">
@@ -196,7 +196,7 @@ export default function PractitionerDetailPage() {
             </div>
 
             {/* Specialties Box */}
-            <div className="bg-[#f0f4f8] dark:bg-slate-800/90 p-6 sm:p-7 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-md">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 p-6 sm:p-7 rounded-3xl border border-emerald-200/80 dark:border-slate-700 shadow-md">
               <h4 className="font-bold text-xl text-[#1a472a] dark:text-emerald-300 mb-4 flex items-center gap-2">
                 <span>{doctor.specialtiesTitle[lang] || doctor.specialtiesTitle['en']}</span>
               </h4>

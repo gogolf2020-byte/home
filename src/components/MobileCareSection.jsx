@@ -43,7 +43,7 @@ export default function MobileCareSection() {
 
           {/* 3 Step Process Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-[#f8faf7] dark:bg-slate-800/50 rounded-2xl p-6 border border-emerald-900/10 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-6 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
               <div className="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-xl mb-4 shadow-sm">
                 01
               </div>
@@ -55,7 +55,7 @@ export default function MobileCareSection() {
               </p>
             </div>
 
-            <div className="bg-[#f8faf7] dark:bg-slate-800/50 rounded-2xl p-6 border border-emerald-900/10 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-6 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
               <div className="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-xl mb-4 shadow-sm">
                 02
               </div>
@@ -67,7 +67,7 @@ export default function MobileCareSection() {
               </p>
             </div>
 
-            <div className="bg-[#f8faf7] dark:bg-slate-800/50 rounded-2xl p-6 border border-emerald-900/10 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-6 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
               <div className="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-xl mb-4 shadow-sm">
                 03
               </div>
@@ -98,7 +98,7 @@ export default function MobileCareSection() {
           {/* Suitability & Safety Section */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {/* Suitable List */}
-            <div className="bg-[#f8faf7] dark:bg-slate-800/50 rounded-2xl p-6 border border-emerald-900/10 dark:border-slate-700">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-6 border border-emerald-200/80 dark:border-slate-700">
               <h4 className="text-lg font-bold text-emerald-900 dark:text-emerald-300 mb-4 flex items-center gap-2">
                 <span>✓</span>
                 <span>{t('mobileCare.suitableTitle')}</span>
@@ -114,7 +114,7 @@ export default function MobileCareSection() {
             </div>
 
             {/* Unsuitable Notice */}
-            <div className="bg-[#f8faf7] dark:bg-slate-800/50 rounded-2xl p-6 border border-emerald-900/10 dark:border-slate-700 flex flex-col justify-between">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-6 border border-emerald-200/80 dark:border-slate-700 flex flex-col justify-between">
               <div>
                 <h4 className="text-lg font-bold text-amber-800 dark:text-amber-300 mb-4 flex items-center gap-2">
                   <span>⚠️</span>
