@@ -5,7 +5,7 @@ export default function Hero() {
   const { t } = useTranslation()
 
   return (
-    <section className="relative isolate overflow-hidden bg-primary">
+    <section className="relative isolate overflow-hidden bg-[#f0f4f9] dark:bg-slate-950 transition-colors duration-300">
       <img
         src={heroImage}
         alt="Wellness Spring practitioner preparing tea outdoors"
