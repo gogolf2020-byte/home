@@ -219,6 +219,8 @@ export default {
   contact: {
     title: '预约与咨询',
     subtitle: '准备好开启您的健康康复之旅了吗？联系 Wellness Spring 探讨您的健康需求并预约诊疗。',
+    hoursTitle: '营业时间',
+    hoursValue: '7 × 24 小时 (需提前预约)',
     byEmail: '📧 邮件沟通',
     byTxt: '💬 短信沟通 (SMS)',
     name: '您的姓名',

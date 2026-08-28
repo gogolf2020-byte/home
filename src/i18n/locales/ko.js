@@ -209,16 +209,18 @@ export default {
     successDesc: '감사합니다! 클리닉 팀이 확인 후 곧 연락드리겠습니다.'
   },
   contact: {
-    title: '진료 예약 및 문의',
-    subtitle: '건강 관리를 위한 첫걸음을 내딛으실 준비가 되셨나요? Wellness Spring에 문의하셔서 맞춤 진료 상담 및 예약을 진행해 보세요.',
+    title: '진료 예약 및 상담',
+    subtitle: '건강 관리를 위한 다음 단계를 시작할 준비가 되셨나요? Wellness Spring에 문의하여 진료를 예약하세요.',
+    hoursTitle: '진료 시간',
+    hoursValue: '24시간 연중무휴 (사전 예약 필수)',
     byEmail: '📧 이메일 문의',
-    byTxt: '💬 문자(SMS) 문의',
+    byTxt: '💬 문자 문의 (SMS)',
     name: '성함',
     email: '이메일 주소',
     phone: '전화번호',
-    message: '문의 내용 / 주요 증상',
+    message: '증상 및 문의 내용',
     sendBtn: '메시지 보내기',
-    scanWeChat: '위챗(WeChat)으로 문의하기'
+    scanWeChat: '위챗(WeChat) QR 코드 연결'
   },
   music: {
     title: 'The Wellness Spring Sound',

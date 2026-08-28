@@ -38,8 +38,9 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4 text-slate-900 dark:text-white text-base">{t('footer.contact')}</h4>
             <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400 font-medium">
+              <li>🕒 {t('contact.hoursValue', '24/7 (By appointment only)')}</li>
               <li>📞 021 101 8892</li>
-              <li>027 372 0262</li>
+              <li>📞 027 372 0262</li>
               <li>📧 wellness.spring.sys@gmail.com</li>
             </ul>
           </div>

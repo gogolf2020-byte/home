@@ -216,16 +216,18 @@ export default {
     successDesc: 'Vielen Dank! Unser Team wird Sie in Kürze kontaktieren.'
   },
   contact: {
-    title: 'Terminvereinbarung & Kontakt',
-    subtitle: 'Kontaktieren Sie Wellness Spring für Ihren persönlichen Behandlungstermin.',
+    title: 'Termin Buchen',
+    subtitle: 'Bereit für den nächsten Schritt in Ihrer Gesundheit? Kontaktieren Sie Wellness Spring, um Ihre Bedürfnisse zu besprechen und einen Termin zu vereinbaren.',
+    hoursTitle: 'Öffnungszeiten',
+    hoursValue: '24/7 (Nur nach Terminvereinbarung)',
     byEmail: '📧 Per E-Mail',
     byTxt: '💬 Per SMS',
     name: 'Ihr Name',
     email: 'Ihre E-Mail',
     phone: 'Ihre Telefonnummer',
-    message: 'Ihre Nachricht',
+    message: 'Ihre Nachricht / Symptome',
     sendBtn: 'Nachricht Senden',
-    scanWeChat: 'WeChat Scannen'
+    scanWeChat: 'Scannen Sie den QR-Code, um sich über WeChat zu verbinden'
   },
   music: {
     title: 'The Wellness Spring Sound',

@@ -116,6 +116,15 @@ export default function Contact({ title, subtitle }) {
               <div className="space-y-5 text-sm sm:text-base">
                 <div>
                   <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-800 dark:text-emerald-400 mb-1 flex items-center gap-1.5">
+                    <span>🕒</span> {t('contact.hoursTitle', 'Opening Hours')}
+                  </h4>
+                  <p className="text-base font-bold text-slate-900 dark:text-white">
+                    {t('contact.hoursValue', '24/7 (By appointment only)')}
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-800 dark:text-emerald-400 mb-1 flex items-center gap-1.5">
                     <span>📞</span> Appointments
                   </h4>
                   <p className="text-lg font-bold text-slate-900 dark:text-white">021 101 8892</p>

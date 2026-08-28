@@ -209,16 +209,18 @@ export default {
     successDesc: 'Malo \'aupito. Te mautolu fetu\'utaki atu vave ke fakapapau\'i \'a e taimi.'
   },
   contact: {
-    title: 'Fetu\'utaki mo e Feitu\'u',
-    subtitle: 'Kua mateuteu ke me\'a atu ki he faitao? Fetu\'utaki mai ki he Wellness Spring.',
-    byEmail: '📧 Imeili',
-    byTxt: '💬 SMS / Telefoni',
-    name: 'Hingoa Kakato',
-    email: 'Imeili',
-    phone: 'Fika Telefoni',
-    message: 'Ngaahi Fakaikiiki / Mamahi',
-    sendBtn: 'Tuku Atu \'a e Poapoaki',
-    scanWeChat: 'WeChat QR Code'
+    title: 'Fakatau Taimi',
+    subtitle: 'Fakafe\'iloaki mo Wellness Spring ke fakatau taimi ki ho\'o mo\'ui lelei.',
+    hoursTitle: 'Kūnga Ngāue',
+    hoursValue: '24/7 (Fakatau taimi pē)',
+    byEmail: '📧 Imeli',
+    byTxt: '💬 Poapoaki (SMS)',
+    name: 'Ho Hingoa',
+    email: 'Ho Imeli',
+    phone: 'Ho Fika Telefoni',
+    message: 'Poapoaki / Sivi',
+    sendBtn: 'Seni Poapoaki',
+    scanWeChat: 'Sikeni ki he WeChat'
   },
   music: {
     title: 'The Wellness Spring Sound',
