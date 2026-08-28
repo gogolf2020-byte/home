@@ -19,8 +19,8 @@ export default function ACCSection() {
           </div>
 
           {/* Description */}
-          <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-3xl p-6 sm:p-8 md:p-10 border border-emerald-200/80 dark:border-slate-700 shadow-sm mb-8">
-            <p className="text-base sm:text-lg md:text-xl font-medium leading-relaxed sm:leading-loose text-slate-800 dark:text-slate-100 text-center max-w-4xl mx-auto">
+          <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-3xl p-4 sm:p-6 border border-emerald-200/80 dark:border-slate-700 shadow-sm mb-8">
+            <p className="text-base sm:text-lg font-medium leading-relaxed text-slate-800 dark:text-slate-100 text-left max-w-4xl mx-auto">
               {t('acc.desc')}
             </p>
           </div>

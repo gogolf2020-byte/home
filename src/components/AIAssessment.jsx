@@ -35,9 +35,9 @@ export default function AIAssessment() {
           </div>
 
           {/* Feature Highlight Box: Text on Left, Original Device Image on Right */}
-          <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-3xl p-6 sm:p-8 md:p-10 border border-emerald-200/80 dark:border-slate-700 shadow-sm mb-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
-              <div className="space-y-4 text-center sm:text-left">
+          <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-3xl p-4 sm:p-6 border border-emerald-200/80 dark:border-slate-700 shadow-sm mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+              <div className="space-y-3 text-left">
                 <div className="inline-flex items-center gap-2 bg-emerald-700 text-white text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full w-fit shadow-sm">
                   <span>⚡ AI & TCM Fusion</span>
                 </div>
@@ -60,54 +60,54 @@ export default function AIAssessment() {
           {/* 3 Step Experience Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {/* Step 1: Scan */}
-            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-6 sm:p-8 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-4 sm:p-5 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-xl mb-4 shadow-sm">
+                <div className="w-10 h-10 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-lg mb-3 shadow-sm">
                   01
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-1.5">
                   {t('ai.step1Title')}
                 </h3>
-                <p className="text-base font-bold text-emerald-900 dark:text-emerald-300 mb-2">
+                <p className="text-sm sm:text-base font-bold text-emerald-900 dark:text-emerald-300 mb-1.5">
                   {t('ai.step1Desc')}
                 </p>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   {t('ai.step1Sub')}
                 </p>
               </div>
             </div>
 
             {/* Step 2: Discover */}
-            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-6 sm:p-8 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-4 sm:p-5 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-xl mb-4 shadow-sm">
+                <div className="w-10 h-10 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-lg mb-3 shadow-sm">
                   02
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-1.5">
                   {t('ai.step2Title')}
                 </h3>
-                <p className="text-base font-bold text-emerald-900 dark:text-emerald-300 mb-2">
+                <p className="text-sm sm:text-base font-bold text-emerald-900 dark:text-emerald-300 mb-1.5">
                   {t('ai.step2Desc')}
                 </p>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   {t('ai.step2Sub')}
                 </p>
               </div>
             </div>
 
             {/* Step 3: Understand */}
-            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-6 sm:p-8 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-4 sm:p-5 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
               <div>
-                <div className="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-xl mb-4 shadow-sm">
+                <div className="w-10 h-10 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-lg mb-3 shadow-sm">
                   03
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-1.5">
                   {t('ai.step3Title')}
                 </h3>
-                <p className="text-base font-bold text-emerald-900 dark:text-emerald-300 mb-2">
+                <p className="text-sm sm:text-base font-bold text-emerald-900 dark:text-emerald-300 mb-1.5">
                   {t('ai.step3Desc')}
                 </p>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                   {t('ai.step3Sub')}
                 </p>
               </div>
@@ -125,11 +125,8 @@ export default function AIAssessment() {
             </button>
           </div>
 
-          {/* Bottom Medical Disclaimer & Privacy Compliance Notice */}
+          {/* Bottom Privacy Compliance Notice */}
           <div className="mt-12 pt-6 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 space-y-2.5 text-center max-w-4xl mx-auto leading-relaxed">
-            <p className="font-semibold text-slate-700 dark:text-slate-200 text-xs sm:text-sm">
-              {t('footer.aiDisclaimer')}
-            </p>
             <p className="text-slate-600 dark:text-slate-300 font-medium">
               {(() => {
                 const text = t('ai.disclaimerPrivacy')

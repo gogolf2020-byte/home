@@ -25,8 +25,8 @@ export default function MobileCareSection() {
           </div>
 
           {/* Core Description & Pre-Assessment Notice Box */}
-          <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-3xl p-6 sm:p-8 md:p-10 border border-emerald-200/80 dark:border-slate-700 shadow-sm mb-12">
-            <div className="max-w-4xl mx-auto space-y-4 text-slate-800 dark:text-slate-100 text-base sm:text-lg md:text-xl font-medium leading-relaxed sm:leading-loose whitespace-pre-line text-center sm:text-left">
+          <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-3xl p-4 sm:p-6 border border-emerald-200/80 dark:border-slate-700 shadow-sm mb-12">
+            <div className="max-w-4xl mx-auto space-y-4 text-slate-800 dark:text-slate-100 text-base sm:text-lg font-medium leading-relaxed whitespace-pre-line text-left">
               <p>{t('mobileCare.desc')}</p>
             </div>
 
@@ -43,38 +43,38 @@ export default function MobileCareSection() {
 
           {/* 3 Step Process Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-6 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
-              <div className="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-xl mb-4 shadow-sm">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-4 sm:p-5 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+              <div className="w-10 h-10 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-lg mb-3 shadow-sm">
                 01
               </div>
-              <h4 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+              <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-1.5">
                 {t('mobileCare.step1Title')}
               </h4>
-              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 {t('mobileCare.step1Desc')}
               </p>
             </div>
 
-            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-6 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
-              <div className="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-xl mb-4 shadow-sm">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-4 sm:p-5 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+              <div className="w-10 h-10 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-lg mb-3 shadow-sm">
                 02
               </div>
-              <h4 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+              <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-1.5">
                 {t('mobileCare.step2Title')}
               </h4>
-              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 {t('mobileCare.step2Desc')}
               </p>
             </div>
 
-            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-6 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
-              <div className="w-12 h-12 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-xl mb-4 shadow-sm">
+            <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-2xl p-4 sm:p-5 border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+              <div className="w-10 h-10 rounded-xl bg-emerald-700 text-white flex items-center justify-center font-black text-lg mb-3 shadow-sm">
                 03
               </div>
-              <h4 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+              <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-1.5">
                 {t('mobileCare.step3Title')}
               </h4>
-              <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 {t('mobileCare.step3Desc')}
               </p>
             </div>

@@ -1,4 +1,8 @@
+import { useTranslation } from 'react-i18next'
+
 export default function Testimonials() {
+  const { t } = useTranslation()
+
   const testimonials = [
     {
       name: 'Terry Horne',
@@ -18,31 +22,41 @@ export default function Testimonials() {
   ]
 
   return (
-    <section id="testimonials" className="bg-[#f0f4f9] py-12 md:py-16 dark:bg-slate-950">
-      <div className="container">
-        <h2 className="text-3xl sm:text-4xl font-bold text-primary dark:text-emerald-400 mb-12 text-center">
-          Testimonials
-        </h2>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
-            <div key={testimonial.name} className="bg-white dark:bg-slate-900 p-8 rounded-lg shadow-md dark:border dark:border-slate-800">
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400">★</span>
-                ))}
+    <section id="testimonials" className="scroll-mt-20 bg-[#f0f4f9] py-16 md:py-24 dark:bg-slate-950 transition-colors duration-300 border-y border-emerald-900/10 dark:border-slate-800">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-6 sm:p-10 md:p-12 shadow-xl border border-slate-200/80 dark:border-slate-800">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary dark:text-emerald-300">
+              {t('testimonials.title', 'Testimonials')}
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.name}
+                className="bg-[#eef4ef] dark:bg-slate-800/80 p-5 sm:p-6 rounded-2xl border border-emerald-200/80 dark:border-slate-700 shadow-sm hover:shadow-md transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="text-yellow-400 text-lg">★</span>
+                    ))}
+                  </div>
+                  
+                  <p className="text-slate-800 dark:text-slate-100 italic mb-5 leading-relaxed text-sm sm:text-base text-left">
+                    "{testimonial.text}"
+                  </p>
+                </div>
+                
+                <div>
+                  <hr className="border-emerald-200/80 dark:border-slate-700 mb-3" />
+                  <h4 className="font-bold text-primary dark:text-emerald-300 text-base">{testimonial.name}</h4>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium">{testimonial.title}</p>
+                </div>
               </div>
-              
-              <p className="text-gray-700 dark:text-slate-300 italic mb-6 leading-8">
-                "{testimonial.text}"
-              </p>
-              
-              <hr className="border-gray-200 dark:border-slate-800 mb-4" />
-              
-              <h4 className="font-bold text-primary dark:text-emerald-300">{testimonial.name}</h4>
-              <p className="text-sm text-gray-600 dark:text-slate-400">{testimonial.title}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

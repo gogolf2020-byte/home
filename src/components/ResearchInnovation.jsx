@@ -131,10 +131,6 @@ export default function ResearchInnovation() {
           </div>
         </div>
 
-        {/* Compliance & AI Disclaimer */}
-        <div className="mt-12 text-center text-xs text-slate-500 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed border-t border-slate-200 dark:border-slate-800 pt-6">
-          <p>💡 {t('footer.aiDisclaimer')}</p>
-        </div>
       </div>
     </section>
   )
