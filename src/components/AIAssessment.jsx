@@ -25,12 +25,12 @@ export default function AIAssessment() {
             </h2>
           </div>
 
-          {/* AI Hero Graphic Banner — Fully Adaptive & 100% Uncropped View */}
-          <div className="rounded-3xl overflow-hidden shadow-lg border border-slate-200/80 dark:border-slate-800 mb-12 bg-white dark:bg-slate-950 max-w-4xl mx-auto flex items-center justify-center">
+          {/* AI Hero Graphic Banner — Fully Adaptive with 24px Padding Border */}
+          <div className="rounded-[2.5rem] overflow-hidden shadow-lg border border-slate-200/80 dark:border-slate-800 mb-12 bg-white dark:bg-slate-950 max-w-4xl mx-auto flex items-center justify-center p-6">
             <img
               src={aiHeroImage}
               alt="MATRIX AI HealthSense Hero Banner"
-              className="w-full h-auto object-contain block"
+              className="w-full h-auto object-contain block rounded-2xl"
             />
           </div>
 
