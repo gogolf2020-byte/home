@@ -20,15 +20,9 @@ export default function AIAssessment() {
               <span>✨</span>
               <span>{t('ai.tagBadge')}</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary dark:text-emerald-300 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary dark:text-emerald-300">
               {t('ai.title')}
             </h2>
-            <p className="text-base sm:text-lg font-semibold text-emerald-800 dark:text-emerald-400 leading-relaxed mb-3">
-              {t('ai.subtitle')}
-            </p>
-            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-              {t('ai.desc')}
-            </p>
           </div>
 
           {/* AI Hero Graphic Banner — Fully Adaptive & 100% Uncropped View */}
@@ -43,13 +37,10 @@ export default function AIAssessment() {
           {/* Feature Highlight Box: Text on Left, Original Device Image on Right */}
           <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-3xl p-6 sm:p-8 border border-emerald-200/80 dark:border-slate-700 shadow-sm mb-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="space-y-4 text-slate-700 dark:text-slate-200 text-base sm:text-lg leading-relaxed text-center sm:text-left">
+              <div className="space-y-3 text-slate-700 dark:text-slate-200 text-base sm:text-lg leading-relaxed text-center sm:text-left">
                 <div className="inline-flex items-center gap-2 bg-emerald-700 text-white text-xs font-bold px-3 py-1 rounded-full w-fit shadow-sm">
                   <span>⚡ AI & TCM Fusion</span>
                 </div>
-                <h3 className="text-2xl font-extrabold text-emerald-900 dark:text-emerald-300">
-                  {t('ai.title')}
-                </h3>
                 <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
                   {t('ai.desc')}
                 </p>
