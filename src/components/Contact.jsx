@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import qrCode from '../assets/3.jpg'
+import qrCode from '../assets/qr-code.jpg'
 
 export default function Contact({ title, subtitle }) {
   const { t } = useTranslation()
