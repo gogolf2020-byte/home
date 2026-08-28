@@ -40,7 +40,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400 font-medium">
               <li>🕒 {t('contact.hoursValue', '24/7 (By appointment only)')}</li>
               <li>📞 021 101 8892</li>
-              <li>📞 027 372 0262</li>
+              <li>💬 027 372 0262 ({t('contact.textBadge', 'Text preferred')})</li>
               <li>📧 wellness.spring.sys@gmail.com</li>
             </ul>
           </div>

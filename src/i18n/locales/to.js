@@ -213,6 +213,7 @@ export default {
     subtitle: 'Fakafe\'iloaki mo Wellness Spring ke fakatau taimi ki ho\'o mo\'ui lelei.',
     hoursTitle: 'Kūnga Ngāue',
     hoursValue: '24/7 (Fakatau taimi pē)',
+    textBadge: 'Poapoaki pē / Text',
     byEmail: '📧 Imeli',
     byTxt: '💬 Poapoaki (SMS)',
     name: 'Ho Hingoa',

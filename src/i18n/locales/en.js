@@ -221,6 +221,7 @@ export default {
     subtitle: 'Ready to take the next step in your health journey? Contact Wellness Spring to discuss your needs and book an appointment.',
     hoursTitle: 'Opening Hours',
     hoursValue: '24/7 (By appointment only)',
+    textBadge: 'Text preferred',
     byEmail: '📧 By Email',
     byTxt: '💬 By Txt (SMS)',
     name: 'Your Name',

@@ -132,9 +132,14 @@ export default function Contact({ title, subtitle }) {
 
                 <div>
                   <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-800 dark:text-emerald-400 mb-1 flex items-center gap-1.5">
-                    <span>📞</span> General Enquiries
+                    <span>💬</span> General Enquiries
                   </h4>
-                  <p className="text-lg font-bold text-slate-900 dark:text-white">027 372 0262</p>
+                  <p className="text-lg font-bold text-slate-900 dark:text-white flex items-center flex-wrap gap-2">
+                    <span>027 372 0262</span>
+                    <span className="text-xs font-semibold text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/80 px-2.5 py-0.5 rounded-full border border-amber-300 dark:border-amber-800 shadow-sm">
+                      ({t('contact.textBadge', 'Text preferred')})
+                    </span>
+                  </p>
                 </div>
 
                 <div>
