@@ -35,23 +35,23 @@ export default function AIAssessment() {
           </div>
 
           {/* Feature Highlight Box: Text on Left, Original Device Image on Right */}
-          <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-3xl p-6 sm:p-8 border border-emerald-200/80 dark:border-slate-700 shadow-sm mb-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="space-y-3 text-slate-700 dark:text-slate-200 text-base sm:text-lg leading-relaxed text-center sm:text-left">
-                <div className="inline-flex items-center gap-2 bg-emerald-700 text-white text-xs font-bold px-3 py-1 rounded-full w-fit shadow-sm">
+          <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-3xl p-6 sm:p-8 md:p-10 border border-emerald-200/80 dark:border-slate-700 shadow-sm mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
+              <div className="space-y-4 text-center sm:text-left">
+                <div className="inline-flex items-center gap-2 bg-emerald-700 text-white text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full w-fit shadow-sm">
                   <span>⚡ AI & TCM Fusion</span>
                 </div>
-                <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+                <p className="text-slate-800 dark:text-slate-100 text-base sm:text-lg md:text-xl font-medium leading-relaxed sm:leading-loose">
                   {t('ai.desc')}
                 </p>
               </div>
 
-              {/* Original Equipment / Device Image on Right — Fully Visible */}
-              <div className="overflow-hidden rounded-2xl border border-emerald-200/80 dark:border-slate-700 bg-white dark:bg-slate-900 p-2 shadow-sm flex items-center justify-center">
+              {/* Original Equipment / Device Image on Right — Balanced Height */}
+              <div className="overflow-hidden rounded-2xl border border-emerald-200/80 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 shadow-sm flex items-center justify-center">
                 <img
                   src={deviceImage}
                   alt="AI Health Assessment Device & Pattern Recognition"
-                  className="w-full h-auto max-h-[300px] object-contain hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto max-h-[220px] sm:max-h-[250px] object-contain hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>

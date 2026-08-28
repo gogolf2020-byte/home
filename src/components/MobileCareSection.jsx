@@ -25,12 +25,12 @@ export default function MobileCareSection() {
           </div>
 
           {/* Core Description & Pre-Assessment Notice Box */}
-          <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-3xl p-6 sm:p-8 border border-emerald-200/80 dark:border-slate-700 shadow-sm mb-12">
-            <div className="max-w-4xl mx-auto space-y-4 text-slate-700 dark:text-slate-200 text-base sm:text-lg leading-relaxed whitespace-pre-line text-center sm:text-left">
+          <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-3xl p-6 sm:p-8 md:p-10 border border-emerald-200/80 dark:border-slate-700 shadow-sm mb-12">
+            <div className="max-w-4xl mx-auto space-y-4 text-slate-800 dark:text-slate-100 text-base sm:text-lg md:text-xl font-medium leading-relaxed sm:leading-loose whitespace-pre-line text-center sm:text-left">
               <p>{t('mobileCare.desc')}</p>
             </div>
 
-            <div className="mt-6 pt-6 border-t border-emerald-200 dark:border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-emerald-900 dark:text-emerald-300 font-semibold">
+            <div className="mt-6 pt-6 border-t border-emerald-200/80 dark:border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-emerald-900 dark:text-emerald-300 font-semibold">
               <div className="flex items-center gap-2">
                 <span className="text-base">📍</span>
                 <span>{t('mobileCare.noticeText')}</span>
