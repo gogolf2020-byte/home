@@ -11,7 +11,7 @@ export default function Practitioner() {
   const lang = ['zh', 'en', 'de', 'ko', 'to'].includes(activeLang) ? activeLang : 'en'
 
   // Filter team doctors list for specialists (excluding Helene who is featured in the Founder section)
-  const teamDoctors = practitionersData.filter((doc) => doc.id !== 'helene-li-yu')
+  const teamDoctors = practitionersData.filter((doc) => doc.id !== 'helene-yu')
 
   return (
     <section id="practitioner" className="bg-[#f0f4f9] py-16 md:py-24 dark:bg-slate-950 transition-colors duration-300">
@@ -33,7 +33,7 @@ export default function Practitioner() {
                 <div className="relative overflow-hidden rounded-[2rem] shadow-xl bg-slate-900 border border-slate-200 dark:border-slate-800">
                   <img
                     src={founderPhoto}
-                    alt="Helene Li YU"
+                    alt="Helene YU"
                     className="h-[420px] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Bottom Gold Wave Overlay matching screenshot */}
@@ -68,7 +68,7 @@ export default function Practitioner() {
                 </span>
                 
                 <h3 className="text-xl sm:text-2xl font-bold text-primary dark:text-emerald-300 tracking-tight mb-2">
-                  Helene Li YU
+                  Helene YU
                 </h3>
 
                 <p className="text-base font-semibold text-emerald-800 dark:text-emerald-400 mb-6">

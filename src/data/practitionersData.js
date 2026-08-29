@@ -371,12 +371,12 @@ export const practitionersData = [
     contactEmail: 'info@wellnessspring.co.nz'
   },
   {
-    id: 'helene-li-yu',
-    slug: 'helene-li-yu',
+    id: 'helene-yu',
+    slug: 'helene-yu',
     name: {
-      zh: 'Helene Li YU',
-      en: 'Helene Li YU',
-      de: 'Helene Li YU'
+      zh: 'Helene YU',
+      en: 'Helene YU',
+      de: 'Helene YU'
     },
     shortTitle: {
       zh: 'Wellness Spring 创始人 · ACC & CMCNZ 注册中医师 · AI-中医临床整合专家',
