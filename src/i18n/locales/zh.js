@@ -20,7 +20,7 @@ export default {
     heroHeadline: '当传统中医遇上负责任的人工智能',
     heroP1: 'Wellness Spring 正在探索将传统中医、AI 智能辅助健康评估与新西兰真实临床实践深度整合的负责任模式。',
     heroP2: '我们的核心关注点在于连接现代前沿技术、医师主导的临床洞察与多元文化健康数据，以支持对 AI 智慧医疗更好的理解、临床验证与未来发展。',
-    
+
     // Module 1
     m1Title: 'AI 辅助临床整合',
     m1Sub: '将 AI 智能洞察与医师主导的中医诊疗深度结合',
@@ -187,7 +187,7 @@ export default {
     founderBadge: '👑 Wellness Spring 创始人',
     founderTag: '创始人 · 执业中医师',
     founderTitle: 'Wellness Spring 创始人 ｜ ACC & CMCNZ 注册中医师 ｜ AI-中医临床整合与跨文化沟通专家',
-    founderDesc1: 'Helene Yu（余丽）为跨学科健康专业人士及新西兰 Wellness Spring 诊所创始人。她的专业背景跨越中医临床诊疗、专业医疗与法律交传、公共服务以及国际企业管理。',
+    founderDesc1: 'Helene Yu（俞利）为跨学科健康专业人士及新西兰 Wellness Spring 诊所创始人。她的专业背景跨越中医临床诊疗、专业医疗与法律交传、公共服务以及国际企业管理。',
     founderDesc2: '作为 ACC 及 CMCNZ 注册中医师、MATRIX AI 产品培训师，她的核心焦点在于推动人工智能与中医师主导的“四诊”评估、结构化真实世界数据及多元文化健康应用的负责任临床整合。',
     teamTag: '专家医师团队',
     teamTitle: '核心专家团队',
