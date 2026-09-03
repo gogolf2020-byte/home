@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import logo from '../assets/98.jpg'
+import { clinicLocations } from '../data/locationsData'
 
 export default function Footer() {
   const { t } = useTranslation()
@@ -39,6 +40,20 @@ export default function Footer() {
             <h4 className="font-bold mb-4 text-slate-900 dark:text-white text-base">{t('footer.contact')}</h4>
             <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400 font-medium">
               <li>🕒 {t('contact.hoursValue', '24/7 (By appointment only)')}</li>
+              {clinicLocations.map((loc) => (
+                <li key={loc.id} className="flex items-start gap-1.5">
+                  <span className="shrink-0">📍</span>
+                  <a
+                    href={loc.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary dark:hover:text-emerald-400 transition-colors"
+                    title={loc.address}
+                  >
+                    {loc.shortAddress || loc.address}
+                  </a>
+                </li>
+              ))}
               <li>📞 021 101 8892</li>
               <li>💬 027 372 0262 ({t('contact.textBadge', 'Text preferred')})</li>
               <li>📧 wellness.spring.sys@gmail.com</li>

@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import qrCode from '../assets/qr-code.jpg'
+import { clinicLocations } from '../data/locationsData'
 
 export default function Contact({ title, subtitle }) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const currentLang = i18n.language || 'zh'
   const [method, setMethod] = useState('email')
   const [formData, setFormData] = useState({
     name: '',
@@ -121,6 +123,41 @@ export default function Contact({ title, subtitle }) {
                   <p className="text-base font-bold text-slate-900 dark:text-white">
                     {t('contact.hoursValue', '24/7 (By appointment only)')}
                   </p>
+                </div>
+
+                <div>
+                  <h4 className="font-bold text-xs uppercase tracking-wider text-emerald-800 dark:text-emerald-400 mb-1 flex items-center gap-1.5">
+                    <span>📍</span> {clinicLocations.length > 1 ? t('contact.locationsTitle', 'Clinic Locations') : t('contact.addressTitle', 'Clinic Address')}
+                  </h4>
+                  <div className="space-y-2.5">
+                    {clinicLocations.map((loc) => {
+                      const locName = loc.nameI18n?.[currentLang] || loc.name
+                      return (
+                        <div key={loc.id} className="group">
+                          {clinicLocations.length > 1 && (
+                            <div className="text-xs font-bold text-emerald-900 dark:text-emerald-300 mb-0.5">
+                              {locName} {loc.isPrimary && <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/60 font-medium">Main</span>}
+                            </div>
+                          )}
+                          <p className="text-sm font-semibold text-slate-900 dark:text-white leading-snug">
+                            {loc.address}
+                          </p>
+                          <a
+                            href={loc.mapUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 hover:text-emerald-800 dark:text-emerald-400 dark:hover:text-emerald-300 hover:underline mt-1 transition-colors"
+                          >
+                            <span>🗺️</span>
+                            <span>{t('contact.viewMap', 'View on Google Maps')}</span>
+                            <svg className="w-3 h-3 ml-0.5 opacity-70 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          </a>
+                        </div>
+                      )
+                    })}
+                  </div>
                 </div>
 
                 <div>

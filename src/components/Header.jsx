@@ -127,26 +127,26 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md dark:bg-slate-900/95 border-b border-emerald-900/10 dark:border-slate-800 transition-colors duration-300">
-      <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="flex h-[72px] sm:h-20 items-center justify-between">
           {/* Logo */}
           <Link
             to="/"
             onClick={(e) => handleNavClick(e, { href: '/' })}
-            className="flex items-center gap-3 group shrink-0"
+            className="flex items-center gap-3 sm:gap-3.5 group shrink-0 mr-4 lg:mr-8 xl:mr-10"
           >
             <img
               src={logo}
               alt="Wellness Spring logo"
-              className="h-10 w-10 rounded-full object-cover shadow-sm group-hover:scale-105 transition-transform"
+              className="h-11 w-11 sm:h-12 sm:w-12 lg:h-[50px] lg:w-[50px] rounded-full object-cover shadow-sm ring-2 ring-emerald-600/15 dark:ring-emerald-400/20 group-hover:scale-105 transition-transform duration-300"
             />
-            <span className="text-lg font-bold text-primary dark:text-emerald-300 tracking-tight block leading-tight">
+            <span className="text-xl sm:text-2xl lg:text-[1.35rem] xl:text-2xl font-bold text-primary dark:text-emerald-300 tracking-tight block leading-tight whitespace-nowrap">
               Wellness Spring
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1 lg:gap-1.5 xl:gap-2 mx-auto">
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2 ml-auto">
             {navItems.map((item) => {
               if (item.isDropdown) {
                 return (
@@ -273,7 +273,7 @@ export default function Header() {
           </nav>
 
           {/* Controls: Language & Theme Toggle */}
-          <div className="hidden md:flex items-center gap-3 ml-4 lg:ml-6 pl-3 border-l border-emerald-900/10 dark:border-slate-800 shrink-0">
+          <div className="hidden lg:flex items-center gap-3 ml-4 lg:ml-6 pl-3 border-l border-emerald-900/10 dark:border-slate-800 shrink-0">
             <label className="sr-only" htmlFor="language">Language</label>
             <div className="relative flex items-center">
               <select
@@ -313,7 +313,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-slate-700 dark:text-white rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+            className="lg:hidden p-2 text-slate-700 dark:text-white rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle Navigation Menu"
           >
@@ -325,7 +325,7 @@ export default function Header() {
 
         {/* Mobile Navigation Drawer */}
         {isMenuOpen && (
-          <nav className="md:hidden py-3 border-t border-emerald-900/10 dark:border-slate-800 flex flex-col gap-1">
+          <nav className="lg:hidden py-3 border-t border-emerald-900/10 dark:border-slate-800 flex flex-col gap-1">
             {navItems.map((item) => {
               if (item.isDropdown) {
                 return (
