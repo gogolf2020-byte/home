@@ -34,26 +34,103 @@ export default function AIAssessment() {
             />
           </div>
 
-          {/* Feature Highlight Box: Text on Left, Original Device Image on Right */}
-          <div className="bg-[#eef4ef] dark:bg-slate-800/80 rounded-3xl p-4 sm:p-6 border border-emerald-200/80 dark:border-slate-700 shadow-sm mb-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-              <div className="space-y-3 text-left">
-                <div className="inline-flex items-center gap-2 bg-emerald-700 text-white text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full w-fit shadow-sm">
-                  <span>⚡ AI & TCM Fusion</span>
-                </div>
-                <p className="text-slate-800 dark:text-slate-100 text-base sm:text-lg md:text-xl font-medium leading-relaxed sm:leading-loose">
-                  {t('ai.desc')}
-                </p>
-              </div>
-
-              {/* Original Equipment / Device Image on Right — Balanced Height */}
-              <div className="overflow-hidden rounded-2xl border border-emerald-200/80 dark:border-slate-700 bg-white dark:bg-slate-900 p-3 shadow-sm flex items-center justify-center">
+          {/* Feature Showcase: Device on Left, 2x2 Feature Cards Grid on Right, Call to Action on Bottom */}
+          <div className="mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch">
+              
+              {/* Left Column: Device Image (Image 2 & 3 styling) */}
+              <div className="lg:col-span-4 flex items-center justify-center bg-slate-950 rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-200/80 dark:border-slate-700/80 overflow-hidden group">
                 <img
                   src={deviceImage}
-                  alt="AI Health Assessment Device & Pattern Recognition"
-                  className="w-full h-auto max-h-[220px] sm:max-h-[250px] object-contain hover:scale-105 transition-transform duration-500"
+                  alt="MATRIX AI HealthSense Device"
+                  className="w-full h-full max-h-[300px] sm:max-h-[340px] lg:max-h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
+
+              {/* Right Column: 2x2 Feature Grid */}
+              <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                {/* Feature 1: Proactive Intervention */}
+                <div className="bg-[#f0f9ff] dark:bg-slate-800/90 rounded-2xl p-4 sm:p-5 border border-sky-100 dark:border-slate-700 shadow-sm flex flex-col justify-start">
+                  <div className="flex items-center gap-2.5 mb-2.5">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-sky-100 dark:bg-sky-950/80 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0 border border-sky-200 dark:border-sky-800/80">
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="6" y="3" width="12" height="18" rx="3" />
+                        <circle cx="12" cy="17" r="1" />
+                        <path d="M10 6h4" />
+                      </svg>
+                    </div>
+                    <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white leading-snug">
+                      {t('ai.feature1Title')}
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+                    {t('ai.feature1Desc')}
+                  </p>
+                </div>
+
+                {/* Feature 2: Continuous Management */}
+                <div className="bg-[#f0f9ff] dark:bg-slate-800/90 rounded-2xl p-4 sm:p-5 border border-sky-100 dark:border-slate-700 shadow-sm flex flex-col justify-start">
+                  <div className="flex items-center gap-2.5 mb-2.5">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-sky-500 text-white flex items-center justify-center shrink-0 shadow-sm">
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                      </svg>
+                    </div>
+                    <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white leading-snug">
+                      {t('ai.feature2Title')}
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+                    {t('ai.feature2Desc')}
+                  </p>
+                </div>
+
+                {/* Feature 3: Personalised Care */}
+                <div className="bg-[#f0f9ff] dark:bg-slate-800/90 rounded-2xl p-4 sm:p-5 border border-sky-100 dark:border-slate-700 shadow-sm flex flex-col justify-start">
+                  <div className="flex items-center gap-2.5 mb-2.5">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-sky-100 dark:bg-sky-950/80 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0 border border-sky-200 dark:border-sky-800/80">
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                      </svg>
+                    </div>
+                    <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white leading-snug">
+                      {t('ai.feature3Title')}
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+                    {t('ai.feature3Desc')}
+                  </p>
+                </div>
+
+                {/* Feature 4: Ultimate Vision */}
+                <div className="bg-[#f0f9ff] dark:bg-slate-800/90 rounded-2xl p-4 sm:p-5 border border-sky-100 dark:border-slate-700 shadow-sm flex flex-col justify-start">
+                  <div className="flex items-center gap-2.5 mb-2.5">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-sky-100 dark:bg-sky-950/80 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0 border border-sky-200 dark:border-sky-800/80">
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" fill="currentColor" fillOpacity="0.25" />
+                        <line x1="4" y1="22" x2="4" y2="15" />
+                      </svg>
+                    </div>
+                    <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white leading-snug">
+                      {t('ai.feature4Title')}
+                    </h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+                    {t('ai.feature4Desc')}
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Call to Action Banner (Matching Image 2 & 3 bottom bar) */}
+            <div className="mt-5 p-4 sm:p-5 rounded-xl bg-slate-50/90 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/80 border-l-[5px] border-l-emerald-500 dark:border-l-emerald-400 shadow-sm text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+              <span className="font-extrabold text-slate-900 dark:text-white mr-1.5 uppercase tracking-wide">
+                {t('ai.callToActionLabel')}:
+              </span>
+              <span>{t('ai.callToActionText')}</span>
             </div>
           </div>
 
