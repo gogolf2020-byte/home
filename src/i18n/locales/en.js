@@ -236,7 +236,15 @@ export default {
     viewMap: 'View on Google Maps',
     textBadge: 'Text preferred',
     byEmail: '📧 By Email',
-    byTxt: '💬 By Txt (SMS)',
+    byTxt: '💬 By Txt',
+    byPortal: '🌐 Online',
+    portalTitle: 'Book via Wellness Spring Portal',
+    portalNoticeTitle: 'Registration Required',
+    portalNoticeDesc: 'Please create an account or sign in on our portal before booking to securely link your health profile and appointment history.',
+    portalFeature1: 'Quick account registration & profile management',
+    portalFeature2: 'Complete online health surveys and care requests',
+    portalFeature3: 'Real-time appointment tracking and records',
+    portalBtn: 'Book Online',
     name: 'Your Name',
     email: 'Your Email',
     phone: 'Your Phone Number',
@@ -256,9 +264,10 @@ export default {
     quickLinks: 'Quick Links',
     about: 'About Us',
     services: 'Services',
-    aiAssessment: 'AI Health Discovery',
+    aiAssessment: 'AI Health Assessment',
     practitioner: 'Practitioners',
-    contact: 'Contact',
-    aiDisclaimer: 'AI-assisted health assessments are used as supportive tools and do not replace professional clinical judgement, medical diagnosis or appropriate referral.'
+    contact: 'Contact Us',
+    friendlyLinks: 'Friendly Links',
+    aiDisclaimer: 'AI-assisted health assessment is designed solely as a supportive exploratory tool and does not replace clinical judgement, medical diagnosis, or appropriate referral.'
   }
 }

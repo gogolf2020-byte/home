@@ -228,7 +228,15 @@ export default {
     viewMap: 'Vakai \'i he Google Maps',
     textBadge: 'Poapoaki pē / Text',
     byEmail: '📧 Imeli',
-    byTxt: '💬 Poapoaki (SMS)',
+    byTxt: '💬 Poapoaki',
+    byPortal: '🌐 Online',
+    portalTitle: 'Fakatau Taimi \'i he Wellness Spring Portal',
+    portalNoticeTitle: 'Fiema\'u ke Lesisita Kimu\'a',
+    portalNoticeDesc: 'Kātaki \'o lesisita ha\'o \'akauni pe hū ki loto \'i he portal kimu\'a pea fakatau taimi ke malu ho\'o fakamatala mo\'ui lelei.',
+    portalFeature1: 'Lesisita vave mo hono pule\'i \'o e \'akauni',
+    portalFeature2: 'Fakafonu \'a e ngaahi foomu sivi mo\'ui lelei \'i he \'initaneti',
+    portalFeature3: 'Muimui\'i tonu \'a e ngaahi taimi faito\'o mo e hisitōlia',
+    portalBtn: 'Fakatau Taimi',
     name: 'Ho Hingoa',
     email: 'Ho Imeli',
     phone: 'Ho Fika Telefoni',
@@ -251,6 +259,7 @@ export default {
     aiAssessment: 'Sivi AI',
     practitioner: 'Kau Faitao',
     contact: 'Fetu\'utaki',
+    friendlyLinks: 'Ngaahi Fehokotaki\'anga',
     aiDisclaimer: 'Ko e sivi AI ko e tokoni pe ke mahino \'a e mo\'ui lelei.'
   }
 }

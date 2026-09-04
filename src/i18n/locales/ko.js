@@ -227,8 +227,16 @@ export default {
     locationsTitle: '지점 안내',
     viewMap: 'Google 지도에서 보기',
     textBadge: '문자 권장 / Text',
-    byEmail: '📧 이메일 문의',
-    byTxt: '💬 문자 문의 (SMS)',
+    byEmail: '📧 이메일',
+    byTxt: '💬 문자 (SMS)',
+    byPortal: '🌐 온라인',
+    portalTitle: 'Wellness Spring 온라인 예약',
+    portalNoticeTitle: '사전 회원가입 안내',
+    portalNoticeDesc: '포털을 통한 예약은 건강 정보 및 진료 이력의 안전한 관리를 위해 사전 회원가입(로그인)이 필요합니다.',
+    portalFeature1: '간편 회원가입 및 개인 맞춤 프로필 관리',
+    portalFeature2: '온라인 건강 설문 및 진료 요구사항 작성',
+    portalFeature3: '실시간 예약 현황 및 치료 내역 확인',
+    portalBtn: '온라인 예약하기',
     name: '성함',
     email: '이메일 주소',
     phone: '전화번호',
@@ -251,6 +259,7 @@ export default {
     aiAssessment: 'AI 건강 진단',
     practitioner: '의료진 소개',
     contact: '문의하기',
+    friendlyLinks: '우호 링크',
     aiDisclaimer: 'AI 헬스센스 진단은 건강 증진을 보조하며 의료 진단을 대체하지 않습니다.'
   }
 }

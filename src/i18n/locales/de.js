@@ -236,6 +236,14 @@ export default {
     textBadge: 'SMS bevorzugt / Text',
     byEmail: '📧 Per E-Mail',
     byTxt: '💬 Per SMS',
+    byPortal: '🌐 Online',
+    portalTitle: 'Über das Wellness Spring Portal buchen',
+    portalNoticeTitle: 'Registrierung erforderlich',
+    portalNoticeDesc: 'Bitte erstellen Sie vor der Buchung ein Konto oder melden Sie sich an, um Ihre Gesundheitsdaten und Termine sicher zu verwalten.',
+    portalFeature1: 'Schnelle Registrierung und Profilverwaltung',
+    portalFeature2: 'Online-Gesundheitsfragebogen ausfüllen',
+    portalFeature3: 'Echtzeit-Terminverfolgung und Behandlungsverlauf',
+    portalBtn: 'Online buchen',
     name: 'Ihr Name',
     email: 'Ihre E-Mail',
     phone: 'Ihre Telefonnummer',
@@ -258,6 +266,7 @@ export default {
     aiAssessment: 'KI-Gesundheitsanalyse',
     practitioner: 'Praxisteam',
     contact: 'Kontakt',
+    friendlyLinks: 'Freundliche Links',
     aiDisclaimer: 'KI-gestützte Analysen dienen als unterstützende Instrumente und ersetzen keine professionelle klinische Beurteilung, medizinische Diagnose oder fachgerechte Überweisung.'
   }
 }

@@ -2,9 +2,11 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import logo from '../assets/98.jpg'
 import { clinicLocations } from '../data/locationsData'
+import { friendlyLinks } from '../data/friendlyLinks'
 
 export default function Footer() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const currentLang = i18n.language || 'zh'
   const currentYear = new Date().getFullYear()
 
   return (
@@ -126,8 +128,45 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Friendly Links Strip */}
+        {friendlyLinks.length > 0 && (
+          <div className="mt-8 pt-6 border-t border-slate-200/80 dark:border-slate-800 text-xs">
+            <div className="flex items-center gap-2 font-bold text-slate-700 dark:text-slate-200 mb-2.5">
+              <span className="text-sm">🔗</span>
+              <span>{t('footer.friendlyLinks')}</span>
+            </div>
+            <div className="flex flex-col gap-2">
+              {friendlyLinks.map((link) => {
+                const title = link.titleI18n?.[currentLang] || link.title
+                const desc = link.descriptionI18n?.[currentLang] || ''
+                return (
+                  <div key={link.id} className="flex items-center">
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:text-emerald-700 dark:hover:text-emerald-400 hover:border-emerald-300 dark:hover:border-emerald-700 shadow-sm transition-all group font-medium"
+                      title={desc ? `${title} — ${desc}` : title}
+                    >
+                      <span>{title}</span>
+                      {desc && (
+                        <span className="text-slate-400 dark:text-slate-500 font-normal ml-1 hidden sm:inline">
+                          — {desc}
+                        </span>
+                      )}
+                      <svg className="w-3 h-3 text-emerald-600 dark:text-emerald-400 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        )}
+
         {/* Global AI Supportive Tool & Privacy Compliance Strip */}
-        <div className="mt-8 pt-6 border-t border-slate-200/80 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 text-center max-w-3xl mx-auto leading-relaxed font-medium space-y-1.5">
+        <div className="mt-6 pt-5 border-t border-slate-200/60 dark:border-slate-800/80 text-xs text-slate-500 dark:text-slate-400 text-center max-w-3xl mx-auto leading-relaxed font-medium space-y-1.5">
           <p>💡 {t('footer.aiDisclaimer')}</p>
           <p>
             🔒 Health information privacy handled in strict compliance with the{' '}

@@ -236,7 +236,15 @@ export default {
     viewMap: '在地图中查看',
     textBadge: '建议发短信 / Text',
     byEmail: '📧 邮件沟通',
-    byTxt: '💬 短信沟通 (SMS)',
+    byTxt: '💬 短信 (SMS)',
+    byPortal: '🌐 在线预约',
+    portalTitle: 'Wellness Spring 在线预约',
+    portalNoticeTitle: '预约前须知',
+    portalNoticeDesc: '通过门户系统预约前需先注册并登录账号，以便安全绑定您的健康档案与预约记录。',
+    portalFeature1: '支持快速注册与个人健康档案管理',
+    portalFeature2: '在线填写专属健康问卷与就诊需求',
+    portalFeature3: '实时跟踪预约审核进度与康复记录',
+    portalBtn: '在线预约',
     name: '您的姓名',
     email: '电子邮箱',
     phone: '联系电话',
@@ -259,6 +267,7 @@ export default {
     aiAssessment: 'AI 智慧健康探索',
     practitioner: '医师团队',
     contact: '联系我们',
+    friendlyLinks: '友情链接',
     aiDisclaimer: 'AI 辅助健康评估仅作为辅助支持工具使用，不能替代专业临床判断、医学诊断或适当转诊。'
   }
 }

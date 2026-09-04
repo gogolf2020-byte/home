@@ -200,11 +200,11 @@ export default function Contact({ title, subtitle }) {
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">{t('contact.title')}</h3>
 
               {/* Send Method Selector */}
-              <div className="flex bg-slate-200/80 dark:bg-slate-800 p-1 rounded-xl mb-4 text-xs font-semibold">
+              <div className="flex bg-slate-200/80 dark:bg-slate-800 p-1 rounded-xl mb-4 text-xs font-semibold gap-1">
                 <button
                   type="button"
                   onClick={() => { setMethod('email'); setErrors({}); }}
-                  className={`flex-1 py-2 px-2.5 rounded-lg transition-all flex items-center justify-center gap-1.5 ${
+                  className={`flex-1 py-2 px-1 rounded-lg transition-all flex items-center justify-center gap-1 ${
                     method === 'email'
                       ? 'bg-white text-emerald-950 shadow-md font-bold dark:bg-emerald-700 dark:text-white'
                       : 'text-slate-600 dark:text-slate-300 hover:text-slate-900'
@@ -215,7 +215,7 @@ export default function Contact({ title, subtitle }) {
                 <button
                   type="button"
                   onClick={() => { setMethod('txt'); setErrors({}); }}
-                  className={`flex-1 py-2 px-2.5 rounded-lg transition-all flex items-center justify-center gap-1.5 ${
+                  className={`flex-1 py-2 px-1 rounded-lg transition-all flex items-center justify-center gap-1 ${
                     method === 'txt'
                       ? 'bg-white text-emerald-950 shadow-md font-bold dark:bg-emerald-700 dark:text-white'
                       : 'text-slate-600 dark:text-slate-300 hover:text-slate-900'
@@ -223,9 +223,63 @@ export default function Contact({ title, subtitle }) {
                 >
                   <span>{t('contact.byTxt')}</span>
                 </button>
+                <button
+                  type="button"
+                  onClick={() => { setMethod('portal'); setErrors({}); }}
+                  className={`flex-1 py-2 px-1 rounded-lg transition-all flex items-center justify-center gap-1 ${
+                    method === 'portal'
+                      ? 'bg-white text-emerald-950 shadow-md font-bold dark:bg-emerald-700 dark:text-white'
+                      : 'text-slate-600 dark:text-slate-300 hover:text-slate-900'
+                  }`}
+                >
+                  <span>{t('contact.byPortal')}</span>
+                </button>
               </div>
 
-              {submitted ? (
+              {method === 'portal' ? (
+                <div className="bg-white dark:bg-slate-900 border border-emerald-300/80 dark:border-emerald-800 rounded-2xl p-4 sm:p-5 space-y-4 shadow-sm">
+                  {/* Notice Banner */}
+                  <div className="p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800/80 text-amber-900 dark:text-amber-300 text-xs leading-relaxed space-y-1">
+                    <div className="font-bold flex items-center gap-1.5 text-xs text-amber-950 dark:text-amber-200">
+                      <span>⚠️</span>
+                      <span>{t('contact.portalNoticeTitle')}</span>
+                    </div>
+                    <p className="text-amber-800 dark:text-amber-300/90 text-xs">
+                      {t('contact.portalNoticeDesc')}
+                    </p>
+                  </div>
+
+                  {/* Highlights */}
+                  <div className="space-y-2 text-xs text-slate-600 dark:text-slate-300 font-medium">
+                    <div className="flex items-start gap-2">
+                      <span className="text-emerald-600 dark:text-emerald-400 font-bold shrink-0">✓</span>
+                      <span>{t('contact.portalFeature1')}</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-emerald-600 dark:text-emerald-400 font-bold shrink-0">✓</span>
+                      <span>{t('contact.portalFeature2')}</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <span className="text-emerald-600 dark:text-emerald-400 font-bold shrink-0">✓</span>
+                      <span>{t('contact.portalFeature3')}</span>
+                    </div>
+                  </div>
+
+                  {/* CTA Button */}
+                  <a
+                    href="https://portal.wellnessspring.co.nz/appointments"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-primary hover:bg-secondary dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group text-sm text-center"
+                  >
+                    <span>🌐</span>
+                    <span>{t('contact.portalBtn')}</span>
+                    <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </a>
+                </div>
+              ) : submitted ? (
                 <div className="bg-white dark:bg-slate-800 border border-emerald-300 dark:border-emerald-700 rounded-2xl p-5 text-center space-y-3">
                   <div className="w-12 h-12 bg-emerald-600 text-white rounded-full flex items-center justify-center mx-auto text-2xl font-bold shadow-sm">
                     ✓
