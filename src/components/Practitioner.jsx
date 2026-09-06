@@ -54,7 +54,7 @@ export default function Practitioner() {
                 {/* Founder Badge */}
                 <div className="mt-4 text-center">
                   <span className="text-xs font-bold text-amber-900 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-4 py-1.5 rounded-full inline-block border border-amber-300/80 dark:border-amber-800 shadow-sm">
-                    👑 {lang === 'zh' ? 'Wellness Spring 诊所创始人' : lang === 'de' ? 'Gründerin von Wellness Spring' : 'Founder of Wellness Spring'}
+                    👑 {lang === 'zh' ? 'Wellness Spring 诊所创始人' : lang === 'de' ? 'Gründerin von Wellness Spring' : lang === 'ko' ? 'Wellness Spring 설립자' : 'Founder of Wellness Spring'}
                   </span>
                 </div>
               </div>
@@ -83,28 +83,70 @@ export default function Practitioner() {
                   {t('practitioner.founderDesc2')}
                 </p>
 
-                {/* Specialties Box (Matches user screenshot) */}
+                {/* Specialties Box */}
                 <div className="bg-[#f0f4f9] dark:bg-slate-800/90 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
                   <h4 className="font-bold text-lg text-primary dark:text-emerald-300 mb-3">
-                    Specialties
+                    {lang === 'zh' ? 'Specialties 临床专长' : lang === 'de' ? 'Schwerpunkte' : lang === 'ko' ? 'Specialties 전문 진료 분야' : 'Specialties'}
                   </h4>
                   <ul className="space-y-2 text-slate-700 dark:text-slate-300 text-sm sm:text-base">
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
-                      <span>Traditional Chinese Medicine & Acupuncture</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
-                      <span>Mind-Body Regulation</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
-                      <span>Emotional Balance & Wellness</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
-                      <span>AI-Assisted Health Assessment</span>
-                    </li>
+                    {lang === 'ko' ? (
+                      <>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
+                          <span>근거 기반 한의학 및 침구 치료 (TCM & Acupuncture)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
+                          <span>심신 균형 및 전인적 체질 관리 (Mind-Body Regulation)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
+                          <span>정서 안정 및 수면 케어 (Emotional Balance & Wellness)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
+                          <span>AI 보조 건강 진단 및 데이터 융합 (AI-Assisted Assessment)</span>
+                        </li>
+                      </>
+                    ) : lang === 'zh' ? (
+                      <>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
+                          <span>Traditional Chinese Medicine & Acupuncture 中医与针灸诊疗</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
+                          <span>Mind-Body Regulation 身心整体调衡</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
+                          <span>Emotional Balance & Wellness 情绪平衡与健康调理</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
+                          <span>AI-Assisted Health Assessment AI 辅助健康评估</span>
+                        </li>
+                      </>
+                    ) : (
+                      <>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
+                          <span>Traditional Chinese Medicine & Acupuncture</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
+                          <span>Mind-Body Regulation</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
+                          <span>Emotional Balance & Wellness</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-emerald-600 dark:text-emerald-400 font-bold">•</span>
+                          <span>AI-Assisted Health Assessment</span>
+                        </li>
+                      </>
+                    )}
                   </ul>
                 </div>
               </div>
@@ -112,30 +154,30 @@ export default function Practitioner() {
           </div>
         </div>
 
-        {/* 2. DOCTORS TEAM GRID (3 Doctors: Dr. Damen Qian, Catherine Wang, Grace Gao) */}
+        {/* 2. DOCTORS TEAM GRID (Specialist Doctors: Xiaodong JIN, Dr. Damen Qian, Catherine Wang, Grace Gao) */}
         <div>
           <div className="text-center max-w-2xl mx-auto mb-10">
             <span className="text-emerald-700 dark:text-emerald-400 text-xs uppercase tracking-widest font-semibold bg-emerald-50 dark:bg-emerald-950/60 px-3.5 py-1 rounded-full border border-emerald-200 dark:border-emerald-800 inline-block mb-2">
-              {lang === 'zh' ? '专家医师团队' : lang === 'de' ? 'FACHÄRZTE TEAM' : 'MEDICAL SPECIALISTS'}
+              {lang === 'zh' ? '专家医师团队' : lang === 'de' ? 'FACHÄRZTE TEAM' : lang === 'ko' ? '전문 의료진' : 'MEDICAL SPECIALISTS'}
             </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1a472a] dark:text-emerald-300">
-              {lang === 'zh' ? '核心专家团队' : lang === 'de' ? 'Unsere Fachärzte' : 'Our Medical Team'}
+              {lang === 'zh' ? '核心专家团队' : lang === 'de' ? 'Unsere Fachärzte' : lang === 'ko' ? '핵심 전문가 의료진' : 'Our Medical Team'}
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {teamDoctors.map((doc) => (
               <Link
                 key={doc.id}
                 to={`/practitioners/${doc.slug}`}
                 className="group bg-white dark:bg-slate-900 p-6 shadow-md hover:shadow-2xl border border-slate-200/80 dark:border-slate-800 transition-all duration-500 cursor-pointer flex flex-col justify-between transform hover:-translate-y-2 rounded-3xl block"
               >
-                {/* Photo Container: Full Image Display with Gold Frame exposed */}
-                <div className="relative overflow-hidden bg-slate-900/5 dark:bg-slate-950">
+                {/* Photo Container: Clean square container with natural top-aligned portrait */}
+                <div className="relative overflow-hidden aspect-square rounded-2xl bg-slate-900/5 dark:bg-slate-950">
                   <img
                     src={doc.photo}
                     alt={doc.name[lang] || doc.name['en']}
-                    className="w-full h-auto object-contain transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 group-hover:-translate-y-1"
+                    className="w-full h-full object-cover object-top transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 group-hover:-translate-y-1"
                   />
                 </div>
 
@@ -168,7 +210,7 @@ export default function Practitioner() {
                   {/* Hover CTA Link */}
                   <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 mt-2">
                     <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                      <span>{lang === 'zh' ? '查看医师详情' : lang === 'de' ? 'Profil anzeigen' : 'View Profile'}</span>
+                      <span>{lang === 'zh' ? '查看医师详情' : lang === 'de' ? 'Profil anzeigen' : lang === 'ko' ? '의료진 상세 보기' : 'View Profile'}</span>
                       <span>→</span>
                     </span>
                   </div>

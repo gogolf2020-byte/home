@@ -43,11 +43,11 @@ export default function PractitionerDetailPage() {
         <div className="container mx-auto max-w-6xl">
           <nav className="flex items-center text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium gap-2">
             <Link to="/" className="hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors">
-              {lang === 'zh' ? '首页' : lang === 'de' ? 'Startseite' : 'Home'}
+              {lang === 'zh' ? '首页' : lang === 'de' ? 'Startseite' : lang === 'ko' ? '홈' : 'Home'}
             </Link>
             <span>/</span>
             <Link to="/#practitioner" className="hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors">
-              {lang === 'zh' ? '医师介绍' : lang === 'de' ? 'Behandler' : 'Practitioner'}
+              {lang === 'zh' ? '医师介绍' : lang === 'de' ? 'Behandler' : lang === 'ko' ? '의료진 소개' : 'Practitioner'}
             </Link>
             <span>/</span>
             <span className="text-emerald-800 dark:text-emerald-300 font-semibold">
@@ -64,12 +64,12 @@ export default function PractitionerDetailPage() {
           {/* Left Column: Image Frame displaying full photo with gold frame exposed */}
           <div className="lg:col-span-5 flex flex-col items-center">
             <div className="relative w-full max-w-md group">
-              {/* Styled Image Frame displaying complete photo without clipping */}
-              <div className="relative overflow-hidden shadow-2xl bg-slate-950 border border-slate-200 dark:border-slate-800 transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-2">
+              {/* Styled Image Frame displaying portrait with consistent square ratio */}
+              <div className="relative overflow-hidden aspect-square rounded-3xl shadow-2xl bg-slate-950 border border-slate-200 dark:border-slate-800 transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-2">
                 <img
                   src={doctor.photo}
                   alt={doctor.name[lang] || doctor.name['en']}
-                  className="w-full h-auto object-contain transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                 />
               </div>
             </div>
@@ -118,7 +118,7 @@ export default function PractitionerDetailPage() {
                       : 'border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
                   }`}
                 >
-                  {lang === 'zh' ? '个人履历' : lang === 'de' ? 'Biografie' : 'Profile'}
+                  {lang === 'zh' ? '个人履历' : lang === 'de' ? 'Biografie' : lang === 'ko' ? '의료진 약력' : 'Profile'}
                 </button>
                 <button
                   onClick={() => setActiveTab('education')}
@@ -128,7 +128,7 @@ export default function PractitionerDetailPage() {
                       : 'border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
                   }`}
                 >
-                  {lang === 'zh' ? '教育与资质' : lang === 'de' ? 'Ausbildung' : 'Education'}
+                  {lang === 'zh' ? '教育与资质' : lang === 'de' ? 'Ausbildung' : lang === 'ko' ? '학력 및 자격' : 'Education'}
                 </button>
                 <button
                   onClick={() => setActiveTab('research')}
@@ -138,7 +138,7 @@ export default function PractitionerDetailPage() {
                       : 'border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
                   }`}
                 >
-                  {lang === 'zh' ? '科研与调护' : lang === 'de' ? 'Forschung' : 'Practice & Philosophy'}
+                  {lang === 'zh' ? '科研与调护' : lang === 'de' ? 'Forschung' : lang === 'ko' ? '연구 및 진료 철학' : 'Practice & Philosophy'}
                 </button>
               </div>
 
@@ -217,7 +217,7 @@ export default function PractitionerDetailPage() {
           <div className="mt-20">
             <div className="text-center mb-10">
               <h3 className="text-2xl sm:text-3xl font-bold text-[#1a472a] dark:text-emerald-300">
-                {lang === 'zh' ? '认识团队其他医师' : lang === 'de' ? 'Weitere Behandler kennenlernen' : 'Meet Other Medical Experts'}
+                {lang === 'zh' ? '认识团队其他医师' : lang === 'de' ? 'Weitere Behandler kennenlernen' : lang === 'ko' ? '다른 전문 의료진 보기' : 'Meet Other Medical Experts'}
               </h3>
             </div>
 
@@ -231,7 +231,7 @@ export default function PractitionerDetailPage() {
                   <img
                     src={other.photo}
                     alt={other.name[lang] || other.name['en']}
-                    className="w-24 h-auto object-contain rounded-none shadow-sm border border-slate-200 dark:border-slate-700 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                    className="w-24 h-24 object-cover object-top rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 flex-shrink-0"
                   />
                   <div>
                     <h4 className="text-xl font-bold text-[#1a472a] dark:text-emerald-300 group-hover:text-emerald-600 transition-colors">
@@ -241,7 +241,7 @@ export default function PractitionerDetailPage() {
                       {other.shortTitle[lang] || other.shortTitle['en']}
                     </p>
                     <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                      <span>{lang === 'zh' ? '查看医师详情' : 'View Profile'}</span>
+                      <span>{lang === 'zh' ? '查看医师详情' : lang === 'de' ? 'Profil anzeigen' : lang === 'ko' ? '의료진 상세 보기' : 'View Profile'}</span>
                       <span>→</span>
                     </span>
                   </div>
