@@ -1,4 +1,3 @@
-import jinPhoto from '../assets/doctors/0_jin.jpg'
 import qianPhoto from '../assets/doctors/1_qian.png'
 import wangPhoto from '../assets/doctors/2_wang.png'
 import gaoPhoto from '../assets/doctors/3_gao.jpg'
@@ -32,7 +31,7 @@ export const practitionersData = [
       de: 'Schmerzlinderung ohne Nadeln · Ein einzigartiger manueller Ansatz für Schmerz & Bewegung',
       ko: 'Pain Relief Without Needles · 침 없는 특별한 수기 통증 완화 및 기능 회복'
     },
-    photo: jinPhoto,
+    photo: 'https://ptlufrvhhdzbrwepdlbh.supabase.co/storage/v1/object/public/wellness/doctors/0_jin.jpg',
     hometown: {
       zh: 'ACC 注册针灸师 · 常氏武术第九代传承人',
       en: 'ACC Registered Acupuncturist · 9th-Gen Chang Martial Arts Inheritor',
