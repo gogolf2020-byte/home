@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import logo from '../assets/98.jpg'
+import { IMAGES } from '../config/assets'
 
 export default function FloatingMusicPlayer() {
   const { t } = useTranslation()
@@ -208,7 +208,7 @@ export default function FloatingMusicPlayer() {
           }`}
         >
           <img
-            src={logo}
+            src={IMAGES.logo}
             alt="Wellness Spring Music"
             className="w-full h-full object-cover rounded-full"
           />

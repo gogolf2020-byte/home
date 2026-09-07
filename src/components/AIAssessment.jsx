@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import aiHeroImage from '../assets/AI-hero.jpg'
-import deviceImage from '../assets/matrix1.jpg'
+import { IMAGES } from '../config/assets'
 import BookingModal from './BookingModal'
 
 export default function AIAssessment() {
@@ -28,7 +27,7 @@ export default function AIAssessment() {
           {/* AI Hero Graphic Banner — Fully Adaptive with 24px Padding Border */}
           <div className="rounded-[2.5rem] overflow-hidden shadow-lg border border-slate-200/80 dark:border-slate-800 mb-12 bg-white dark:bg-slate-950 max-w-4xl mx-auto flex items-center justify-center p-6">
             <img
-              src={aiHeroImage}
+              src={IMAGES.aiHero}
               alt="MATRIX AI HealthSense Hero Banner"
               className="w-full h-auto object-contain block rounded-2xl"
             />
@@ -41,7 +40,7 @@ export default function AIAssessment() {
               {/* Left Column: Device Image (Image 2 & 3 styling) */}
               <div className="lg:col-span-4 flex items-center justify-center bg-slate-950 rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-200/80 dark:border-slate-700/80 overflow-hidden group">
                 <img
-                  src={deviceImage}
+                  src={IMAGES.aiDevice}
                   alt="MATRIX AI HealthSense Device"
                   className="w-full h-full max-h-[300px] sm:max-h-[340px] lg:max-h-full object-contain rounded-xl group-hover:scale-105 transition-transform duration-500"
                 />

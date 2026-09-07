@@ -1,7 +1,4 @@
-import qianPhoto from '../assets/doctors/1_qian.png'
-import wangPhoto from '../assets/doctors/2_wang.png'
-import gaoPhoto from '../assets/doctors/3_gao.jpg'
-import helenePhoto from '../assets/22.jpg'
+import { IMAGES } from '../config/assets'
 
 export const practitionersData = [
   {
@@ -31,7 +28,7 @@ export const practitionersData = [
       de: 'Schmerzlinderung ohne Nadeln · Ein einzigartiger manueller Ansatz für Schmerz & Bewegung',
       ko: 'Pain Relief Without Needles · 침 없는 특별한 수기 통증 완화 및 기능 회복'
     },
-    photo: 'https://ptlufrvhhdzbrwepdlbh.supabase.co/storage/v1/object/public/wellness/doctors/0_jin.jpg',
+    photo: IMAGES.doctorJin,
     hometown: {
       zh: 'ACC 注册针灸师 · 常氏武术第九代传承人',
       en: 'ACC Registered Acupuncturist · 9th-Gen Chang Martial Arts Inheritor',
@@ -189,7 +186,7 @@ export const practitionersData = [
       de: 'Doktormutter: Prof. Wulan (Nationaler Qihuang-Gelehrter & Erbe des Kulturerbes)',
       ko: '지도교수: 중국 국가 기황석학·국가 무형문화유산 전수자 우란(乌兰) 교수'
     },
-    photo: qianPhoto,
+    photo: IMAGES.doctorQian,
     hometown: {
       zh: '籍贯：内蒙古自治区赤峰市',
       en: 'Hometown: Chifeng, Inner Mongolia',
@@ -347,7 +344,7 @@ export const practitionersData = [
       de: 'Gründerin von He Yang Wellness · "Harmonie mit der Natur · Pflege von Körper & Geist"',
       ko: 'He Yang Wellness (화양 웰니스) 설립자 ｜ “자연과의 조화 · 기혈의 보양”'
     },
-    photo: wangPhoto,
+    photo: IMAGES.doctorWang,
     hometown: {
       zh: '新西兰注册针灸师 · 和养 Wellness 创始人',
       en: 'NZ Registered Acupuncturist · Founder He Yang Wellness',
@@ -497,7 +494,7 @@ export const practitionersData = [
       de: 'NZCCM-Absolventin · Evidenzbasierte Akupunktur & Kräuterheilkunde',
       ko: '뉴질랜드중의학원 (NZCCM) 졸업 · 근거 기반 침구 및 한약 치료 전문가'
     },
-    photo: gaoPhoto,
+    photo: IMAGES.doctorGao,
     hometown: {
       zh: '新西兰 ACC & CMC 认证注册针灸师',
       en: 'NZ ACC & CMC Registered Acupuncturist',
@@ -647,7 +644,7 @@ export const practitionersData = [
       de: '"Verbindung von Traditioneller Chinesischer Medizin und globaler Gesundheit durch Sprache, Kultur und Technologie."',
       ko: '“언어, 문화, 기술을 잇는 가교로서 전통 한의학과 글로벌 헬스케어를 연결합니다.”'
     },
-    photo: helenePhoto,
+    photo: IMAGES.doctorHelena,
     hometown: {
       zh: 'Wellness Spring 创始人 · 执业中医师',
       en: 'Founder & Practitioner at Wellness Spring',

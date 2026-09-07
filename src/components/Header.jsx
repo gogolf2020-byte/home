@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import logo from '../assets/98.jpg'
+import { IMAGES } from '../config/assets'
 import { usePreferences } from '../context/Preferences'
 
 export default function Header() {
@@ -136,7 +136,7 @@ export default function Header() {
             className="flex items-center gap-3 sm:gap-3.5 group shrink-0 mr-4 lg:mr-8 xl:mr-10"
           >
             <img
-              src={logo}
+              src={IMAGES.logo}
               alt="Wellness Spring logo"
               className="h-11 w-11 sm:h-12 sm:w-12 lg:h-[50px] lg:w-[50px] rounded-full object-cover shadow-sm ring-2 ring-emerald-600/15 dark:ring-emerald-400/20 group-hover:scale-105 transition-transform duration-300"
             />

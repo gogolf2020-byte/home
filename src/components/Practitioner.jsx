@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { usePreferences } from '../context/Preferences'
 import { practitionersData } from '../data/practitionersData'
-import founderPhoto from '../assets/22.jpg'
+import { IMAGES } from '../config/assets'
 
 export default function Practitioner() {
   const { t, i18n } = useTranslation()
@@ -32,7 +32,7 @@ export default function Practitioner() {
               <div className="relative w-full max-w-sm group">
                 <div className="relative overflow-hidden rounded-[2rem] shadow-xl bg-slate-900 border border-slate-200 dark:border-slate-800">
                   <img
-                    src={founderPhoto}
+                    src={IMAGES.founder}
                     alt="Helene YU"
                     className="h-[420px] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />

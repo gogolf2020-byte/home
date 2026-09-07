@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import heroImage from '../assets/88.jpg'
+import { IMAGES } from '../config/assets'
 
 export default function Hero() {
   const { t } = useTranslation()
@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-[#f0f4f9] dark:bg-slate-950 transition-colors duration-300">
       <img
-        src={heroImage}
+        src={IMAGES.hero}
         alt="Wellness Spring practitioner preparing tea outdoors"
         className="absolute inset-0 -z-20 h-full w-full object-cover object-center"
       />

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import logo from '../assets/98.jpg'
+import { IMAGES } from '../config/assets'
 import { clinicLocations } from '../data/locationsData'
 import { friendlyLinks } from '../data/friendlyLinks'
 
@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <img src={logo} alt="Wellness Spring logo" className="h-12 w-12 rounded-full object-cover shadow-sm border border-slate-200 dark:border-slate-800" />
+              <img src={IMAGES.logo} alt="Wellness Spring logo" className="h-12 w-12 rounded-full object-cover shadow-sm border border-slate-200 dark:border-slate-800" />
               <h3 className="text-xl font-bold text-primary dark:text-emerald-300">Wellness Spring</h3>
             </div>
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-medium">

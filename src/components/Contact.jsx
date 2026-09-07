@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import qrCode from '../assets/qr-code.jpg'
+import { IMAGES } from '../config/assets'
 import { clinicLocations } from '../data/locationsData'
 
 export default function Contact({ title, subtitle }) {
@@ -438,7 +438,7 @@ export default function Contact({ title, subtitle }) {
             </div>
 
             <div className="bg-[#eef4ef] dark:bg-slate-800/80 p-6 rounded-3xl border border-emerald-200/80 dark:border-slate-700 flex flex-col items-center justify-center text-center">
-              <img src={qrCode} alt="Wellness Spring WeChat QR code" className="h-36 w-36 rounded-2xl bg-white p-2 shadow-md border border-slate-200 dark:border-slate-700" />
+              <img src={IMAGES.wechatQr} alt="Wellness Spring WeChat QR code" className="h-36 w-36 rounded-2xl bg-white p-2 shadow-md border border-slate-200 dark:border-slate-700" />
               <p className="mt-4 text-sm font-bold text-slate-800 dark:text-slate-200">{t('contact.scanWeChat')}</p>
             </div>
           </div>
