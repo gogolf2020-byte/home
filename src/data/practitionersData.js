@@ -160,6 +160,306 @@ export const practitionersData = [
     contactEmail: 'info@wellnessspring.co.nz'
   },
   {
+    id: 'grace-gao',
+    slug: 'grace-gao',
+    name: {
+      zh: 'Grace Gao',
+      en: 'Grace Gao',
+      de: 'Grace Gao',
+      ko: '그레이스 가오 (Grace Gao)'
+    },
+    shortTitle: {
+      zh: '新西兰 ACC & CMC 注册针灸师 · 硕士在读',
+      en: 'ACC & CMC Registered Acupuncturist · Master Candidate',
+      de: 'ACC & CMC Registrierte Akupunkteurin · Master-Studium',
+      ko: '뉴질랜드 ACC & CMC 등록 한의사 · 석사 과정'
+    },
+    title: {
+      zh: '新西兰 ACC & CMC 注册针灸师 ｜ 中医药学硕士在读',
+      en: 'ACC & CMC Registered Acupuncturist | Master Candidate in TCM',
+      de: 'ACC & CMC Registrierte Akupunkteurin | Master-Studium in TCM',
+      ko: '뉴질랜드 ACC & CMC 등록 한의사 ｜ 중의약학 석사 과정'
+    },
+    mentor: {
+      zh: '新西兰中医学院 (NZCCM) 毕业 · 循证中针诊疗专家',
+      en: 'Graduate of NZCCM · Evidence-Based Acupuncture & Herbal Specialist',
+      de: 'NZCCM-Absolventin · Evidenzbasierte Akupunktur & Kräuterheilkunde',
+      ko: '뉴질랜드중의학원 (NZCCM) 졸업 · 근거 기반 침구 및 한약 치료 전문가'
+    },
+    photo: IMAGES.doctorGao,
+    hometown: {
+      zh: '新西兰 ACC & CMC 认证注册针灸师',
+      en: 'NZ ACC & CMC Registered Acupuncturist',
+      de: 'NZ ACC & CMC Registrierte Akupunkteurin',
+      ko: '뉴질랜드 ACC & CMC 인증 등록 한의사'
+    },
+    tags: {
+      zh: ['ACC 认证医师', 'CMC 注册医师', '新西兰中医学院', '硕士在读', '痛症与内科调理'],
+      en: ['ACC Registered', 'CMC Registered', 'NZCCM Graduate', 'Master Candidate', 'Musculoskeletal Care'],
+      de: ['ACC-Registriert', 'CMC-Registriert', 'NZCCM-Absolventin', 'Master-Studium', 'Schmerztherapie'],
+      ko: ['ACC 인증의', 'CMC 등록 한의사', '뉴질랜드중의학원', '석사 과정', '통증 및 내과 질환']
+    },
+    shortDesc: {
+      zh: '毕业于新西兰中医学院并攻读硕士，精通针灸、推拿与中药调理，擅长肌骨痛症与内科杂病的精准诊疗。',
+      en: 'A passionate Registered Acupuncturist with a solid TCM foundation, skilled in acupuncture, Tui Na, and herbal care for musculoskeletal pain and internal disorders.',
+      de: 'Erfahrene Akupunkteurin mit fundierter TCM-Ausbildung, spezialisiert auf Akupunktur, Tui Na und Kräuterheilkunde bei Schmerzen und internistischen Erkrankungen.',
+      ko: '뉴질랜드중의학원 졸업 후 석사 과정을 밟고 있으며, 침구·추나 및 한약 치료를 통해 근골격계 통증과 내과 질환의 정밀 진료를 전문으로 합니다.'
+    },
+    bioParagraphs: {
+      zh: [
+        'Grace Gao 为新西兰 ACC & CMC 双认证注册针灸师，具备扎实的中医药学术功底与丰富的临床诊疗经验。她毕业于新西兰中医学院（New Zealand College of Chinese Medicine），目前正在攻读中医药学硕士学位，致力于将深厚的学术理论与临床实践深度结合。',
+        '在临床中，Grace 精通针灸、推拿理筋与中药调理，尤为擅长肌骨系统各类痛症及内科杂病的精准诊断与高效调护。她始终恪守循证医疗标准，以热忱而专业的态度为患者提供高质量的个性化康复服务，致力于提升求诊者的生活质量与整体健康水平。'
+      ],
+      en: [
+        'Grace Gao is a passionate and results-driven Registered Acupuncturist with a solid academic foundation in Traditional Chinese Medicine and extensive clinical experience. She graduated from the New Zealand College of Chinese Medicine and is currently pursuing a Master’s degree in the same field, dedicated to integrating deep academic knowledge with clinical practice.',
+        'Holding ACC and CMC registrations in New Zealand, Grace has expertise in utilizing acupuncture, Tui Na, and herbal medicine, particularly skilled in effectively diagnosing and treating a wide range of musculoskeletal pain conditions and internal medical disorders. She is committed to providing the highest standard of evidence-based care to improve patient health outcomes and quality of life.'
+      ],
+      de: [
+        'Grace Gao ist eine leidenschaftliche und ergebnisorientierte registrierte Akupunkteurin mit fundiertem akademischem Wissen in Traditioneller Chinesischer Medizin und umfangreicher klinischer Erfahrung. Sie schloss ihr Studium am New Zealand College of Chinese Medicine ab und absolvierte derzeit ihr Masterstudium in demselben Fachbereich.',
+        'Mit ihrer ACC- und CMC-Zulassung in Neuseeland kombiniert Grace Akupunktur, Tui Na und Kräuterheilkunde. Sie ist besonders versiert in der Diagnose und Behandlung von Muskel-Skelett-Schmerzen sowie internistischen Erkrankungen und verschreibt sich höchsten evidenzbasierten Qualitätsstandards.'
+      ],
+      ko: [
+        '그레이스 가오(Grace Gao) 한의사는 뉴질랜드 ACC 및 CMC 이중 인증 등록 한의사로, 탄탄한 중의약 학문적 기반과 풍부한 임상 경험을 겸비하고 있습니다. 뉴질랜드중의학원(NZCCM)을 졸업하고 현재 중의약학 석사 과정을 밟으며 학술 이론과 임상 실천의 통합에 매진하고 있습니다.',
+        '임상에서 침술, 추나 수기요법, 한약 조제를 능숙하게 활용하며, 특히 근골격계 통증 질환과 내과 복합 질환의 정확한 진단과 효과적인 치료에 능합니다. 엄격한 근거 기반 치료 기준을 준수하며 정성어린 맞춤 치료로 환자의 삶의 질 향상을 돕습니다.'
+      ]
+    },
+    educationList: {
+      zh: [
+        { period: '硕士在读', degree: '中医药学硕士学位 (Master of TCM Candidate)', school: '新西兰中医学院 (NZCCM)' },
+        { period: '学士毕业', degree: '中医/针灸学士学位 (Bachelor of TCM / Acupuncture)', school: '新西兰中医学院 (NZCCM)' },
+        { period: '双执业认证', degree: '新西兰 ACC & CMC 注册认证针灸师', school: 'ACC & CMC New Zealand' }
+      ],
+      en: [
+        { period: 'Currently Pursuing', degree: 'Master’s Degree in Traditional Chinese Medicine', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
+        { period: 'Graduated', degree: 'Bachelor of Health Science / Acupuncture', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
+        { period: 'Accreditation', degree: 'ACC & CMC Registered Acupuncturist', school: 'ACC & CMC New Zealand' }
+      ],
+      de: [
+        { period: 'Laufend', degree: 'Masterstudium Traditionelle Chinesische Medizin', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
+        { period: 'Abschluss', degree: 'Bachelor of Health Science / Akupunktur', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
+        { period: 'Zulassung', degree: 'ACC & CMC Registrierte Akupunkteurin', school: 'ACC & CMC Neuseeland' }
+      ],
+      ko: [
+        { period: '석사 과정', degree: '중의약학 석사 과정 (Master of TCM Candidate)', school: '뉴질랜드중의학원 (NZCCM)' },
+        { period: '학사 졸업', degree: '건강과학(침구학) 학사 (Bachelor of TCM / Acupuncture)', school: '뉴질랜드중의학원 (NZCCM)' },
+        { period: '이중 면허', degree: '뉴질랜드 ACC & CMC 등록 인증 한의사', school: 'ACC & CMC New Zealand' }
+      ]
+    },
+    researchPoints: {
+      zh: [
+        '融合循证医学理念与深厚中医药理论，深耕中医药学术与临床深度融合。',
+        '精通针灸、推拿理筋与中药辨证施治，实现身心并调与多维调护。',
+        '专精于肌骨系统急性/慢性痛症、关节功能障碍及内科疑难杂病的精准诊疗。',
+        '持有新西兰 ACC & CMC 双权威注册资质，全力保障高质量高标准的患者康复成果。'
+      ],
+      en: [
+        'Dedicated to integrating deep academic knowledge of TCM with evidence-based clinical practice.',
+        'Expertise in combining acupuncture, Tui Na manual therapy, and Chinese herbal medicine.',
+        'Specialized in diagnosing and treating complex musculoskeletal pain and internal disorders.',
+        'Holds dual ACC & CMC registrations committed to delivering high-standard patient outcomes.'
+      ],
+      de: [
+        'Verbindung von vertieftem akademischen Wissen der TCM mit evidenzbasierter klinischer Praxis.',
+        'Expertise in Akupunktur, Tui Na manueller Therapie und chinesischer Kräuterheilkunde.',
+        'Spezialisiert auf Diagnose und Behandlung von Muskel-Skelett-Schmerzen und internistischen Beschwerden.',
+        'Doppelzulassung als ACC & CMC registrierte Behandlerin für beste Patientenergebnisse.'
+      ],
+      ko: [
+        '근거 기반 의학 철학과 전통 중의약 이론의 심층 융합 연구.',
+        '침술, 추나 수기요법, 한약 변증 처방을 통한 다차원 전인 케어 구현.',
+        '급만성 근골격계 통증, 관절 기능 장애 및 내과 질환의 정밀 진단.',
+        '뉴질랜드 ACC & CMC 이중 인증 보유로 높은 수준의 환자 회복 성과 보장.'
+      ]
+    },
+    specialtiesTitle: {
+      zh: 'Specialties 临床专长',
+      en: 'Specialties',
+      de: 'Schwerpunkte',
+      ko: 'Specialties 전문 진료 분야'
+    },
+    specialties: {
+      zh: [
+        'Musculoskeletal Pain & Injury Rehabilitation 肌骨系统痛症与损伤康复',
+        'Acupuncture & Tui Na Manual Therapy 针灸与推拿理筋手法',
+        'Internal Medical Disorders & Herbal Care 内科杂病诊断与中药辨证调理',
+        'Evidence-Based Integrative Care 循证医疗与全方位身心健康管理',
+        'ACC & CMC Registered Services ACC & CMC 注册针灸理疗服务'
+      ],
+      en: [
+        'Musculoskeletal Pain Conditions & Injury Rehabilitation',
+        'Acupuncture & Tui Na Manual Therapy',
+        'Internal Medical Disorders & Herbal Conditioning',
+        'Evidence-Based Integrative Health Management',
+        'ACC & CMC Registered Acupuncture Services'
+      ],
+      de: [
+        'Muskel-Skelett-Schmerzen & Verletzungsrehabilitation',
+        'Akupunktur & Tui Na Manuelle Therapie',
+        'Internistische Erkrankungen & Kräuterheilkunde',
+        'Evidenzbasierte Ganzheitliche Gesundheitsversorgung',
+        'ACC & CMC Registrierte Akupunktur-Behandlungen'
+      ],
+      ko: [
+        '근골격계 통증 및 부상 재활 치료',
+        '침구 치료 및 추나 수기요법',
+        '내과 복합 질환 진단 및 한약 변증 조절',
+        '근거 기반 통합 의학 및 전인적 건강 관리',
+        'ACC & CMC 등록 침구 치료 서비스'
+      ]
+    },
+    contactEmail: 'info@wellnessspring.co.nz'
+  },
+  {
+    id: 'catherine-wang',
+    slug: 'catherine-wang',
+    name: {
+      zh: 'Catherine Wang',
+      en: 'Catherine Wang',
+      de: 'Catherine Wang',
+      ko: '캐서린 왕 (Catherine Wang)'
+    },
+    shortTitle: {
+      zh: '新西兰注册针灸师 · ACC 认证医师 · 历史学博士',
+      en: 'NZ Registered Acupuncturist · ACC Provider · Ph.D.',
+      de: 'NZ Registrierte Akupunkteurin · ACC-Anbieterin · Ph.D.',
+      ko: '뉴질랜드 등록 한의사 · ACC 인증의 · 역사학 박사'
+    },
+    title: {
+      zh: '新西兰注册针灸师 ｜ ACC 理赔认证医师 ｜ BHSc (针灸) · 历史学博士',
+      en: 'New Zealand Registered Acupuncturist | ACC Provider | BHSc (Acupuncture) · Ph.D.',
+      de: 'Neuseeländisch registrierte Akupunkteurin | ACC-Anbieterin | BHSc (Akupunktur) · Ph.D.',
+      ko: '뉴질랜드 등록 한의사 ｜ ACC 인증의 ｜ BHSc (침구학) · 역사학 박사'
+    },
+    mentor: {
+      zh: 'He Yang Wellness 和养 创始人 ｜ “和其岁月 · 养其气血”',
+      en: 'Founder of He Yang Wellness · "Harmony with Nature · Nourish Body & Mind"',
+      de: 'Gründerin von He Yang Wellness · "Harmonie mit der Natur · Pflege von Körper & Geist"',
+      ko: 'He Yang Wellness (화양 웰니스) 설립자 ｜ “자연과의 조화 · 기혈의 보양”'
+    },
+    photo: IMAGES.doctorWang,
+    hometown: {
+      zh: '新西兰注册针灸师 · 和养 Wellness 创始人',
+      en: 'NZ Registered Acupuncturist · Founder He Yang Wellness',
+      de: 'NZ Registrierte Akupunkteurin · Gründerin He Yang Wellness',
+      ko: '뉴질랜드 등록 한의사 · 화양 웰니스 설립자'
+    },
+    tags: {
+      zh: ['新西兰注册针灸师', 'ACC 认证医师', '和养创始人', '健康科学学士', '郑州大学博士'],
+      en: ['NZ Registered Acupuncturist', 'ACC Provider', 'Founder He Yang Wellness', 'BHSc Acupuncture', 'Ph.D. Zhengzhou University'],
+      de: ['NZ-Registriert', 'ACC-Anbieterin', 'Gründerin He Yang Wellness', 'BHSc Akupunktur', 'Ph.D. Zhengzhou Universität'],
+      ko: ['뉴질랜드 등록 한의사', 'ACC 인증의', '화양 웰니스 설립자', '건강과학 학사', '정저우대 박사']
+    },
+    shortDesc: {
+      zh: '和养 Wellness 创始人，毕业于新西兰中医学院及郑州大学，专注痛症管理、女性全生命周期健康与睡眠舒缓。',
+      en: 'Founder of He Yang Wellness, NZCCM & Zhengzhou University graduate, focusing on pain management, women\'s health, and sleep.',
+      de: 'Gründerin von He Yang Wellness, Absolventin der NZCCM und Zhengzhou-Universität, spezialisiert auf Schmerztherapie und Frauengesundheit.',
+      ko: '화양 웰니스 설립자로서 뉴질랜드중의학원 및 정저우대를 졸업하였으며, 통증 관리, 여성 생애주기 건강 및 수면·스트레스 조절을 전문으로 합니다.'
+    },
+    bioParagraphs: {
+      zh: [
+        'Catherine Wang 为新西兰注册针灸师及 ACC 认证理疗医师，同时亦是“和养 (He Yang Wellness)”品牌的创始人。她于 2026 年 4 月毕业于新西兰中医学院（New Zealand College of Chinese Medicine），获健康科学（针灸专业）学士学位，此前于中国郑州大学获得中国古代史博士学位。',
+        '凭借针灸专业背景与深厚的中华传统文化底蕴，Catherine 主张“和其岁月，养其气血”的整体调护理念。她认为真正健康的本质不仅在于无病无痛，更在于身心、自然与日常生活之间的调和与平衡。临床中尤其关注痛症管理、女性健康调理、压力舒缓、睡眠改善及综合亚健康调理。'
+      ],
+      en: [
+        'Catherine Wang is a New Zealand registered acupuncturist and ACC provider, and the founder of He Yang Wellness. She graduated with a Bachelor of Health Science (Acupuncture) from the New Zealand College of Chinese Medicine in April 2026 and holds a Ph.D. in Ancient Chinese History from Zhengzhou University, China.',
+        'With a background spanning clinical acupuncture and traditional Chinese culture, Catherine takes a holistic and individualized approach to care. Guided by the philosophy "Harmony with Nature · Nourish Body & Mind", she believes good health is a dynamic state of balance in body, mind and everyday life. Her clinical interests center on pain management, women’s wellness, stress reduction, sleep regulation, and general wellbeing.'
+      ],
+      de: [
+        'Catherine Wang ist eine in Neuseeland registrierte Akupunkteurin, ACC-Behandlerin und Gründerin von He Yang Wellness. Sie schloss ihr Studium der Gesundheitswissenschaften (Akupunktur) am New Zealand College of Chinese Medicine im April 2026 ab und promovierte an der Zhengzhou-Universität in China in Alter Chinesischer Geschichte.',
+        'Mit ihrer Expertise in Akupunktur und traditioneller chinesischer Kultur verfolgt Catherine einen ganzheitlichen und individuellen Behandlungsansatz. Frei nach dem Motto „Harmonie mit der Natur · Pflege von Körper & Geist“ versteht sie Gesundheit als Einklang von Körper, Geist und Alltag. Ihre Schwerpunkte liegen in der Schmerztherapie, Frauengesundheit, Stressabbau und Schlafverbesserung.'
+      ],
+      ko: [
+        '캐서린 왕(Catherine Wang) 한의사는 뉴질랜드 등록 한의사이자 ACC 인증 치료의이며, "화양 웰니스(He Yang Wellness)"의 설립자입니다. 뉴질랜드중의학원(NZCCM)에서 건강과학(침구학) 학사를 취득하였으며, 중국 정저우대학교에서 중국 고대사 박사 학위를 취득했습니다.',
+        '침구학 임상 지식과 깊이 있는 동양 전통문화 철학을 바탕으로 "자연과 조화하고 기혈을 보양한다"는 전인적 치료를 지향합니다. 건강은 질병이 없는 상태를 넘어 신체와 마음, 일상생활의 조화에서 비롯된다고 믿으며, 통증 관리, 여성 건강, 스트레스 완화, 수면 개선에 집중하고 있습니다.'
+      ]
+    },
+    educationList: {
+      zh: [
+        { period: '2026.04 毕业', degree: '健康科学学士（针灸专业）BHSc (Acupuncture)', school: '新西兰中医学院 (NZCCM)' },
+        { period: '博士学位', degree: '中国古代史博士 Ph.D. in Ancient Chinese History', school: '郑州大学 (Zhengzhou University)' },
+        { period: '执业认证', degree: '新西兰注册针灸师 & ACC 理赔认证医师', school: 'Acupuncture NZ / ACC Provider' }
+      ],
+      en: [
+        { period: 'Graduated Apr 2026', degree: 'Bachelor of Health Science (Acupuncture)', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
+        { period: 'Doctoral Degree', degree: 'Ph.D. in Ancient Chinese History', school: 'Zhengzhou University, China' },
+        { period: 'Accreditation', degree: 'NZ Registered Acupuncturist & ACC Provider', school: 'Acupuncture NZ / ACC Provider' }
+      ],
+      de: [
+        { period: 'Abschluss Apr 2026', degree: 'Bachelor of Health Science (Akupunktur)', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
+        { period: 'Doktorgrad', degree: 'Ph.D. in Alter Chinesischer Geschichte', school: 'Zhengzhou-Universität, China' },
+        { period: 'Zulassung', degree: 'NZ Registrierte Akupunkteurin & ACC-Anbieterin', school: 'Acupuncture NZ / ACC Provider' }
+      ],
+      ko: [
+        { period: '2026.04 졸업', degree: '건강과학(침구학) 학사 BHSc (Acupuncture)', school: '뉴질랜드중의학원 (NZCCM)' },
+        { period: '박사 학위', degree: '중국 고대사 박사 Ph.D. in Ancient History', school: '정저우대학교' },
+        { period: '면허 인증', degree: '뉴질랜드 등록 한의사 & ACC 치료 인증의', school: 'Acupuncture NZ / ACC Provider' }
+      ]
+    },
+    researchPoints: {
+      zh: [
+        '创立“和养 Wellness (He Yang Wellness)”，倡导“和其岁月 · 养其气血”的天人合一调养之道。',
+        '融合针灸临床诊疗与中华传统哲学底蕴，针对求诊者身心状态提供定制化整体调护。',
+        '专注于痛症管理、女性全生命周期健康调理、压力舒缓与睡眠质量提升。',
+        '支持 ACC 理赔诊疗，致力于为社区提供高质量、具人文关怀的健康管理方案。'
+      ],
+      en: [
+        'Founder of He Yang Wellness: "Harmony with Nature · Nourish Body & Mind".',
+        'Combines clinical acupuncture expertise with traditional Chinese cultural heritage.',
+        'Specialized focus on pain management, women\'s wellness, stress relief, and sleep improvement.',
+        'Registered ACC provider dedicated to individualized, compassionate holistic care.'
+      ],
+      de: [
+        'Gründerin von He Yang Wellness: „Harmonie mit der Natur · Pflege von Körper & Geist“.',
+        'Verbindung von klinischer Akupunktur und traditioneller chinesischer Kulturphilosophie.',
+        'Spezialisierung auf Schmerztherapie, Frauengesundheit, Stressabbau und Schlafverbesserung.',
+        'ACC-registrierte Behandlerin für individuelle und nachhaltige Patientenfürsorge.'
+      ],
+      ko: [
+        '화양 웰니스(He Yang Wellness) 설립: 자연과 조화를 이루고 기혈을 보양하는 전인 케어 지향.',
+        '임상 침구 치료와 동양 전통 철학을 접목하여 개인 맞춤형 심신 통합 관리 제공.',
+        '통증 관리, 여성 생애주기별 건강 조절, 스트레스 해소 및 수면의 질 개선 전문.',
+        'ACC 등록 의료인으로서 따뜻하고 수준 높은 지역사회 헬스케어 서비스 제공.'
+      ]
+    },
+    specialtiesTitle: {
+      zh: 'Specialties 临床专长',
+      en: 'Specialties',
+      de: 'Schwerpunkte',
+      ko: 'Specialties 전문 진료 분야'
+    },
+    specialties: {
+      zh: [
+        'Pain Management 痛症管理与肌骨损伤康复',
+        'Women’s Wellness 女性健康调理与气血调和',
+        'Stress & Sleep 压力舒缓、焦虑缓解与睡眠改善',
+        'General Wellbeing 身心平衡与亚健康整体调理',
+        'ACC Provider Services ACC 损伤注册针灸治疗服务'
+      ],
+      en: [
+        'Pain Management & Musculoskeletal Recovery',
+        'Women’s Wellness & Hormonal/Blood Nourishment',
+        'Stress Reduction, Anxiety & Sleep Regulation',
+        'Holistic Health & General Wellbeing',
+        'ACC Provider Acupuncture & Injury Recovery'
+      ],
+      de: [
+        'Schmerztherapie & Rehabilitation von Verletzungen',
+        'Frauengesundheit & Vitalitätsförderung',
+        'Stressabbau, Angstbewältigung & Schlafregulierung',
+        'Ganzheitliche Gesundheit & Prävention',
+        'ACC-Registrierte Akupunktur-Behandlung'
+      ],
+      ko: [
+        '통증 관리 및 근골격계 손상 재활 치료',
+        '여성 건강 케어 및 호르몬·기혈 조화 관리',
+        '스트레스 해소, 불안 완화 및 수면 장애 개선',
+        '전인적 건강 증진 및 만성 아건강 체질 개선',
+        'ACC 등록 부상 재활 침구 치료 서비스'
+      ]
+    },
+    contactEmail: 'info@heyangwellness.co.nz'
+  },
+  {
     id: 'dr-damen-qian',
     slug: 'dr-damen-qian',
     name: {
@@ -316,306 +616,6 @@ export const practitionersData = [
       ]
     },
     contactEmail: '18514550228@163.com'
-  },
-  {
-    id: 'catherine-wang',
-    slug: 'catherine-wang',
-    name: {
-      zh: 'Catherine Wang',
-      en: 'Catherine Wang',
-      de: 'Catherine Wang',
-      ko: '캐서린 왕 (Catherine Wang)'
-    },
-    shortTitle: {
-      zh: '新西兰注册针灸师 · ACC 认证医师 · 历史学博士',
-      en: 'NZ Registered Acupuncturist · ACC Provider · Ph.D.',
-      de: 'NZ Registrierte Akupunkteurin · ACC-Anbieterin · Ph.D.',
-      ko: '뉴질랜드 등록 한의사 · ACC 인증의 · 역사학 박사'
-    },
-    title: {
-      zh: '新西兰注册针灸师 ｜ ACC 理赔认证医师 ｜ BHSc (针灸) · 历史学博士',
-      en: 'New Zealand Registered Acupuncturist | ACC Provider | BHSc (Acupuncture) · Ph.D.',
-      de: 'Neuseeländisch registrierte Akupunkteurin | ACC-Anbieterin | BHSc (Akupunktur) · Ph.D.',
-      ko: '뉴질랜드 등록 한의사 ｜ ACC 인증의 ｜ BHSc (침구학) · 역사학 박사'
-    },
-    mentor: {
-      zh: 'He Yang Wellness 和养 创始人 ｜ “和其岁月 · 养其气血”',
-      en: 'Founder of He Yang Wellness · "Harmony with Nature · Nourish Body & Mind"',
-      de: 'Gründerin von He Yang Wellness · "Harmonie mit der Natur · Pflege von Körper & Geist"',
-      ko: 'He Yang Wellness (화양 웰니스) 설립자 ｜ “자연과의 조화 · 기혈의 보양”'
-    },
-    photo: IMAGES.doctorWang,
-    hometown: {
-      zh: '新西兰注册针灸师 · 和养 Wellness 创始人',
-      en: 'NZ Registered Acupuncturist · Founder He Yang Wellness',
-      de: 'NZ Registrierte Akupunkteurin · Gründerin He Yang Wellness',
-      ko: '뉴질랜드 등록 한의사 · 화양 웰니스 설립자'
-    },
-    tags: {
-      zh: ['新西兰注册针灸师', 'ACC 认证医师', '和养创始人', '健康科学学士', '郑州大学博士'],
-      en: ['NZ Registered Acupuncturist', 'ACC Provider', 'Founder He Yang Wellness', 'BHSc Acupuncture', 'Ph.D. Zhengzhou University'],
-      de: ['NZ-Registriert', 'ACC-Anbieterin', 'Gründerin He Yang Wellness', 'BHSc Akupunktur', 'Ph.D. Zhengzhou Universität'],
-      ko: ['뉴질랜드 등록 한의사', 'ACC 인증의', '화양 웰니스 설립자', '건강과학 학사', '정저우대 박사']
-    },
-    shortDesc: {
-      zh: '和养 Wellness 创始人，毕业于新西兰中医学院及郑州大学，专注痛症管理、女性全生命周期健康与睡眠舒缓。',
-      en: 'Founder of He Yang Wellness, NZCCM & Zhengzhou University graduate, focusing on pain management, women\'s health, and sleep.',
-      de: 'Gründerin von He Yang Wellness, Absolventin der NZCCM und Zhengzhou-Universität, spezialisiert auf Schmerztherapie und Frauengesundheit.',
-      ko: '화양 웰니스 설립자로서 뉴질랜드중의학원 및 정저우대를 졸업하였으며, 통증 관리, 여성 생애주기 건강 및 수면·스트레스 조절을 전문으로 합니다.'
-    },
-    bioParagraphs: {
-      zh: [
-        'Catherine Wang 为新西兰注册针灸师及 ACC 认证理疗医师，同时亦是“和养 (He Yang Wellness)”品牌的创始人。她于 2026 年 4 月毕业于新西兰中医学院（New Zealand College of Chinese Medicine），获健康科学（针灸专业）学士学位，此前于中国郑州大学获得中国古代史博士学位。',
-        '凭借针灸专业背景与深厚的中华传统文化底蕴，Catherine 主张“和其岁月，养其气血”的整体调护理念。她认为真正健康的本质不仅在于无病无痛，更在于身心、自然与日常生活之间的调和与平衡。临床中尤其关注痛症管理、女性健康调理、压力舒缓、睡眠改善及综合亚健康调理。'
-      ],
-      en: [
-        'Catherine Wang is a New Zealand registered acupuncturist and ACC provider, and the founder of He Yang Wellness. She graduated with a Bachelor of Health Science (Acupuncture) from the New Zealand College of Chinese Medicine in April 2026 and holds a Ph.D. in Ancient Chinese History from Zhengzhou University, China.',
-        'With a background spanning clinical acupuncture and traditional Chinese culture, Catherine takes a holistic and individualized approach to care. Guided by the philosophy "Harmony with Nature · Nourish Body & Mind", she believes good health is a dynamic state of balance in body, mind and everyday life. Her clinical interests center on pain management, women’s wellness, stress reduction, sleep regulation, and general wellbeing.'
-      ],
-      de: [
-        'Catherine Wang ist eine in Neuseeland registrierte Akupunkteurin, ACC-Behandlerin und Gründerin von He Yang Wellness. Sie schloss ihr Studium der Gesundheitswissenschaften (Akupunktur) am New Zealand College of Chinese Medicine im April 2026 ab und promovierte an der Zhengzhou-Universität in China in Alter Chinesischer Geschichte.',
-        'Mit ihrer Expertise in Akupunktur und traditioneller chinesischer Kultur verfolgt Catherine einen ganzheitlichen und individuellen Behandlungsansatz. Frei nach dem Motto „Harmonie mit der Natur · Pflege von Körper & Geist“ versteht sie Gesundheit als Einklang von Körper, Geist und Alltag. Ihre Schwerpunkte liegen in der Schmerztherapie, Frauengesundheit, Stressabbau und Schlafverbesserung.'
-      ],
-      ko: [
-        '캐서린 왕(Catherine Wang) 한의사는 뉴질랜드 등록 한의사이자 ACC 인증 치료의이며, "화양 웰니스(He Yang Wellness)"의 설립자입니다. 뉴질랜드중의학원(NZCCM)에서 건강과학(침구학) 학사를 취득하였으며, 중국 정저우대학교에서 중국 고대사 박사 학위를 취득했습니다.',
-        '침구학 임상 지식과 깊이 있는 동양 전통문화 철학을 바탕으로 "자연과 조화하고 기혈을 보양한다"는 전인적 치료를 지향합니다. 건강은 질병이 없는 상태를 넘어 신체와 마음, 일상생활의 조화에서 비롯된다고 믿으며, 통증 관리, 여성 건강, 스트레스 완화, 수면 개선에 집중하고 있습니다.'
-      ]
-    },
-    educationList: {
-      zh: [
-        { period: '2026.04 毕业', degree: '健康科学学士（针灸专业）BHSc (Acupuncture)', school: '新西兰中医学院 (NZCCM)' },
-        { period: '博士学位', degree: '中国古代史博士 Ph.D. in Ancient Chinese History', school: '郑州大学 (Zhengzhou University)' },
-        { period: '执业认证', degree: '新西兰注册针灸师 & ACC 理赔认证医师', school: 'Acupuncture NZ / ACC Provider' }
-      ],
-      en: [
-        { period: 'Graduated Apr 2026', degree: 'Bachelor of Health Science (Acupuncture)', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
-        { period: 'Doctoral Degree', degree: 'Ph.D. in Ancient Chinese History', school: 'Zhengzhou University, China' },
-        { period: 'Accreditation', degree: 'NZ Registered Acupuncturist & ACC Provider', school: 'Acupuncture NZ / ACC Provider' }
-      ],
-      de: [
-        { period: 'Abschluss Apr 2026', degree: 'Bachelor of Health Science (Akupunktur)', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
-        { period: 'Doktorgrad', degree: 'Ph.D. in Alter Chinesischer Geschichte', school: 'Zhengzhou-Universität, China' },
-        { period: 'Zulassung', degree: 'NZ Registrierte Akupunkteurin & ACC-Anbieterin', school: 'Acupuncture NZ / ACC Provider' }
-      ],
-      ko: [
-        { period: '2026.04 졸업', degree: '건강과학(침구학) 학사 BHSc (Acupuncture)', school: '뉴질랜드중의학원 (NZCCM)' },
-        { period: '박사 학위', degree: '중국 고대사 박사 Ph.D. in Ancient History', school: '정저우대학교' },
-        { period: '면허 인증', degree: '뉴질랜드 등록 한의사 & ACC 치료 인증의', school: 'Acupuncture NZ / ACC Provider' }
-      ]
-    },
-    researchPoints: {
-      zh: [
-        '创立“和养 Wellness (He Yang Wellness)”，倡导“和其岁月 · 养其气血”的天人合一调养之道。',
-        '融合针灸临床诊疗与中华传统哲学底蕴，针对求诊者身心状态提供定制化整体调护。',
-        '专注于痛症管理、女性全生命周期健康调理、压力舒缓与睡眠质量提升。',
-        '支持 ACC 理赔诊疗，致力于为社区提供高质量、具人文关怀的健康管理方案。'
-      ],
-      en: [
-        'Founder of He Yang Wellness: "Harmony with Nature · Nourish Body & Mind".',
-        'Combines clinical acupuncture expertise with traditional Chinese cultural heritage.',
-        'Specialized focus on pain management, women\'s wellness, stress relief, and sleep improvement.',
-        'Registered ACC provider dedicated to individualized, compassionate holistic care.'
-      ],
-      de: [
-        'Gründerin von He Yang Wellness: „Harmonie mit der Natur · Pflege von Körper & Geist“.',
-        'Verbindung von klinischer Akupunktur und traditioneller chinesischer Kulturphilosophie.',
-        'Spezialisierung auf Schmerztherapie, Frauengesundheit, Stressabbau und Schlafverbesserung.',
-        'ACC-registrierte Behandlerin für individuelle und nachhaltige Patientenfürsorge.'
-      ],
-      ko: [
-        '화양 웰니스(He Yang Wellness) 설립: 자연과 조화를 이루고 기혈을 보양하는 전인 케어 지향.',
-        '임상 침구 치료와 동양 전통 철학을 접목하여 개인 맞춤형 심신 통합 관리 제공.',
-        '통증 관리, 여성 생애주기별 건강 조절, 스트레스 해소 및 수면의 질 개선 전문.',
-        'ACC 등록 의료인으로서 따뜻하고 수준 높은 지역사회 헬스케어 서비스 제공.'
-      ]
-    },
-    specialtiesTitle: {
-      zh: 'Specialties 临床专长',
-      en: 'Specialties',
-      de: 'Schwerpunkte',
-      ko: 'Specialties 전문 진료 분야'
-    },
-    specialties: {
-      zh: [
-        'Pain Management 痛症管理与肌骨损伤康复',
-        'Women’s Wellness 女性健康调理与气血调和',
-        'Stress & Sleep 压力舒缓、焦虑缓解与睡眠改善',
-        'General Wellbeing 身心平衡与亚健康整体调理',
-        'ACC Provider Services ACC 损伤注册针灸治疗服务'
-      ],
-      en: [
-        'Pain Management & Musculoskeletal Recovery',
-        'Women’s Wellness & Hormonal/Blood Nourishment',
-        'Stress Reduction, Anxiety & Sleep Regulation',
-        'Holistic Health & General Wellbeing',
-        'ACC Provider Acupuncture & Injury Recovery'
-      ],
-      de: [
-        'Schmerztherapie & Rehabilitation von Verletzungen',
-        'Frauengesundheit & Vitalitätsförderung',
-        'Stressabbau, Angstbewältigung & Schlafregulierung',
-        'Ganzheitliche Gesundheit & Prävention',
-        'ACC-Registrierte Akupunktur-Behandlung'
-      ],
-      ko: [
-        '통증 관리 및 근골격계 손상 재활 치료',
-        '여성 건강 케어 및 호르몬·기혈 조화 관리',
-        '스트레스 해소, 불안 완화 및 수면 장애 개선',
-        '전인적 건강 증진 및 만성 아건강 체질 개선',
-        'ACC 등록 부상 재활 침구 치료 서비스'
-      ]
-    },
-    contactEmail: 'info@heyangwellness.co.nz'
-  },
-  {
-    id: 'grace-gao',
-    slug: 'grace-gao',
-    name: {
-      zh: 'Grace Gao',
-      en: 'Grace Gao',
-      de: 'Grace Gao',
-      ko: '그레이스 가오 (Grace Gao)'
-    },
-    shortTitle: {
-      zh: '新西兰 ACC & CMC 注册针灸师 · 硕士在读',
-      en: 'ACC & CMC Registered Acupuncturist · Master Candidate',
-      de: 'ACC & CMC Registrierte Akupunkteurin · Master-Studium',
-      ko: '뉴질랜드 ACC & CMC 등록 한의사 · 석사 과정'
-    },
-    title: {
-      zh: '新西兰 ACC & CMC 注册针灸师 ｜ 中医药学硕士在读',
-      en: 'ACC & CMC Registered Acupuncturist | Master Candidate in TCM',
-      de: 'ACC & CMC Registrierte Akupunkteurin | Master-Studium in TCM',
-      ko: '뉴질랜드 ACC & CMC 등록 한의사 ｜ 중의약학 석사 과정'
-    },
-    mentor: {
-      zh: '新西兰中医学院 (NZCCM) 毕业 · 循证中针诊疗专家',
-      en: 'Graduate of NZCCM · Evidence-Based Acupuncture & Herbal Specialist',
-      de: 'NZCCM-Absolventin · Evidenzbasierte Akupunktur & Kräuterheilkunde',
-      ko: '뉴질랜드중의학원 (NZCCM) 졸업 · 근거 기반 침구 및 한약 치료 전문가'
-    },
-    photo: IMAGES.doctorGao,
-    hometown: {
-      zh: '新西兰 ACC & CMC 认证注册针灸师',
-      en: 'NZ ACC & CMC Registered Acupuncturist',
-      de: 'NZ ACC & CMC Registrierte Akupunkteurin',
-      ko: '뉴질랜드 ACC & CMC 인증 등록 한의사'
-    },
-    tags: {
-      zh: ['ACC 认证医师', 'CMC 注册医师', '新西兰中医学院', '硕士在读', '痛症与内科调理'],
-      en: ['ACC Registered', 'CMC Registered', 'NZCCM Graduate', 'Master Candidate', 'Musculoskeletal Care'],
-      de: ['ACC-Registriert', 'CMC-Registriert', 'NZCCM-Absolventin', 'Master-Studium', 'Schmerztherapie'],
-      ko: ['ACC 인증의', 'CMC 등록 한의사', '뉴질랜드중의학원', '석사 과정', '통증 및 내과 질환']
-    },
-    shortDesc: {
-      zh: '毕业于新西兰中医学院并攻读硕士，精通针灸、推拿与中药调理，擅长肌骨痛症与内科杂病的精准诊疗。',
-      en: 'A passionate Registered Acupuncturist with a solid TCM foundation, skilled in acupuncture, Tui Na, and herbal care for musculoskeletal pain and internal disorders.',
-      de: 'Erfahrene Akupunkteurin mit fundierter TCM-Ausbildung, spezialisiert auf Akupunktur, Tui Na und Kräuterheilkunde bei Schmerzen und internistischen Erkrankungen.',
-      ko: '뉴질랜드중의학원 졸업 후 석사 과정을 밟고 있으며, 침구·추나 및 한약 치료를 통해 근골격계 통증과 내과 질환의 정밀 진료를 전문으로 합니다.'
-    },
-    bioParagraphs: {
-      zh: [
-        'Grace Gao 为新西兰 ACC & CMC 双认证注册针灸师，具备扎实的中医药学术功底与丰富的临床诊疗经验。她毕业于新西兰中医学院（New Zealand College of Chinese Medicine），目前正在攻读中医药学硕士学位，致力于将深厚的学术理论与临床实践深度结合。',
-        '在临床中，Grace 精通针灸、推拿理筋与中药调理，尤为擅长肌骨系统各类痛症及内科杂病的精准诊断与高效调护。她始终恪守循证医疗标准，以热忱而专业的态度为患者提供高质量的个性化康复服务，致力于提升求诊者的生活质量与整体健康水平。'
-      ],
-      en: [
-        'Grace Gao is a passionate and results-driven Registered Acupuncturist with a solid academic foundation in Traditional Chinese Medicine and extensive clinical experience. She graduated from the New Zealand College of Chinese Medicine and is currently pursuing a Master’s degree in the same field, dedicated to integrating deep academic knowledge with clinical practice.',
-        'Holding ACC and CMC registrations in New Zealand, Grace has expertise in utilizing acupuncture, Tui Na, and herbal medicine, particularly skilled in effectively diagnosing and treating a wide range of musculoskeletal pain conditions and internal medical disorders. She is committed to providing the highest standard of evidence-based care to improve patient health outcomes and quality of life.'
-      ],
-      de: [
-        'Grace Gao ist eine leidenschaftliche und ergebnisorientierte registrierte Akupunkteurin mit fundiertem akademischem Wissen in Traditioneller Chinesischer Medizin und umfangreicher klinischer Erfahrung. Sie schloss ihr Studium am New Zealand College of Chinese Medicine ab und absolvierte derzeit ihr Masterstudium in demselben Fachbereich.',
-        'Mit ihrer ACC- und CMC-Zulassung in Neuseeland kombiniert Grace Akupunktur, Tui Na und Kräuterheilkunde. Sie ist besonders versiert in der Diagnose und Behandlung von Muskel-Skelett-Schmerzen sowie internistischen Erkrankungen und verschreibt sich höchsten evidenzbasierten Qualitätsstandards.'
-      ],
-      ko: [
-        '그레이스 가오(Grace Gao) 한의사는 뉴질랜드 ACC 및 CMC 이중 인증 등록 한의사로, 탄탄한 중의약 학문적 기반과 풍부한 임상 경험을 겸비하고 있습니다. 뉴질랜드중의학원(NZCCM)을 졸업하고 현재 중의약학 석사 과정을 밟으며 학술 이론과 임상 실천의 통합에 매진하고 있습니다.',
-        '임상에서 침술, 추나 수기요법, 한약 조제를 능숙하게 활용하며, 특히 근골격계 통증 질환과 내과 복합 질환의 정확한 진단과 효과적인 치료에 능합니다. 엄격한 근거 기반 치료 기준을 준수하며 정성어린 맞춤 치료로 환자의 삶의 질 향상을 돕습니다.'
-      ]
-    },
-    educationList: {
-      zh: [
-        { period: '硕士在读', degree: '中医药学硕士学位 (Master of TCM Candidate)', school: '新西兰中医学院 (NZCCM)' },
-        { period: '学士毕业', degree: '中医/针灸学士学位 (Bachelor of TCM / Acupuncture)', school: '新西兰中医学院 (NZCCM)' },
-        { period: '双执业认证', degree: '新西兰 ACC & CMC 注册认证针灸师', school: 'ACC & CMC New Zealand' }
-      ],
-      en: [
-        { period: 'Currently Pursuing', degree: 'Master’s Degree in Traditional Chinese Medicine', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
-        { period: 'Graduated', degree: 'Bachelor of Health Science / Acupuncture', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
-        { period: 'Accreditation', degree: 'ACC & CMC Registered Acupuncturist', school: 'ACC & CMC New Zealand' }
-      ],
-      de: [
-        { period: 'Laufend', degree: 'Masterstudium Traditionelle Chinesische Medizin', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
-        { period: 'Abschluss', degree: 'Bachelor of Health Science / Akupunktur', school: 'New Zealand College of Chinese Medicine (NZCCM)' },
-        { period: 'Zulassung', degree: 'ACC & CMC Registrierte Akupunkteurin', school: 'ACC & CMC Neuseeland' }
-      ],
-      ko: [
-        { period: '석사 과정', degree: '중의약학 석사 과정 (Master of TCM Candidate)', school: '뉴질랜드중의학원 (NZCCM)' },
-        { period: '학사 졸업', degree: '건강과학(침구학) 학사 (Bachelor of TCM / Acupuncture)', school: '뉴질랜드중의학원 (NZCCM)' },
-        { period: '이중 면허', degree: '뉴질랜드 ACC & CMC 등록 인증 한의사', school: 'ACC & CMC New Zealand' }
-      ]
-    },
-    researchPoints: {
-      zh: [
-        '融合循证医学理念与深厚中医药理论，深耕中医药学术与临床深度融合。',
-        '精通针灸、推拿理筋与中药辨证施治，实现身心并调与多维调护。',
-        '专精于肌骨系统急性/慢性痛症、关节功能障碍及内科疑难杂病的精准诊疗。',
-        '持有新西兰 ACC & CMC 双权威注册资质，全力保障高质量高标准的患者康复成果。'
-      ],
-      en: [
-        'Dedicated to integrating deep academic knowledge of TCM with evidence-based clinical practice.',
-        'Expertise in combining acupuncture, Tui Na manual therapy, and Chinese herbal medicine.',
-        'Specialized in diagnosing and treating complex musculoskeletal pain and internal disorders.',
-        'Holds dual ACC & CMC registrations committed to delivering high-standard patient outcomes.'
-      ],
-      de: [
-        'Verbindung von vertieftem akademischen Wissen der TCM mit evidenzbasierter klinischer Praxis.',
-        'Expertise in Akupunktur, Tui Na manueller Therapie und chinesischer Kräuterheilkunde.',
-        'Spezialisiert auf Diagnose und Behandlung von Muskel-Skelett-Schmerzen und internistischen Beschwerden.',
-        'Doppelzulassung als ACC & CMC registrierte Behandlerin für beste Patientenergebnisse.'
-      ],
-      ko: [
-        '근거 기반 의학 철학과 전통 중의약 이론의 심층 융합 연구.',
-        '침술, 추나 수기요법, 한약 변증 처방을 통한 다차원 전인 케어 구현.',
-        '급만성 근골격계 통증, 관절 기능 장애 및 내과 질환의 정밀 진단.',
-        '뉴질랜드 ACC & CMC 이중 인증 보유로 높은 수준의 환자 회복 성과 보장.'
-      ]
-    },
-    specialtiesTitle: {
-      zh: 'Specialties 临床专长',
-      en: 'Specialties',
-      de: 'Schwerpunkte',
-      ko: 'Specialties 전문 진료 분야'
-    },
-    specialties: {
-      zh: [
-        'Musculoskeletal Pain & Injury Rehabilitation 肌骨系统痛症与损伤康复',
-        'Acupuncture & Tui Na Manual Therapy 针灸与推拿理筋手法',
-        'Internal Medical Disorders & Herbal Care 内科杂病诊断与中药辨证调理',
-        'Evidence-Based Integrative Care 循证医疗与全方位身心健康管理',
-        'ACC & CMC Registered Services ACC & CMC 注册针灸理疗服务'
-      ],
-      en: [
-        'Musculoskeletal Pain Conditions & Injury Rehabilitation',
-        'Acupuncture & Tui Na Manual Therapy',
-        'Internal Medical Disorders & Herbal Conditioning',
-        'Evidence-Based Integrative Health Management',
-        'ACC & CMC Registered Acupuncture Services'
-      ],
-      de: [
-        'Muskel-Skelett-Schmerzen & Verletzungsrehabilitation',
-        'Akupunktur & Tui Na Manuelle Therapie',
-        'Internistische Erkrankungen & Kräuterheilkunde',
-        'Evidenzbasierte Ganzheitliche Gesundheitsversorgung',
-        'ACC & CMC Registrierte Akupunktur-Behandlungen'
-      ],
-      ko: [
-        '근골격계 통증 및 부상 재활 치료',
-        '침구 치료 및 추나 수기요법',
-        '내과 복합 질환 진단 및 한약 변증 조절',
-        '근거 기반 통합 의학 및 전인적 건강 관리',
-        'ACC & CMC 등록 침구 치료 서비스'
-      ]
-    },
-    contactEmail: 'info@wellnessspring.co.nz'
   },
   {
     id: 'helene-yu',

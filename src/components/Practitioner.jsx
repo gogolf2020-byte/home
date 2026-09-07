@@ -172,12 +172,12 @@ export default function Practitioner() {
                 to={`/practitioners/${doc.slug}`}
                 className="group bg-white dark:bg-slate-900 p-6 shadow-md hover:shadow-2xl border border-slate-200/80 dark:border-slate-800 transition-all duration-500 cursor-pointer flex flex-col justify-between transform hover:-translate-y-2 rounded-3xl block"
               >
-                {/* Photo Container: Full Image Display with object-contain */}
-                <div className="relative overflow-hidden bg-slate-900/5 dark:bg-slate-950">
+                {/* Photo Container: Unified 1:1 square display */}
+                <div className="relative overflow-hidden aspect-square rounded-2xl bg-[#0c231e] dark:bg-slate-950 flex items-center justify-center">
                   <img
                     src={doc.photo}
                     alt={doc.name[lang] || doc.name['en']}
-                    className="w-full h-auto object-contain transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 group-hover:-translate-y-1"
+                    className="w-full h-full object-contain transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105 group-hover:-translate-y-1"
                   />
                 </div>
 

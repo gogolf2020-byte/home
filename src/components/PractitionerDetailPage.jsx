@@ -64,12 +64,12 @@ export default function PractitionerDetailPage() {
           {/* Left Column: Image Frame displaying full photo with gold frame exposed */}
           <div className="lg:col-span-5 flex flex-col items-center">
             <div className="relative w-full max-w-md group">
-              {/* Styled Image Frame displaying complete photo with object-contain */}
-              <div className="relative overflow-hidden shadow-2xl bg-slate-950 border border-slate-200 dark:border-slate-800 transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-2">
+              {/* Styled Image Frame displaying complete photo with consistent square ratio */}
+              <div className="relative overflow-hidden aspect-square rounded-3xl shadow-2xl bg-[#0c231e] dark:bg-slate-950 flex items-center justify-center border border-slate-200 dark:border-slate-800 transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-2">
                 <img
                   src={doctor.photo}
                   alt={doctor.name[lang] || doctor.name['en']}
-                  className="w-full h-auto object-contain transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
                 />
               </div>
             </div>
@@ -228,11 +228,13 @@ export default function PractitionerDetailPage() {
                   to={`/practitioners/${other.slug}`}
                   className="group bg-white dark:bg-slate-900 p-6 shadow-md hover:shadow-xl border border-slate-200 dark:border-slate-800 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex items-center gap-5 cursor-pointer transform hover:-translate-y-2 block"
                 >
-                  <img
-                    src={other.photo}
-                    alt={other.name[lang] || other.name['en']}
-                    className="w-24 h-auto object-contain rounded-none shadow-sm border border-slate-200 dark:border-slate-700 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
-                  />
+                  <div className="w-24 h-24 aspect-square flex-shrink-0 overflow-hidden rounded-2xl bg-[#0c231e] dark:bg-slate-950 flex items-center justify-center border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <img
+                      src={other.photo}
+                      alt={other.name[lang] || other.name['en']}
+                      className="w-full h-full object-contain transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                    />
+                  </div>
                   <div>
                     <h4 className="text-xl font-bold text-[#1a472a] dark:text-emerald-300 group-hover:text-emerald-600 transition-colors">
                       {other.name[lang] || other.name['en']}
