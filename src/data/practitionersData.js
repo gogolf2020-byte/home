@@ -459,6 +459,8 @@ export const practitionersData = [
     },
     contactEmail: 'info@heyangwellness.co.nz'
   },
+  // TODO: 第4位医生 Dr. Damen QIAN 暂时隐藏，后期需要时移除此块注释即可恢复
+  /*
   {
     id: 'dr-damen-qian',
     slug: 'dr-damen-qian',
@@ -617,6 +619,7 @@ export const practitionersData = [
     },
     contactEmail: '18514550228@163.com'
   },
+  */
   {
     id: 'helene-yu',
     slug: 'helene-yu',
