@@ -13,6 +13,21 @@ export default function Practitioner() {
   // Filter team doctors list for specialists (excluding Helene who is featured in the Founder section)
   const teamDoctors = practitionersData.filter((doc) => doc.id !== 'helene-yu')
 
+  // Layout adapts to the number of visible doctors (1–4 per row on desktop) and keeps the row centered.
+  const columnCount = Math.min(Math.max(teamDoctors.length, 1), 4)
+  const teamGridWidthClass = {
+    1: 'max-w-sm',
+    2: 'max-w-3xl',
+    3: 'max-w-5xl',
+    4: 'max-w-7xl'
+  }[columnCount]
+  const teamCardWidthClass = {
+    1: 'w-full',
+    2: 'w-full sm:w-[calc(50%-0.75rem)]',
+    3: 'w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]',
+    4: 'w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(25%-1.125rem)]'
+  }[columnCount]
+
   return (
     <section id="practitioner" className="bg-[#f0f4f9] py-16 md:py-24 dark:bg-slate-950 transition-colors duration-300">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -154,7 +169,7 @@ export default function Practitioner() {
           </div>
         </div>
 
-        {/* 2. DOCTORS TEAM GRID (Specialist Doctors: Xiaodong JIN, Dr. Damen Qian, Catherine Wang, Grace Gao) */}
+        {/* 2. DOCTORS TEAM GRID (all practitioners except the founder; layout auto-centers by count) */}
         <div>
           <div className="text-center max-w-2xl mx-auto mb-10">
             <span className="text-emerald-700 dark:text-emerald-400 text-xs uppercase tracking-widest font-semibold bg-emerald-50 dark:bg-emerald-950/60 px-3.5 py-1 rounded-full border border-emerald-200 dark:border-emerald-800 inline-block mb-2">
@@ -165,12 +180,12 @@ export default function Practitioner() {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className={`flex flex-wrap justify-center gap-6 mx-auto ${teamGridWidthClass}`}>
             {teamDoctors.map((doc) => (
               <Link
                 key={doc.id}
                 to={`/practitioners/${doc.slug}`}
-                className="group bg-white dark:bg-slate-900 p-6 shadow-md hover:shadow-2xl border border-slate-200/80 dark:border-slate-800 transition-all duration-500 cursor-pointer flex flex-col justify-between transform hover:-translate-y-2 rounded-3xl block"
+                className={`group ${teamCardWidthClass} max-w-sm bg-white dark:bg-slate-900 p-6 shadow-md hover:shadow-2xl border border-slate-200/80 dark:border-slate-800 hover:border-emerald-200 dark:hover:border-emerald-800 transition-all duration-500 cursor-pointer flex flex-col transform hover:-translate-y-2 rounded-3xl`}
               >
                 {/* Photo Container: Unified 1:1 square display */}
                 <div className="relative overflow-hidden aspect-square rounded-2xl bg-[#0c231e] dark:bg-slate-950 flex items-center justify-center">
@@ -182,7 +197,7 @@ export default function Practitioner() {
                 </div>
 
                 {/* Doctor Details */}
-                <div className="pt-5 pb-2 text-center flex-1 flex flex-col justify-between">
+                <div className="pt-5 pb-1 text-center flex-1 flex flex-col">
                   <div>
                     {/* Doctor Name */}
                     <h4 className="text-2xl font-extrabold text-[#1a472a] dark:text-emerald-300 group-hover:text-emerald-600 transition-colors mb-1.5">
@@ -208,7 +223,7 @@ export default function Practitioner() {
                   </div>
 
                   {/* Hover CTA Link */}
-                  <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 mt-2">
+                  <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80 mt-auto">
                     <span className="text-xs font-bold text-emerald-700 dark:text-emerald-400 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                       <span>{lang === 'zh' ? '查看医师详情' : lang === 'de' ? 'Profil anzeigen' : lang === 'ko' ? '의료진 상세 보기' : 'View Profile'}</span>
                       <span>→</span>
