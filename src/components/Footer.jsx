@@ -67,7 +67,7 @@ export default function Footer() {
             <h4 className="font-bold mb-4 text-slate-900 dark:text-white text-base">Follow Us</h4>
             <div className="flex gap-2.5 flex-wrap">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61593909915723"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -78,7 +78,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/wellness.spring.sys/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -89,7 +89,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://tiktok.com"
+                href="https://www.tiktok.com/@wellnessspringadmin"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TikTok"
@@ -100,7 +100,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/+642110118892"
+                href="https://wa.me/64211018892"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
